@@ -11,6 +11,14 @@ set modeline
 
 filetype indent plugin on
 
+" syntax and automatically load ~/.vimcolor
+if &t_Co > 2 || has("gui_running")
+	syntax on
+	if filereadable(expand("<sfile>:p:h") . "/.vimcolor")
+		source <sfile>:p:h/.vimcolor
+	endif
+endif
+
 if has("X11")
 	set guifont=DejaVu\ Sans\ Mono\ 10
 elseif has("win32")
