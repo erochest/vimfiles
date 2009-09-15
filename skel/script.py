@@ -16,6 +16,9 @@ import sys
 import time
 
 
+__version__ = '0.0'
+
+
 LOG_FORMAT = (
     '%(asctime)s [%(levelname)s] %(name)s : %(message)s'
     )
