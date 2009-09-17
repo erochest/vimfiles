@@ -63,16 +63,15 @@ def setup_logging(opts):
 
     """
 
-    args = {}
+    logging.basicConfig()
+    logger = logging.getLogger()
+    logger.setLevel(LOG_LEVELS[opts.log_level])
     if opts.log_file == 'STDOUT':
-        args['stream'] = sys.stdout
+        handler = logging.StreamHandler(sys.stdout)
     else:
-        args['filename'] = opts.log_file
-    logging.basicConfig(
-        level=LOG_LEVELS[opts.log_level],
-        format=LOG_FORMAT,
-        **args
-        )
+        handler = logging.FileHandler(opts.log_file)
+    handler.setFormatter(logging.Formatter(LOG_FORMAT))
+    logger.addHandler(handler)
     atexit.register(logging.shutdown)
 
 
