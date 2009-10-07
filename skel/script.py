@@ -87,8 +87,8 @@ def main(argv=None):
         end = timer()
         logging.info('done')
         logging.info('elapsed time: %s', datetime.timedelta(seconds=end-start))
-    except SystemExit:
-        return 0
+    except SystemExit, exit:
+        return exit.code
     except KeyboardInterrupt:
         logging.warning('KeyboardInterrupt')
         return 2
