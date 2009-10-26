@@ -14,6 +14,8 @@ filetype indent plugin on
 " syntax and automatically load ~/.vimcolor
 if &t_Co > 2 || has("gui_running")
 	syntax on
+	set guioptions-=m
+	set guioptions-=T
 	if filereadable(expand("<sfile>:p:h") . "/.vimcolor")
 		source <sfile>:p:h/.vimcolor
 	endif
