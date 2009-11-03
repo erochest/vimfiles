@@ -51,4 +51,5 @@ nmap <C-M-Left> <C-w>V
 
 " More movements
 nmap <C-Tab> :tabnext<CR>
+nmap <C-n> :next<CR>
 
