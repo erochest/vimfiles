@@ -53,3 +53,8 @@ nmap <C-M-Left> <C-w>V
 "nmap <C-Tab> :tabnext<CR>	" Removed after I discovered gt and gT
 nmap <C-n> :next<CR>
 
+" Haskell mode settings. From http://projects.haskell.org/haskellmode-vim/
+au Bufenter *.hs compiler ghc
+let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
+
+
