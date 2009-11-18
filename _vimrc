@@ -50,6 +50,6 @@ nmap <C-M-Right> <C-w>v
 nmap <C-M-Left> <C-w>V
 
 " More movements
-nmap <C-Tab> :tabnext<CR>
+"nmap <C-Tab> :tabnext<CR>	" Removed after I discovered gt and gT
 nmap <C-n> :next<CR>
 
