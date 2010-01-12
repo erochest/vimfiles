@@ -5,4 +5,5 @@ setlocal shiftwidth=4
 setlocal textwidth=0
 setlocal cindent
 setlocal foldcolumn=1
+setlocal omnifunc=ccomplete#Complete
 

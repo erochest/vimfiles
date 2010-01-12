@@ -6,7 +6,8 @@ setlocal smarttab
 setlocal textwidth=0
 setlocal foldcolumn=1
 setlocal foldmethod=indent
-setlocal omnifunc=pysmell#Complete
+" setlocal omnifunc=pysmell#Complete
+setlocal omnifunc=pythoncomplete#Complete
 
 " hooks into the skel system
 function! PySkelS()

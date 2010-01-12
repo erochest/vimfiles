@@ -6,6 +6,7 @@ setlocal shiftwidth=2
 setlocal textwidth=0
 setlocal foldcolumn=1
 setlocal foldmethod=indent
+setlocal omnifunc=htmlcomplete#CompleteTags
 
 "source ~/vim/xhtml.vim
 

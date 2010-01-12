@@ -8,6 +8,7 @@ setlocal autoindent
 setlocal backspace=indent,eol,start
 setlocal foldmethod=indent
 setlocal foldcolumn=1
+setlocal omnifunc=xmlcomplete#CompleteTags
 
 " standard entities
 imap <buffer> <LocalLeader>& &amp;
