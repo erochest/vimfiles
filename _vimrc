@@ -81,11 +81,11 @@ let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
 
 function ChCwd()
 	execute "chdir " . escape(expand("%:p:h"), ' ')
-end
+endfunction
 
 function StripWS()
 	%s/\s\+$//ge
-end
+endfunction
 
 function! TodoListMode()
 	e ~/.todo.otl
@@ -95,7 +95,7 @@ function! TodoListMode()
 	tabnew ~/.notes.txt
 	tabfirst
 	" or 'norm! zMzr
-end
+endfunction!
 
 "}}}
 
