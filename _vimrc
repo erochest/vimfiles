@@ -1,4 +1,6 @@
 
+"{{{ Global settings
+
 set autoindent
 set backspace=2
 set backup
@@ -8,8 +10,14 @@ set hlsearch
 set incsearch
 set wildmenu
 set modeline
+set foldmethod=marker
+set number
 
 filetype indent plugin on
+
+"}}}
+
+"{{{ GUI Settings
 
 " syntax and automatically load ~/.vimcolor
 if &t_Co > 2 || has("gui_running")
@@ -27,6 +35,9 @@ elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
 endif
 
+"}}}
+
+"{{{ Mappings
 " The next four blocks are taken from
 " http://stackoverflow.com/questions/1445992/vim-file-navigation/1446480#1446480
 
@@ -53,8 +64,38 @@ nmap <C-M-Left> <C-w>V
 "nmap <C-Tab> :tabnext<CR>	" Removed after I discovered gt and gT
 nmap <C-n> :next<CR>
 
+"}}}
+
+"{{{ Haskell Settings
+" These should probably be moved to ftplugin/haskell_local.vim
+
 " Haskell mode settings. From http://projects.haskell.org/haskellmode-vim/
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
 
+"}}}
+
+"{{{ Commands & Mappings
+
+" Some of these are taken from http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/171558#171558
+
+function ChCwd()
+	execute "chdir " . escape(expand("%:p:h"), ' ')
+end
+
+function StripWS()
+	%s/\s\+$//ge
+end
+
+function! TodoListMode()
+	e ~/.todo.otl
+	Calendar
+	wincmd l
+	set foldlevel=1
+	tabnew ~/.notes.txt
+	tabfirst
+	" or 'norm! zMzr
+end
+
+"}}}
 
