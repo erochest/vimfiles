@@ -79,15 +79,17 @@ let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
 
 " Some of these are taken from http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/171558#171558
 
-function ChCwd()
+function s:ChCwd()
 	execute "chdir " . escape(expand("%:p:h"), ' ')
 endfunction
+com! ChCwd call s:ChCwd()
 
-function StripWS()
+function s:StripWS()
 	%s/\s\+$//ge
 endfunction
+com! StripWS call s:StripWS
 
-function! TodoListMode()
+function! s:TodoListMode()
 	e ~/.todo.otl
 	Calendar
 	wincmd l
@@ -96,6 +98,16 @@ function! TodoListMode()
 	tabfirst
 	" or 'norm! zMzr
 endfunction!
+com! TodoList call s:TodoListMode()
+
+function! s:DiffWithSaved()
+	let filetype=&ft
+	diffthis
+	vnew | r # | normal! 1Gdd
+	diffthis
+	exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
 
 "}}}
 
