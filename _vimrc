@@ -87,7 +87,7 @@ com! ChCwd call s:ChCwd()
 function s:StripWS()
 	%s/\s\+$//ge
 endfunction
-com! StripWS call s:StripWS
+com! StripWS call s:StripWS()
 
 function! s:TodoListMode()
 	e ~/.todo.otl
