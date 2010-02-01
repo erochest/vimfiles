@@ -9,7 +9,5 @@ setlocal cindent
 setlocal foldmethod=syntax
 setlocal foldcolumn=1
 
-compiler cs
-setlocal makeprg=nant\ -e\ -nologo
-setlocal errorformat=%f(%l\\,%c):\ %t%*[^\ ]\ CS%n:\ %m
+compiler msbuild
 

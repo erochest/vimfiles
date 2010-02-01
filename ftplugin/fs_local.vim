@@ -13,3 +13,5 @@ setlocal autoindent
 
 setlocal fileformat=unix
 
+compiler msbuild
+
