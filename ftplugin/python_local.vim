@@ -10,8 +10,8 @@ setlocal foldmethod=indent
 " setlocal omnifunc=pysmell#Complete
 setlocal omnifunc=pythoncomplete#Complete
 
-compiler pylint
-let g:pylint_onwrite = 0
+" compiler pylint
+" let g:pylint_onwrite = 0
 
 " hooks into the skel system
 function! s:PySkelS()
