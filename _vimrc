@@ -87,7 +87,7 @@ com! ChCwd call s:ChCwd()
 function s:StripWS()
 	%s/\s\+$//ge
 endfunction
-com! StripWS call s:StripWS()
+com! StripWS call s:StripWS
 
 function! s:TodoListMode()
 	e ~/.todo.otl
@@ -108,6 +108,9 @@ function! s:DiffWithSaved()
 	exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+
+nmap <Leader>j ggODate: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>Subject: <CR>Tags: <CR><CR><CR><CR>=====<CR><ESC>kkkkkk$
 
 "}}}
 
