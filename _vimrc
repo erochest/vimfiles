@@ -15,6 +15,9 @@ set number
 
 filetype indent plugin on
 
+set grepprg=ack\ --column\ --nogroup
+set grepformat=%f:%l:%c:%m
+
 "}}}
 
 "{{{ GUI Settings
