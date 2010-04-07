@@ -112,6 +112,12 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
+" From http://vim.wikia.com/wiki/Open_a_web-browser_with_the_URL_in_the_current_line
+function! Browser()
+	let line = getline(".")
+	exec "!google-chrome '" . line . "'"
+endfunction
+map <LocalLeader>http :call Browser()<CR>
 
 nmap <Leader>j ggODate: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>Subject: <CR>Tags: <CR><CR><CR><CR>=====<CR><ESC>kkkkkk$
 nmap <Leader>pl o<ESC>"+p
