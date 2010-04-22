@@ -66,6 +66,7 @@ nmap <C-M-Left> <C-w>V
 " More movements
 "nmap <C-Tab> :tabnext<CR>	" Removed after I discovered gt and gT
 nmap <C-n> :next<CR>
+nmap <C-j> :cn<CR>zvzz
 
 "}}}
 
