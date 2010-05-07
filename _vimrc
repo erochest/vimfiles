@@ -70,12 +70,13 @@ nmap <C-j> :cn<CR>zvzz
 
 "}}}
 
-"{{{ Haskell Settings
+"{{{ File-type Settings
 " These should probably be moved to ftplugin/haskell_local.vim
-
 " Haskell mode settings. From http://projects.haskell.org/haskellmode-vim/
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
+
+let vimclojure#WantNailgun = 1
 
 "}}}
 
