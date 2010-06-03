@@ -15,7 +15,7 @@ set number
 
 filetype indent plugin on
 
-set grepprg=ack\ --column\ --nogroup
+set grepprg=ack\ --column\ --nogroup\ --nopager
 set grepformat=%f:%l:%c:%m
 
 "}}}
