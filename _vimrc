@@ -2,7 +2,7 @@
 "{{{ Global settings
 
 set autoindent
-set backspace=2
+set backspace=indent,eol,start
 set backup
 set history=50
 set ruler
@@ -12,12 +12,19 @@ set wildmenu
 set modeline
 set foldmethod=marker
 set number
+set hidden
+set wildignore=*.swp,*.bak,*.pyc
 
 filetype indent plugin on
 
 set grepprg=ack\ --column\ --nogroup\ --nopager
 set grepformat=%f:%l:%c:%m
 
+"}}}
+
+"{{{ Set up Pathogen (git://github.com/tpope/vim-pathogen.git).
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
 "}}}
 
 "{{{ GUI Settings

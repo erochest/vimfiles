@@ -480,6 +480,7 @@ taglist-session	taglist.txt	/*taglist-session*
 taglist-todo	taglist.txt	/*taglist-todo*
 taglist-using	taglist.txt	/*taglist-using*
 taglist.txt	taglist.txt	/*taglist.txt*
+todotxt	todotxt.txt	/*todotxt*
 tvo	otl.txt	/*tvo*
 tvo--	otl.txt	/*tvo--*
 tvo-<C-CR>	otl.txt	/*tvo-<C-CR>*
