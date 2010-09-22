@@ -24,7 +24,7 @@ set grepformat=%f:%l:%c:%m
 "}}}
 
 "{{{ Set up Pathogen (git://github.com/tpope/vim-pathogen.git).
-call pathogen#helptags()
+"call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 "}}}
 
