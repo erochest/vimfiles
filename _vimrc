@@ -12,7 +12,6 @@ set wildmenu
 set modeline
 set foldmethod=marker
 set number
-set hidden
 set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
 
