@@ -135,6 +135,12 @@ function! Browser()
 endfunction
 map <LocalLeader>http :call Browser()<CR>
 
+" Expand to a larger window size.
+function! s:ExpandWindow()
+	set lines=56 columns=120
+endfunction
+com! ExpandWindow call s:ExpandWindow()
+
 nmap <Leader>j ggODate: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>Subject: <CR>Tags: <CR><CR><CR><CR>=====<CR><ESC>kkkkkk$
 nmap <Leader>pl o<ESC>"+p
 nmap <Leader>dl "+dd
