@@ -1,4 +1,11 @@
 
+"{{{ Set up Pathogen (git://github.com/tpope/vim-pathogen.git).
+"call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+filetype off	" Necessary on Ubuntu (at least), to make sure pathogen
+		" picks up ftdetect directories in plugins.
+"}}}
+
 "{{{ Global settings
 
 set autoindent
@@ -15,6 +22,7 @@ set number
 set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
 
+syntax on
 filetype indent plugin on
 
 set grepprg=ack\ --column\ --nogroup\ --nopager
@@ -22,16 +30,10 @@ set grepformat=%f:%l:%c:%m
 
 "}}}
 
-"{{{ Set up Pathogen (git://github.com/tpope/vim-pathogen.git).
-"call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-"}}}
-
 "{{{ GUI Settings
 
 " syntax and automatically load ~/.vimcolor
 if &t_Co > 2 || has("gui_running")
-	syntax on
 	set guioptions-=m
 	set guioptions-=T
 	if filereadable(expand("<sfile>:p:h") . "/.vimcolor")
