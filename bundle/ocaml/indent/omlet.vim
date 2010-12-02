@@ -49,7 +49,8 @@ setlocal expandtab
 setlocal fo=croq
 syntax enable
 setlocal indentexpr=GetOMLetIndent(v:lnum)
-setlocal indentkeys=0{,0},!^F,o,O,0=let\ ,0=and,0=in,0=end,0),0],0=\|],0=do,0=done,0=then,0=else,0=with,0\|,0=->,0=;;,0=module,0=struct,0=sig,0=class,0=object,0=val,0=method,0=initializer,0=inherit,0=open,0=include,0=exception,0=external,0=type,0=&&,0^,0*,0\,,0=::,0@,0+,0/,0-
+"setlocal indentkeys=0{,0},!^F,o,O,0=let\ ,0=and,0=in,0=end,0),0],0=\|],0=do,0=done,0=then,0=else,0=with,0\|,0=->,0=;;,0=module,0=struct,0=sig,0=class,0=object,0=val,0=method,0=initializer,0=inherit,0=open,0=include,0=exception,0=external,0=type,0=&&,0^,0*,0\,,0=::,0@,0+,0/,0-
+setlocal indentkeys=0{,0},!^F,o,O,0=and,0=in,0=end,0),0],0=\|],0=do,0=done,0=then,0=else,0=with,0\|,0=->,0=;;,0=module,0=struct,0=sig,0=class,0=object,0=val,0=method,0=initializer,0=inherit,0=open,0=include,0=exception,0=external,0=type,0=&&,0^,0*,0\,,0=::,0@,0+,0/,0-
 
 " Get the modeline
 let s:s = line2byte(line('.'))+col('.')-1
