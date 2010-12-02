@@ -3,3 +3,4 @@ bundle/scala=http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src
 bundle/nerdtree=git://github.com/scrooloose/nerdtree.git
 bundle/surround=git://github.com/tpope/vim-surround.git
 bundle/repeat=git://github.com/tpope/vim-repeat.git
+bundle/vcscommand=git://repo.or.cz/vcscommand
