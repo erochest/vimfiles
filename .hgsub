@@ -1,2 +1,3 @@
 bundle/xmledit=git://github.com/sukima/xmledit.git
 bundle/scala=http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src/vim 
+bundle/nerdtree=git://github.com/scrooloose/nerdtree.git
