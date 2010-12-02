@@ -2,11 +2,11 @@
 " What Is This: Calendar
 " File: calendar.vim
 " Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
-" Last Change: Tue, 24 Nov 2009
-" Version: 2.0
+" Last Change: 06-May-2010.
+" Version: 2.2
 " Thanks:
 "     Ingo Karkat                   : bug fix
-"     Thinca                        : bug report
+"     Thinca                        : bug report, bug fix
 "     Yu Pei                        : bug report
 "     Per Winkvist                  : bug fix
 "     Serge (gentoosiast) Koksharov : bug fix
@@ -56,6 +56,9 @@
 "     <Leader>ch
 "       show horizontal calendar ...
 " ChangeLog:
+"     2.2  : http://gist.github.com/355513#file_customizable_keymap.diff
+"            http://gist.github.com/355513#file_winfixwidth.diff
+"     2.1  : bug fix, set filetype 'calendar'.
 "     2.0  : bug fix, many bug fix and enhancements.
 "     1.9  : bug fix, use nnoremap.
 "     1.8  : bug fix, E382 when close diary.
@@ -315,7 +318,7 @@
 "       :echo calendar_version
 " GetLatestVimScripts: 52 1 :AutoInstall: calendar.vim
 
-let g:calendar_version = "2.0"
+let g:calendar_version = "2.2"
 if &compatible
   finish
 endif
@@ -994,7 +997,9 @@ function! Calendar(...)
       setlocal winfixheight
     else
       execute 'to '.vcolumn.'vsplit __Calendar'
+      setlocal winfixwidth
     endif
+    call s:CalendarBuildKeymap(dir, vyear, vmnth)
     setlocal noswapfile
     setlocal buftype=nofile
     setlocal bufhidden=delete
@@ -1008,6 +1013,7 @@ function! Calendar(...)
     setlocal modifiable
     setlocal nolist
     let b:Calendar='Calendar'
+    setlocal filetype=calendar
     " is this a vertical (0) or a horizontal (1) split?
   endif
   if g:calendar_datetime == "statusline"
@@ -1061,24 +1067,6 @@ function! Calendar(...)
 
   let vyear = vyear_org
   let vmnth = vmnth_org
-
-  "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  "+++ build keymap
-  "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  " make keymap
-  execute 'nnoremap <silent> <buffer> q :close<bar>wincmd p<cr>'
-
-  execute 'nnoremap <silent> <buffer> <cr> :call <SID>CalendarDoAction()<cr>'
-  execute 'nnoremap <silent> <buffer> <2-LeftMouse> :call <SID>CalendarDoAction()<cr>'
-  execute 'nnoremap <silent> <buffer> t :call Calendar(b:CalendarDir)<cr>'
-  execute 'nnoremap <silent> <buffer> ? :call <SID>CalendarHelp()<cr>'
-  execute 'nnoremap <silent> <buffer> r :call Calendar(' . dir . ',' . vyear . ',' . vmnth . ')<cr>'
-  let pnav = s:GetToken(g:calendar_navi_label, ',', 1)
-  let nnav = s:GetToken(g:calendar_navi_label, ',', 3)
-  execute 'nnoremap <silent> <buffer> <Left>  :call <SID>CalendarDoAction("<' . pnav . '")<cr>'
-  execute 'nnoremap <silent> <buffer> <Right> :call <SID>CalendarDoAction("' . nnav . '>")<cr>'
-  execute 'nnoremap <silent> <buffer> <Up>    :call Calendar('.dir.','.(vyear-1).','.vmnth.')<cr>'
-  execute 'nnoremap <silent> <buffer> <Down>  :call Calendar('.dir.','.(vyear+1).','.vmnth.')<cr>'
 
   "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   "+++ build highlight
@@ -1232,6 +1220,38 @@ function! s:CalendarVar(var)
     return ''
   endif
   exec 'return ' . a:var
+endfunction
+
+"*****************************************************************
+"* CalendarBuildKeymap : build keymap
+"*----------------------------------------------------------------
+"*****************************************************************
+function! s:CalendarBuildKeymap(dir, vyear, vmnth)
+  " make keymap
+  execute 'nnoremap <silent> <buffer> q :close<bar>wincmd p<cr>'
+
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarDoAction  :call <SID>CalendarDoAction()<cr>'
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarDoAction  :call <SID>CalendarDoAction()<cr>'
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarGotoToday :call Calendar(b:CalendarDir)<cr>'
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarShowHelp  :call <SID>CalendarHelp()<cr>'
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarReDisplay :call Calendar(' . a:dir . ',' . a:vyear . ',' . a:vmnth . ')<cr>'
+  let pnav = s:GetToken(g:calendar_navi_label, ',', 1)
+  let nnav = s:GetToken(g:calendar_navi_label, ',', 3)
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarGotoPrevMonth :call <SID>CalendarDoAction("<' . pnav . '")<cr>'
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarGotoNextMonth :call <SID>CalendarDoAction("' . nnav . '>")<cr>'
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarGotoPrevYear  :call Calendar('.a:dir.','.(a:vyear-1).','.a:vmnth.')<cr>'
+  execute 'nnoremap <silent> <buffer> <Plug>CalendarGotoNextYear  :call Calendar('.a:dir.','.(a:vyear+1).','.a:vmnth.')<cr>'
+
+  nmap <buffer> <CR>          <Plug>CalendarDoAction
+  nmap <buffer> <2-LeftMouse> <Plug>CalendarDoAction
+  nmap <buffer> t             <Plug>CalendarGotoToday
+  nmap <buffer> ?             <Plug>CalendarShowHelp
+  nmap <buffer> r             <Plug>CalendarReDisplay
+
+  nmap <buffer> <Left>  <Plug>CalendarGotoPrevMonth
+  nmap <buffer> <Right> <Plug>CalendarGotoNextMonth
+  nmap <buffer> <Up>    <Plug>CalendarGotoPrevYear
+  nmap <buffer> <Down>  <Plug>CalendarGotoNextYear
 endfunction
 
 "*****************************************************************
