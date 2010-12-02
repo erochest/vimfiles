@@ -7,3 +7,4 @@ bundle/vcscommand=git://repo.or.cz/vcscommand
 bundle/visual_studio/plugin=http://vim-visual-studio.googlecode.com/svn/trunk
 bundle/command-t=git://git.wincent.com/command-t.git
 bundle/snipmate=git://github.com/msanders/snipmate.vim.git
+bundle/vim-ruby=git://github.com/vim-ruby/vim-ruby.git
