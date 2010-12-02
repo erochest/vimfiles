@@ -1,9 +1,11 @@
 
 "{{{ Set up Pathogen (git://github.com/tpope/vim-pathogen.git).
 "call pathogen#helptags()
-"filetype off	" Necessary on Ubuntu (at least), to make sure pathogen
+filetype off	" Necessary on Ubuntu (at least), to make sure pathogen
 		" picks up ftdetect directories in plugins.
 call pathogen#runtime_append_all_bundles()
+syntax on
+filetype plugin indent on
 "}}}
 
 "{{{ Global settings
@@ -21,11 +23,6 @@ set foldmethod=marker
 set number
 set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
-
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
 
 set grepprg=ack\ --column\ --nogroup\ --nopager
 set grepformat=%f:%l:%c:%m
