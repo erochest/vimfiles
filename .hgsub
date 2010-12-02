@@ -5,3 +5,4 @@ bundle/surround=git://github.com/tpope/vim-surround.git
 bundle/repeat=git://github.com/tpope/vim-repeat.git
 bundle/vcscommand=git://repo.or.cz/vcscommand
 bundle/visual_studio/plugin=http://vim-visual-studio.googlecode.com/svn/trunk
+bundle/command-t=git://git.wincent.com/command-t.git
