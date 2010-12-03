@@ -10,6 +10,10 @@ hg clone http://vim-visual-studio.googlecode.com/svn/trunk bundle/visual_studio/
 hg clone git://git.wincent.com/command-t.git bundle/command-t
 hg clone git://github.com/msanders/snipmate.vim.git bundle/snipmate
 hg clone git://github.com/vim-ruby/vim-ruby.git bundle/vim-ruby
+hg clone git://github.com/tpope/vim-rails.git bundle/vim-rails
+hg clone git://github.com/tpope/vim-endwise.git bundle/vim-endwise
+hg clone git://github.com/tpope/vim-abolish.git bundle/vim-abolish
+hg clone git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter
 
 # Finally, command-t has a Ruby extension that needs to be built.
 cd bundle/command-t/
