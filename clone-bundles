@@ -1,0 +1,19 @@
+#!/bin/sh
+
+hg clone git://github.com/sukima/xmledit.git bundle/xmledit
+hg clone http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src/vim  bundle/scala
+hg clone git://github.com/scrooloose/nerdtree.git bundle/nerdtree
+hg clone git://github.com/tpope/vim-surround.git bundle/surround
+hg clone git://github.com/tpope/vim-repeat.git bundle/repeat
+hg clone git://repo.or.cz/vcscommand bundle/vcscommand
+hg clone http://vim-visual-studio.googlecode.com/svn/trunk bundle/visual_studio/plugin
+hg clone git://git.wincent.com/command-t.git bundle/command-t
+hg clone git://github.com/msanders/snipmate.vim.git bundle/snipmate
+hg clone git://github.com/vim-ruby/vim-ruby.git bundle/vim-ruby
+
+# Finally, command-t has a Ruby extension that needs to be built.
+cd bundle/command-t/
+ruby extconf.rb
+make
+cd ../..
+
