@@ -15,6 +15,13 @@ hg clone git://github.com/tpope/vim-endwise.git bundle/vim-endwise
 hg clone git://github.com/tpope/vim-abolish.git bundle/vim-abolish
 hg clone git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter
 
+# Set up sparkup
+hg clone git://github.com/rstacruz/sparkup.git bundle/sparkup-all
+pushd bundle/sparkup-all
+hg up master
+popd
+ln -s sparkup-all/vim bundle/sparkup
+
 # Finally, command-t has a Ruby extension that needs to be built.
 cd bundle/command-t/
 ruby extconf.rb
