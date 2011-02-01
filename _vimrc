@@ -110,11 +110,10 @@ endfunction
 com! StripWS call s:StripWS()
 
 function! s:TodoListMode()
-	e ~/.todo.otl
+	e ~/gtd/todo.txt
 	Calendar
 	wincmd l
-	set foldlevel=1
-	tabnew ~/.notes.txt
+	tabnew ~/gtd/journal.mkd
 	tabfirst
 	" or 'norm! zMzr
 endfunction!
