@@ -15,6 +15,7 @@ hg clone git://github.com/tpope/vim-endwise.git bundle/vim-endwise
 hg clone git://github.com/tpope/vim-abolish.git bundle/vim-abolish
 hg clone git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter
 hg clone git://github.com/tpope/vim-ragtag.git bundle/ragtag
+hg clone git://github.com/othree/html5.vim.git bundle/html5
 
 # Set up sparkup
 hg clone git://github.com/rstacruz/sparkup.git bundle/sparkup-all
