@@ -83,6 +83,9 @@ nmap <C-M-Left> <C-w>V
 nmap <C-n> :next<CR>
 nmap <C-j> :cn<CR>zvzz
 
+" Turn off spell-check. This makes HTML and other things hard to read.
+nmap <F12> :set nospell<CR>
+
 "}}}
 
 "{{{ File-type Settings
