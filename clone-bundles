@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 hg clone git://github.com/sukima/xmledit.git bundle/xmledit
 hg clone http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src/vim  bundle/scala
@@ -6,7 +6,7 @@ hg clone git://github.com/scrooloose/nerdtree.git bundle/nerdtree
 hg clone git://github.com/tpope/vim-surround.git bundle/surround
 hg clone git://github.com/tpope/vim-repeat.git bundle/repeat
 hg clone git://repo.or.cz/vcscommand bundle/vcscommand
-hg clone http://vim-visual-studio.googlecode.com/svn/trunk bundle/visual_studio/plugin
+# hg clone http://vim-visual-studio.googlecode.com/svn/trunk bundle/visual_studio/plugin
 hg clone git://git.wincent.com/command-t.git bundle/command-t
 hg clone git://github.com/msanders/snipmate.vim.git bundle/snipmate
 hg clone git://github.com/vim-ruby/vim-ruby.git bundle/vim-ruby
@@ -23,11 +23,23 @@ hg clone git://github.com/rstacruz/sparkup.git bundle/sparkup-all
 pushd bundle/sparkup-all
 hg up master
 popd
-ln -s sparkup-all/vim bundle/sparkup
+ln -s bundle/sparkup-all/vim bundle/sparkup
+
+# Update everything that can be to master.
+pushd bundle
+for hgdir in $(find . -name .hg -a -d -maxdepth 2); do
+	repodir=$(dirname $hgdir)
+	echo $repodir
+	hg -R $repodir bookmarks | grep master
+	if [ $? -eq 0 ]; then
+		hg -R $repodir up master
+	fi
+	echo
+done
+popd
 
 # Finally, command-t has a Ruby extension that needs to be built.
-cd bundle/command-t/
-ruby extconf.rb
-make
-cd ../..
+pushd bundle/command-t/
+rake make
+popd
 
