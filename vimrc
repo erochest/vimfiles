@@ -10,22 +10,22 @@ filetype plugin indent on
 
 "{{{ Global settings
 
-set autoindent
+set autoindent  		" missing
 set backspace=indent,eol,start
-set backup
-set history=50
+set backup 			" missing
+set history=50 			" missing
 set ruler
 set hlsearch
 set incsearch
-set wildmenu
+set wildmenu 			" missing
 set modeline
-set foldmethod=marker
+set foldmethod=marker 		" missing
 set number
 set wildignore=*.swp,*.bak,*.pyc
-set pastetoggle=<F2>
+set pastetoggle=<F2> 		" missing
 
-set grepprg=ack\ --column\ --nogroup\ --nopager
-set grepformat=%f:%l:%c:%m
+set grepprg=ack\ --column\ --nogroup\ --nopager 	" missing
+set grepformat=%f:%l:%c:%m 				" missing
 
 "}}}
 
