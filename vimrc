@@ -48,6 +48,8 @@ if has("X11")
 	set guifont=DejaVu\ Sans\ Mono\ 10
 elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
+elseif has("gui_running")
+	set guifont=Lucida\ Sans\ Typewriter\ Regular:h12
 endif
 
 "}}}
