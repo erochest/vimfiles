@@ -17,6 +17,8 @@ hg clone git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter
 hg clone git://github.com/godlygeek/tabular.git bundle/tabular
 hg clone git://github.com/tpope/vim-ragtag.git bundle/ragtag
 hg clone git://github.com/othree/html5.vim.git bundle/html5
+# hg clone git://github.com/klokane/vim-phpunit.git bundle/phpunit/plugin/
+hg clone git://github.com/afternoon/vim-phpunit.git bundle/phpunit
 
 # Set up sparkup
 hg clone git://github.com/rstacruz/sparkup.git bundle/sparkup-all
