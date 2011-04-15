@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.sparql setfiletype sparql
+au BufNewFile,BufRead *.spq setfiletype sparql
