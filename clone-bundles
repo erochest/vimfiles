@@ -21,6 +21,9 @@ hg clone git://github.com/mrtazz/simplenote.vim.git bundle/simplenote
 # hg clone git://github.com/klokane/vim-phpunit.git bundle/phpunit/plugin/
 hg clone git://github.com/afternoon/vim-phpunit.git bundle/phpunit
 
+mkdir -p bundle/phpcomplete
+hg clone git://github.com/shawncplus/phpcomplete.vim.git bundle/phpcomplete/autoload
+
 # Set up sparkup
 hg clone git://github.com/rstacruz/sparkup.git bundle/sparkup-all
 pushd bundle/sparkup-all
