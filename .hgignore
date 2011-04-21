@@ -7,3 +7,4 @@ tags
 *.swp
 .DS_Store
 *.orig
+bundle/*

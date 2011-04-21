@@ -1,11 +1,48 @@
 
-"{{{ Set up Pathogen (git://github.com/tpope/vim-pathogen.git).
-"call pathogen#helptags()
-filetype off	" Necessary on Ubuntu (at least), to make sure pathogen
-		" picks up ftdetect directories in plugins.
-call pathogen#runtime_append_all_bundles()
-syntax on
-filetype plugin indent on
+"{{{ Set up Vundle (git://github.com/gmarik/vundle) and other plugins
+set rtp+=~/.vim/vundle/
+call vundle#rc()
+
+"filetype off
+" Bundle 'git://github.com/sukima/xmledit.git'
+" Bundle 'Superior-Haskell-Interaction-Mode-SHIM'
+Bundle 'git://github.com/ewiplayer/vim-scala.git'
+Bundle 'git://github.com/scrooloose/nerdtree.git'
+Bundle 'git://github.com/tpope/vim-surround.git'
+Bundle 'git://github.com/tpope/vim-repeat.git'
+Bundle 'git://repo.or.cz/vcscommand'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://github.com/msanders/snipmate.vim.git'
+Bundle 'git://github.com/vim-ruby/vim-ruby.git'
+Bundle 'git://github.com/tpope/vim-rails.git'
+Bundle 'git://github.com/tpope/vim-endwise.git'
+Bundle 'git://github.com/tpope/vim-abolish.git'
+Bundle 'git://github.com/scrooloose/nerdcommenter.git'
+Bundle 'git://github.com/godlygeek/tabular.git'
+" Bundle 'git://github.com/tpope/vim-ragtag.git'
+Bundle 'git://github.com/othree/html5.vim.git'
+Bundle 'git://github.com/mrtazz/simplenote.vim.git'
+" Bundle 'git://github.com/afternoon/vim-phpunit.git'
+Bundle 'phpcomplete.vim'
+Bundle 'git://github.com/rstacruz/sparkup.git'
+
+" Add back in:
+Bundle 'VimOutliner'
+Bundle 'vimoutliner-colorscheme-fix'
+Bundle 'taglist.vim'
+Bundle 'project.tar.gz'
+Bundle 'sparql.vim'
+Bundle 'n3.vim'
+Bundle 'Processing'
+
+" {{{ Still AWOL:
+"  * vimclojure
+"  * todotxt
+"  * dbext
+" }}}
+
+ 
+"filetype plugin indent on
 "}}}
 
 "{{{ Global settings
@@ -26,6 +63,9 @@ set pastetoggle=<F2>
 
 set grepprg=ack\ --column\ --nogroup\ --nopager
 set grepformat=%f:%l:%c:%m
+
+set directory=~/.tmp,~/tmp,/tmp
+set backupdir=~/.tmp,~/tmp,/tmp
 
 " set formatprg=par\ -w60
 " map <A-q> {v}!par -jw60<CR>
