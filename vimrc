@@ -3,7 +3,7 @@
 set rtp+=~/.vim/vundle/
 call vundle#rc()
 
-"filetype off
+filetype off
 " Bundle 'git://github.com/sukima/xmledit.git'
 " Bundle 'Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'git://github.com/ewiplayer/vim-scala.git'
@@ -21,10 +21,11 @@ Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/godlygeek/tabular.git'
 " Bundle 'git://github.com/tpope/vim-ragtag.git'
 Bundle 'git://github.com/othree/html5.vim.git'
-Bundle 'git://github.com/mrtazz/simplenote.vim.git'
+" Bundle 'git://github.com/mrtazz/simplenote.vim.git'
 " Bundle 'git://github.com/afternoon/vim-phpunit.git'
 Bundle 'phpcomplete.vim'
 Bundle 'git://github.com/rstacruz/sparkup.git'
+Bundle 'Gundo'
 
 " Add back in:
 Bundle 'VimOutliner'
@@ -42,7 +43,7 @@ Bundle 'Processing'
 " }}}
 
  
-"filetype plugin indent on
+filetype plugin indent on
 "}}}
 
 "{{{ Global settings
