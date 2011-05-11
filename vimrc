@@ -4,7 +4,7 @@ set rtp+=~/.vim/vundle/
 call vundle#rc()
 
 filetype off
-" Bundle 'git://github.com/sukima/xmledit.git'
+Bundle 'git://github.com/sukima/xmledit.git'
 " Bundle 'Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'git://github.com/ewiplayer/vim-scala.git'
 Bundle 'git://github.com/scrooloose/nerdtree.git'
