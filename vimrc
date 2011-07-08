@@ -175,7 +175,7 @@ function! s:GtdMode()
 	tabe ~/gtd/note/review
 	tabe ~/Dropbox/links.txt
 	tabe ~/Dropbox/quotes
-	tabe ~/Dropbox/links.txt
+	tabe ~/Dropbox/friday-list.mkd
 	tabnext 1
 endfunction
 com! Gtd call s:GtdMode()
