@@ -203,7 +203,8 @@ function! s:ExpandWindow()
 endfunction
 com! ExpandWindow call s:ExpandWindow()
 
-nmap <Leader>j ggODate: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>Subject: <CR>Tags: <CR><CR><ESC>kkk$
+nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
+nmap <Leader>archive :r!todo.sh archive<CR>
 nmap <Leader>pl o<ESC>"+p
 nmap <Leader>dl "+dd
 nmap <Leader>yy "+yy
