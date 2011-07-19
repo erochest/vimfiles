@@ -174,7 +174,7 @@ function! s:GtdMode()
 	e ~/Dropbox/gtd/todo.txt
 	tabe ~/gtd/note/review
 	tabe ~/Dropbox/links.txt
-	G
+	normal G
 	tabe ~/Dropbox/quotes
 	tabe ~/Dropbox/journal.mkd
 	sp ~/Dropbox/melina.mkd
