@@ -65,6 +65,9 @@ set pastetoggle=<F2>
 set grepprg=ack\ --column\ --nogroup\ --nopager
 set grepformat=%f:%l:%c:%m
 
+" From http://stolowski.blogspot.com/2011/07/finding-your-way-in-vim.html
+nmap <Leader>fcw :copen<CR><C-w>k:grep <C-R>=expand("<cword>")<CR><CR>
+
 set directory=~/.tmp,~/tmp,/tmp
 set backupdir=~/.tmp,~/tmp,/tmp
 
