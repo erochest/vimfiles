@@ -27,6 +27,7 @@ Bundle 'phpcomplete.vim'
 Bundle 'git://github.com/rstacruz/sparkup.git'
 Bundle 'Gundo'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+Bundle 'git://github.com/tpope/vim-fugitive.git'
 
 " Add back in:
 Bundle 'VimOutliner'
