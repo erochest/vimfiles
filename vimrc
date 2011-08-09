@@ -26,6 +26,7 @@ Bundle 'git://github.com/mrtazz/simplenote.vim.git'
 Bundle 'phpcomplete.vim'
 Bundle 'git://github.com/rstacruz/sparkup.git'
 Bundle 'Gundo'
+Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 
 " Add back in:
 Bundle 'VimOutliner'
