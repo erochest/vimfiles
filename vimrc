@@ -29,6 +29,7 @@ Bundle 'Gundo'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'VimClojure'
+Bundle 'jnwhiteh/vim-golang'
 
 " Add back in:
 Bundle 'VimOutliner'
