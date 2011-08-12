@@ -28,6 +28,7 @@ Bundle 'git://github.com/rstacruz/sparkup.git'
 Bundle 'Gundo'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'VimClojure'
 
 " Add back in:
 Bundle 'VimOutliner'
@@ -39,11 +40,9 @@ Bundle 'n3.vim'
 Bundle 'Processing'
 
 " {{{ Still AWOL:
-"  * vimclojure
 "  * todotxt
 "  * dbext
 " }}}
-
  
 filetype plugin indent on
 "}}}
@@ -146,7 +145,7 @@ nmap <F12> :set nospell<CR>
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
 
-let vimclojure#WantNailgun = 1
+" let vimclojure#WantNailgun = 1
 
 "}}}
 
