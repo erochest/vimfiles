@@ -1,0 +1,22 @@
+
+snippet story
+	Story: ${1:title}
+	  As ${2:role}
+	  I want ${3:feature}
+	  So that ${4:benefit}
+snippet scenario
+	Scenario ${1:n}: ${2:title}
+	  Given ${3:context-1}
+	  When ${5:action}
+	  Then ${6:result}
+snippet when
+	When ${1:action}
+	Then ${2:result-1}
+snippet inorderto
+	In order to ${1:benefit}
+	As ${2:role}
+	I want ${3:feature}
+	So that ${4:action}
+snippet examples
+	Examples:
+	  | ${1:column-1}
