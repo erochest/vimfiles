@@ -40,6 +40,7 @@ Bundle 'tpope/vim-javascript'
 Bundle 'tpope/vim-indent-object'
 Bundle 'vim-scripts/Color-Sampler-Pack'
 Bundle 'tpope/vim-rake'
+Bundle 'majutsushi/tagbar'
 
 " Add back in:
 Bundle 'VimOutliner'
