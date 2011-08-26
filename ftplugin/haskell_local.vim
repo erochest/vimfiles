@@ -7,3 +7,6 @@ setlocal smarttab
 setlocal textwidth=0
 setlocal foldcolumn=1
 
+" This is for Snap.
+let b:ghc_staticoptions = "-isrc -w -XTypeSynonymInstances -XMultiParamTypeClasses"
+

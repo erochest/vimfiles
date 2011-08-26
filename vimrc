@@ -155,7 +155,9 @@ nmap <F12> :set nospell<CR>
 " These should probably be moved to ftplugin/haskell_local.vim
 " Haskell mode settings. From http://projects.haskell.org/haskellmode-vim/
 au Bufenter *.hs compiler ghc
-let g:haddock_browser = "C:/Program Files/Mozilla Firefox/firefox.exe"
+
+let g:haddock_browser = "open"
+let g:haddock_browser_callformat = "%s %s"
 
 " let vimclojure#WantNailgun = 1
 
