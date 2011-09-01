@@ -4,6 +4,16 @@ set rtp+=~/.vim/vundle/
 call vundle#rc()
 
 filetype off
+
+if has('win32')
+	set rtp+=~/vimfiles/bundle/vundle
+else
+	set rtp+=~/.vim/bundle/vundle/
+endif
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
 Bundle 'git://github.com/sukima/xmledit.git'
 " Bundle 'Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'git://github.com/ewiplayer/vim-scala.git'
@@ -106,7 +116,7 @@ if has("X11")
 elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
 elseif has("gui_running")
-	set guifont=Lucida\ Sans\ Typewriter\ Regular:h12
+	set guifont=DejaVu\ Sans\ Mono:h13
 endif
 
 "}}}
