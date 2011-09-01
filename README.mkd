@@ -1,0 +1,5 @@
+
+To install:
+
+    curl https://bitbucket.org/erochest/vimfiles/raw/tip/vimrc -o - | bash
+
