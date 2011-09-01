@@ -37,7 +37,7 @@ end
 
 desc 'This runs :BundleInstall.'
 task :bundleinstall do
-  sh %{vim -c :BundleInstall -c :q}
+  sh %{vim -f -c :BundleInstall -c :q}
 end
 
 desc 'This compiles Command-T.'
