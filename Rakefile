@@ -35,9 +35,11 @@ end
 
 desc 'This runs :BundleInstall.'
 task :bundleinstall do
-  sh %{vim -f -c :BundleInstall -c :q}
-rescue Error => err
-  puts "Error running :BundleInstall: #{err}"
+  begin
+    sh %{vim -f -c :BundleInstall -c :q}
+  rescue Exception => err
+    puts "Error running :BundleInstall: #{err}"
+  end
 end
 
 desc 'This compiles Command-T.'
