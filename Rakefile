@@ -1,6 +1,4 @@
 
-# TODO: This leaves out haskellmode.
-
 require 'fileutils'
 
 CWD = File.dirname(__FILE__)

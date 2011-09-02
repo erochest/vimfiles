@@ -10,7 +10,8 @@ if has('win32')
 else
 	set rtp+=~/.vim/bundle/vundle/
 endif
-call vundle#rc()
+" This line is in the instructions, but it doesn't appear to work.
+" call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
@@ -52,7 +53,7 @@ Bundle 'vim-scripts/Color-Sampler-Pack'
 Bundle 'tpope/vim-rake'
 Bundle 'majutsushi/tagbar'
 Bundle 'robgleeson/hammer.vim'
-
+Bundle 'lukerandall/haskellmode-vim'
 " Add back in:
 Bundle 'VimOutliner'
 Bundle 'vimoutliner-colorscheme-fix'
