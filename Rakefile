@@ -49,6 +49,6 @@ end
 
 desc 'This installs dependencies for Hammer.'
 task :hammerdepends do
-  sh %{gem install redcarpet}
+  sh %{gem install redcarpet github-markup}
 end
 
