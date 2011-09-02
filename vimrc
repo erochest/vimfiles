@@ -1,7 +1,7 @@
 
 "{{{ Set up Vundle (git://github.com/gmarik/vundle) and other plugins
 set rtp+=~/.vim/vundle/
-call vundle#rc()
+" call vundle#rc()
 
 filetype off
 

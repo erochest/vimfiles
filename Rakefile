@@ -42,7 +42,7 @@ end
 
 desc 'This compiles Command-T.'
 task :commandt do
-  sh %{cd #{CWD}/bundle/command-t/ruby/comment-t
+  sh %{cd #{CWD}/bundle/command-t/ruby/command-t
        ruby ./extconf.rb
        make}
 end
