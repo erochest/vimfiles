@@ -10,8 +10,9 @@ if has('win32')
 else
 	set rtp+=~/.vim/bundle/vundle/
 endif
-" This line is in the instructions, but it doesn't appear to work.
-" call vundle#rc()
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
