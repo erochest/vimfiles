@@ -64,6 +64,11 @@ Bundle 'sparql.vim'
 Bundle 'n3.vim'
 Bundle 'Processing'
 
+" Both of these are broken, so I've added it manually.
+" Bundle 'Conque-Shell'
+" Bundle 'http://conque.googlecode.com/files/conque_2.3.tar.gz'
+Bundle 'conque'
+
 " {{{ Still AWOL:
 "  * todotxt
 "  * dbext

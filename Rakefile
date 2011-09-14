@@ -1,5 +1,6 @@
 
 require 'fileutils'
+require 'net/http'
 
 CWD = File.dirname(__FILE__)
 
@@ -13,6 +14,7 @@ end
 desc 'This installs everything to get me up and running on Vim.'
 task :install => [:vundle,
                   :vimrc,
+                  :conque,
                   :bundleinstall,
                   :commandt,
                   :hammerdepends]
@@ -31,6 +33,14 @@ task :vimrc do
     # on windows copy
     FileUtils.cp("#{CWD}/vimrc", "#{ENV['USERPROFILE']}/_vimrc")
   end
+end
+
+desc 'This download the ConqueShell extension. This needs to be managed
+manually.'
+task :conque do
+ sh %{curl --output /tmp/conque_2.3.tar.gz http://conque.googlecode.com/files/conque_2.3.tar.gz}
+ sh %{cd bundle && tar xfz /tmp/conque_2.3.tar.gz}
+ FileUtils.mv('bundle/conque_2.3', 'bundle/conque')
 end
 
 desc 'This runs :BundleInstall.'
