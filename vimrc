@@ -241,7 +241,7 @@ endfunction
 com! ExpandWindow call s:ExpandWindow()
 
 nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
-nmap <Leader>J <Leader>j<CR><ESC>k:r!todo.sh archive<CR>{zz
+nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 nmap <Leader>archive :r!todo.sh archive<CR>
 nmap <Leader>pl o<ESC>"+p
 nmap <Leader>dl "+dd
