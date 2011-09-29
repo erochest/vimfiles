@@ -1,3 +1,14 @@
 snippet data
 	data ${1:typename} = ${2:constructor} { ${3:varname} :: ${4:type} }
 	    deriving (${5:typeclasses})
+snippet module
+	module ${1:module}
+	    (${2:exports}
+	    ) where
+snippet func
+	-- | ${1:documentation}
+	${2:name} :: ${3:signature}
+	$2 ${4:params} = 
+snippet instance
+	instance ${1:base} ${2:type} where
+		${3:functions}
