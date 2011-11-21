@@ -63,6 +63,8 @@ Bundle 'project.tar.gz'
 Bundle 'sparql.vim'
 Bundle 'n3.vim'
 Bundle 'Processing'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -248,6 +250,11 @@ nmap <Leader>pl o<ESC>"+p
 nmap <Leader>dl "+dd
 nmap <Leader>yy "+yy
 nmap <Leader>l ggO<C-R>=strftime("%M-%d-%YT%H:%M:%S %z")<CR><space>\|<space>
+
+" These are to work with FuzzyFinder.
+nmap <Leader>f :FufFileWithCurrentBufferDir<CR>
+nmap <Leader>b :FufBuffer<CR>
+nmap <Leader>t :FufTaggedFile<CR>
 
 "}}}
 
