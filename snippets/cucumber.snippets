@@ -1,14 +1,14 @@
 
-snippet story
-	Story: ${1:title}
+snippet feature
+	Feature: ${1:title}
 	  As ${2:role}
 	  I want ${3:feature}
 	  So that ${4:benefit}
 snippet scenario
-	Scenario ${1:n}: ${2:title}
-	  Given ${3:context-1}
-	  When ${5:action}
-	  Then ${6:result}
+	Scenario: ${1:title}
+	  Given ${2:context-1}
+	  When ${3:action}
+	  Then ${4:result}
 snippet when
 	When ${1:action}
 	Then ${2:result-1}
