@@ -23,7 +23,7 @@ Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://github.com/tpope/vim-surround.git'
 Bundle 'git://github.com/tpope/vim-repeat.git'
 Bundle 'git://repo.or.cz/vcscommand'
-Bundle 'git://git.wincent.com/command-t.git'
+" Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://github.com/msanders/snipmate.vim.git'
 Bundle 'git://github.com/vim-ruby/vim-ruby.git'
 Bundle 'git://github.com/tpope/vim-rails.git'
@@ -127,7 +127,7 @@ elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
 elseif has("gui_running")
 	set guifont=DejaVu\ Sans\ Mono:h13
-	set transparency=15
+	set transparency=5
 endif
 
 "}}}
