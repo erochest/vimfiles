@@ -108,6 +108,10 @@ set backupdir=~/.tmp,~/tmp,/tmp
 " map <A-q> {v}!par -jw60<CR>
 " vmap <A-q> !par -jw60<CR>
 
+" These are for NERDCommenter:
+let NERDSpaceDelims=1
+let NERDRemoveExtraSpaces=1
+
 "}}}
 
 "{{{ GUI Settings
