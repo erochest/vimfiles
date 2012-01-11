@@ -65,6 +65,7 @@ Bundle 'n3.vim'
 Bundle 'Processing'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'juvenn/mustache.vim'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
