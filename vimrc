@@ -175,6 +175,11 @@ nmap <C-j> :cn<CR>zvzz
 " Turn off spell-check. This makes HTML and other things hard to read.
 nmap <F12> :set nospell<CR>
 
+"{{{ Mappings for :Tab
+vmap t= :Tab /=<CR>
+vmap t> :Tab /[=-]><CR>
+"}}}
+
 "}}}
 
 "{{{ File-type Settings
