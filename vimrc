@@ -178,6 +178,7 @@ nmap <F12> :set nospell<CR>
 "{{{ Mappings for :Tab
 vmap t= :Tab /=<CR>
 vmap t> :Tab /[=-]><CR>
+vmap t: :Tab /:<CR>
 "}}}
 
 "}}}
