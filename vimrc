@@ -66,6 +66,7 @@ Bundle 'Processing'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'juvenn/mustache.vim'
+Bundle 'pbrisbin/html-template-syntax'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
