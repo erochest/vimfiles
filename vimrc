@@ -80,6 +80,7 @@ Bundle 'conque'
 " }}}
  
 filetype plugin indent on
+syntax on
 "}}}
 
 "{{{ Global settings
@@ -262,7 +263,7 @@ nmap <Leader>archive :r!todo.sh archive<CR>
 nmap <Leader>pl o<ESC>"+p
 nmap <Leader>dl "+dd
 nmap <Leader>yy "+yy
-nmap <Leader>l ggO<C-R>=strftime("%M-%d-%YT%H:%M:%S %z")<CR><space>\|<space>
+nmap <Leader>l ggO<C-R>=strftime("%m-%d-%YT%H:%M:%S %z")<CR><space>\|<space>
 
 " These are to work with FuzzyFinder.
 nmap <Leader>f :FufFileWithCurrentBufferDir<CR>
