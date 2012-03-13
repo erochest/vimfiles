@@ -17,7 +17,9 @@ task :install => [:vundle,
                   :conque,
                   :bundleinstall,
                   :commandt,
-                  :hammerdepends]
+                  :hammerdepends,
+                  'coffee:snippets'
+]
 
 desc 'This clones the Vundle repository.'
 task :vundle do
@@ -62,5 +64,12 @@ end
 desc 'This installs dependencies for Hammer.'
 task :hammerdepends do
   sh %{gem install redcarpet github-markup}
+end
+
+namespace :coffee do
+  desc 'This downloads the coffee.snippets file.'
+  task :snippets do
+    sh %{curl --output snippets/coffee.snippet https://raw.github.com/carlosvillu/coffeScript-VIM-Snippets/master/snippets/coffee.snippets}
+  end
 end
 
