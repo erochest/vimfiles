@@ -69,6 +69,7 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'pbrisbin/html-template-syntax'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'walm/jshint.vim'
+Bundle 'clvv/a.vim'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
