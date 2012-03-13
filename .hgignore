@@ -8,3 +8,4 @@ tags
 .DS_Store
 *.orig
 bundle/*
+snippets/coffee.snippet
