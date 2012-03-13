@@ -135,8 +135,8 @@ if has("X11")
 elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
 elseif has("gui_running")
-	set guifont=DejaVu\ Sans\ Mono:h13
-	set transparency=5
+	set guifont=Bitstream\ Vera\ Sans\ Mono:h13
+	set transparency=10
 endif
 
 "}}}
