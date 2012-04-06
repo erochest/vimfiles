@@ -7,10 +7,10 @@ usage: %prog [options]
 """
 
 
+import argparse
 import atexit
 import datetime
 import logging
-import optparse
 import os
 import sys
 import time
@@ -28,6 +28,7 @@ LOG_LEVELS = {
     'normal': logging.INFO,
     'verbose': logging.DEBUG,
     }
+LOG_LEVEL_KEYS = [ 'very-quiet', 'quiet', 'normal', 'verbose' ]
 
 if sys.platform == 'win32':
     timer = time.clock
@@ -42,18 +43,24 @@ def parse_args(argv):
 
     """
 
-    op = optparse.OptionParser(usage=__doc__, version='%prog '+__version__)
-    op.add_option('--log-dest', action='store', dest='log_file',
-                  default='STDOUT',
-                  help='The name of the file to send log messages to. '
-                       '"STDOUT" will print to the screen. Default=%default.')
-    op.add_option('--log-level', action='store', dest='log_level',
-                  choices=LOG_LEVELS.keys(), default='normal',
-                  help='The level of logging information to output. Valid '
-                       'choices are "quiet", "normal", and "verbose". '
-                       'Default="%default".')
-    (opts, args) = op.parse_args(argv)
-    return (opts, args)
+    ap = argparse.ArgumentParser(
+            description=__doc__,
+            fromfile_prefix_chars='@',
+            )
+
+    ap.add_argument('--log-dest', action='store', dest='log_file',
+                    default='STDERR',
+                    help='The name of the file to send log messages to. '
+                         '"STDOUT" and "STDERR" will print to the screen. '
+                         'Default=%(default)s.')
+    ap.add_argument('--log-level', action='store', dest='log_level',
+                    choices=LOG_LEVEL_KEYS, default='normal',
+                    help='The level of logging information to output. Valid '
+                         'choices are "quiet", "normal", and "verbose". '
+                         'Default="%(default)s".')
+
+    args = ap.parse_args(argv)
+    return args
 
 
 def setup_logging(opts):
@@ -66,8 +73,10 @@ def setup_logging(opts):
     logging.basicConfig()
     logger = logging.getLogger()
     logger.setLevel(LOG_LEVELS[opts.log_level])
-    if opts.log_file == 'STDOUT':
+    if opts.log_file == 'STDOUT' or opts.log_file == '-':
         handler = logging.StreamHandler(sys.stdout)
+    elif opts.log_file == 'STDERR':
+        handler = logging.StreamHandler(sys.stderr)
     else:
         handler = logging.FileHandler(opts.log_file)
     handler.setFormatter(logging.Formatter(LOG_FORMAT))
@@ -76,8 +85,8 @@ def setup_logging(opts):
 
 
 def main(argv=None):
-    (opts, args) = parse_args(argv or sys.argv[1:])
-    setup_logging(opts)
+    args = parse_args(argv or sys.argv[1:])
+    setup_logging(args)
     try:
         start = timer()
 
