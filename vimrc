@@ -95,6 +95,7 @@ set history=50
 set ruler
 set hlsearch
 set incsearch
+set nojoinspaces
 set wildmenu
 set modeline
 set foldmethod=marker
