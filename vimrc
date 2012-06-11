@@ -40,7 +40,7 @@ Bundle 'git://github.com/rstacruz/sparkup.git'
 Bundle 'Gundo'
 Bundle 'git://github.com/kchmck/vim-coffee-script.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'VimClojure'
+" Bundle 'VimClojure'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'mattn/gist-vim'
 Bundle 'git://github.com/tpope/vim-unimpaired.git'
@@ -75,7 +75,7 @@ Bundle 'kevinw/pyflakes-vim.git'
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
 " Bundle 'http://conque.googlecode.com/files/conque_2.3.tar.gz'
-Bundle 'conque'
+" Bundle 'conque'
 
 " {{{ Still AWOL:
 "  * todotxt
