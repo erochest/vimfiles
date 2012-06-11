@@ -53,7 +53,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'vim-scripts/Color-Sampler-Pack'
 Bundle 'tpope/vim-rake'
 Bundle 'majutsushi/tagbar'
-Bundle 'robgleeson/hammer.vim'
+Bundle 'matthias-guenther/hammer.vim'
 Bundle 'lukerandall/haskellmode-vim'
 " Add back in:
 Bundle 'VimOutliner'
