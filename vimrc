@@ -251,7 +251,7 @@ com! DiffSaved call s:DiffWithSaved()
 " From http://vim.wikia.com/wiki/Open_a_web-browser_with_the_URL_in_the_current_line
 function! Browser()
 	let line = getline(".")
-	exec "!google-chrome '" . line . "'"
+	exec "!open '" . substitute(line, '^\s*', '', '') . "'"
 endfunction
 map <LocalLeader>http :call Browser()<CR>
 
