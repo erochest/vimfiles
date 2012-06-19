@@ -71,6 +71,7 @@ Bundle 'jgdavey/tslime.vim'
 Bundle 'walm/jshint.vim'
 Bundle 'clvv/a.vim'
 Bundle 'kevinw/pyflakes-vim.git'
+Bundle 'tpope/vim-git'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
