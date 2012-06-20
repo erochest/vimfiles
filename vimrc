@@ -104,7 +104,9 @@ set number
 set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
 
-set grepprg=ack\ --column\ --nogroup\ --nopager
+" Trying out ag
+" set grepprg=ack\ --column\ --nogroup\ --nopager
+set grepprg=ag\ --column\ --stats
 set grepformat=%f:%l:%c:%m
 
 " From http://stolowski.blogspot.com/2011/07/finding-your-way-in-vim.html
