@@ -33,7 +33,7 @@ Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/godlygeek/tabular.git'
 Bundle 'git://github.com/tpope/vim-ragtag.git'
 Bundle 'git://github.com/othree/html5.vim.git'
-" Bundle 'git://github.com/mrtazz/simplenote.vim.git'
+Bundle 'git://github.com/mrtazz/simplenote.vim.git'
 " Bundle 'git://github.com/afternoon/vim-phpunit.git'
 Bundle 'phpcomplete.vim'
 Bundle 'git://github.com/rstacruz/sparkup.git'
@@ -72,6 +72,7 @@ Bundle 'walm/jshint.vim'
 Bundle 'clvv/a.vim'
 Bundle 'kevinw/pyflakes-vim.git'
 Bundle 'tpope/vim-git'
+Bundle 'scrooloose/syntastic'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -203,6 +204,9 @@ let g:haddock_browser_callformat = "%s %s"
 
 " let vimclojure#WantNailgun = 1
 
+if filereadable(expand("<sfile>:p:h") . "/.simplenote")
+	source <sfile>:p:h/.simplenote
+endif
 "}}}
 
 "{{{ Commands & Mappings
