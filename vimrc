@@ -73,6 +73,7 @@ Bundle 'clvv/a.vim'
 Bundle 'kevinw/pyflakes-vim.git'
 Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
+Bundle 'rodjek/vim-puppet'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
