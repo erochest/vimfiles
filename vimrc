@@ -236,7 +236,10 @@ com! TodoList call s:TodoListMode()
 
 function! s:GtdMode()
 	tabonly
-	e ~/Dropbox/gtd/todo.txt
+	e ~/Dropbox/gtd/someday.txt
+	set filetype=todotxt
+	sp ~/Dropbox/gtd/todo.txt
+	set filetype=todotxt
 	tabe ~/gtd/note/review
 	tabe ~/Dropbox/links.txt
 	normal G
