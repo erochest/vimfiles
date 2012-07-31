@@ -28,7 +28,7 @@ end
 
 desc 'This links or copies vimrc to ~ (platform dependent).'
 task :vimrc do
-  if (Config::CONFIG['host_os'] =~ /mswin|mingw/).nil?
+  if (RbConfig::CONFIG['host_os'] =~ /mswin|mingw/).nil?
     # on unix, link
     FileUtils.ln_s("#{CWD}/vimrc", File.expand_path('~/.vimrc'))
   else
