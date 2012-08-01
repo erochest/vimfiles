@@ -107,9 +107,9 @@ set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
 
 " Trying out ag
-" set grepprg=ack\ --column\ --nogroup\ --nopager
-set grepprg=ag\ --column\ --stats
-set grepformat=%f:%l:%c:%m
+set grepprg=ack\ --column\ --nogroup\ --nopager
+" set grepprg=ag\ --column\ --stats
+" set grepformat=%f:%l:%c:%m
 
 " From http://stolowski.blogspot.com/2011/07/finding-your-way-in-vim.html
 nmap <Leader>fcw :copen<CR><C-w>k:grep <C-R>=expand("<cword>")<CR><CR>
