@@ -285,5 +285,9 @@ nmap <Leader>f :FufFileWithCurrentBufferDir<CR>
 nmap <Leader>b :FufBuffer<CR>
 nmap <Leader>t :FufTaggedFile<CR>
 
+" For TMux
+vmap <Leader>tmux <Plug>SendSelectionToTmux
+nmap <Leader>tmux vip<Plug>SendSelectionToTmux
+
 "}}}
 
