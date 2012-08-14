@@ -74,6 +74,7 @@ Bundle 'kevinw/pyflakes-vim.git'
 Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
+Bundle 'vim-pandoc/vim-pandoc'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -105,6 +106,8 @@ set foldmethod=marker
 set number
 set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
+
+let g:snips_author='Eric Rochester'
 
 " Trying out ag
 set grepprg=ack\ --column\ --nogroup\ --nopager
