@@ -16,6 +16,7 @@ task :install => [:vundle,
                   :vimrc,
                   :conque,
                   :bundleinstall,
+                  :vimproc,
                   :commandt,
                   :hammerdepends,
                   'coffee:snippets'
@@ -52,6 +53,11 @@ task :bundleinstall do
   rescue Exception => err
     puts "Error running :BundleInstall: #{err}"
   end
+end
+
+desc 'This runs "make -f make_mac.mak" for vimproc.'
+task :vimproc do
+  sh %{pushd bundle/vimproc ; make -f make_mac.mak ; popd}
 end
 
 desc 'This compiles Command-T.'
