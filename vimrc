@@ -59,6 +59,7 @@ Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
+Bundle 'bitc/lushtags'
 " Add back in:
 Bundle 'VimOutliner'
 Bundle 'vimoutliner-colorscheme-fix'
