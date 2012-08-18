@@ -8,6 +8,6 @@ setlocal textwidth=0
 setlocal foldcolumn=1
 setlocal foldmethod=indent
 
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+" autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
