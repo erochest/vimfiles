@@ -7,5 +7,5 @@ setlocal smarttab
 setlocal textwidth=0
 setlocal foldcolumn=1
 
-" setlocal omnifunc=necoghc#omnifunc
+setlocal omnifunc=necoghc#omnifunc
 
