@@ -54,7 +54,8 @@ Bundle 'vim-scripts/Color-Sampler-Pack'
 Bundle 'tpope/vim-rake'
 Bundle 'majutsushi/tagbar'
 Bundle 'matthias-guenther/hammer.vim'
-Bundle 'lukerandall/haskellmode-vim'
+" Bundle 'lukerandall/haskellmode-vim'
+Bundle "dag/vim2hs"
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-snippets-complete'
@@ -81,6 +82,7 @@ Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'vim-pandoc/vim-pandoc'
+" Bundle "kana/vim-textobj-indent"
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -263,15 +265,6 @@ vmap t: :Tab /:<CR>
 "}}}
 
 "{{{ File-type Settings
-" These should probably be moved to ftplugin/haskell_local.vim
-" Haskell mode settings. From http://projects.haskell.org/haskellmode-vim/
-au Bufenter *.hs compiler ghc
-
-let g:haddock_browser = "open"
-let g:haddock_browser_callformat = "%s %s"
-
-" let vimclojure#WantNailgun = 1
-
 if filereadable(expand("<sfile>:p:h") . "/.simplenote")
 	source <sfile>:p:h/.simplenote
 endif
