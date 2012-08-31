@@ -83,6 +83,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'vim-pandoc/vim-pandoc'
 " Bundle "kana/vim-textobj-indent"
+Bundle 'editorconfig/editorconfig-vim'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
