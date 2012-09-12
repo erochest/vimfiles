@@ -101,6 +101,8 @@ syntax on
 
 "{{{ Global settings
 
+let mapleader=","
+
 set autoindent
 set backspace=indent,eol,start
 set backup
@@ -115,6 +117,20 @@ set foldmethod=marker
 set number
 set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
+set cursorline
+
+" For automatically resizing windows when you navigate.
+set winheight=5
+set winminheight=5
+set winheight=999
+nmap <c-w>j <c-w>j<c-w>_
+nmap <c-w>k <c-w>k<c-w>_
+
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
+nmap <leader><leader> <c-^>
 
 let g:snips_author='Eric Rochester'
 
