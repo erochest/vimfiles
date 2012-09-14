@@ -71,7 +71,7 @@ Bundle 'sparql.vim'
 Bundle 'n3.vim'
 Bundle 'Processing'
 Bundle 'L9'
-Bundle 'FuzzyFinder'
+" Bundle 'FuzzyFinder'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pbrisbin/html-template-syntax'
 Bundle 'jgdavey/tslime.vim'
@@ -84,6 +84,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'vim-pandoc/vim-pandoc'
 " Bundle "kana/vim-textobj-indent"
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'kien/ctrlp.vim'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
