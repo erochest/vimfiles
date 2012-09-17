@@ -277,6 +277,10 @@ nmap <C-j> :cn<CR>zvzz
 " Turn off spell-check. This makes HTML and other things hard to read.
 nmap <F12> :set nospell<CR>
 
+" This jumps to the current tag in a new window. If there's more than one
+" target for that tag, prompt for which to go to. This uses the "t register.
+nmap <c-w><c-]> "tyaw:stjump<space><c-r>t<cr>
+
 "{{{ Mappings for :Tab
 vmap t= :Tab /=<CR>
 vmap t> :Tab /[=-]><CR>
