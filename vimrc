@@ -238,6 +238,9 @@ endif
 
 "{{{ Mappings
 
+" Take this back from neocompl snippets complete.
+iunmap <C-k>
+
 " From http://nvie.com/posts/how-i-boosted-my-vim/
 nnoremap ; :
 vmap Q gq
