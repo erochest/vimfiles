@@ -319,6 +319,7 @@ function! s:GtdMode()
 	sp ~/Dropbox/gtd/todo.txt
 	set filetype=todotxt
 	tabe ~/gtd/note/review
+	sp ~/Dropbox/epistle/Inbox.txt
 	tabe ~/Dropbox/links.txt
 	normal G
 	tabe ~/Dropbox/quotes
