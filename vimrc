@@ -212,6 +212,8 @@ if !exists('g:neocomplcache_omni_patterns')
 endif
 "}}}
 
+let vimclojure#WantNailgun = 1
+
 "}}}
 
 "{{{ GUI Settings
