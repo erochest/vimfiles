@@ -155,7 +155,7 @@ let NERDSpaceDelims=1
 let NERDRemoveExtraSpaces=1
 
 "{{{ For neocomplcache
-" let g:acp_enableAtStartup = 0
+let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
@@ -202,7 +202,7 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 " Shell like behavior(not recommended).
 "set completeopt+=longest
 "let g:neocomplcache_enable_auto_select = 1
-"let g:neocomplcache_disable_auto_complete = 1
+let g:neocomplcache_disable_auto_complete = 1
 "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
 "inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 
