@@ -361,6 +361,13 @@ function! s:ExpandWindow()
 endfunction
 com! ExpandWindow call s:ExpandWindow()
 
+" This sets the text that runs past textwidth to be a different color.
+function! ShowRunOff()
+	highlight RunOff term=bold ctermbg=darkgrey guibg=#592929
+	call matchadd("RunOff", "\\%" . &textwidth . "v.*")
+endfunction
+nmap <leader>R :call ShowRunOff()<cr>
+
 nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
 nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 nmap <Leader>archive :r!todo.sh archive<CR>
