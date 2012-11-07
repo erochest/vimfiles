@@ -85,6 +85,7 @@ Bundle 'rodjek/vim-puppet'
 " Bundle "kana/vim-textobj-indent"
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'feuerbach/vim-hs-module-name'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
