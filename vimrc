@@ -86,6 +86,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'feuerbach/vim-hs-module-name'
+Bundle 'WebAPI.vim'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
