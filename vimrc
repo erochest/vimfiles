@@ -377,6 +377,15 @@ function! ShowRunOff78()
 endfunction
 nmap <leader>R8 :call ShowRunOff78()<cr>
 
+" This creates a nmap that sends the current file name to a program running in
+" tmux.
+function! s:CreateNMapTmuxFile(mapChar, programFormat)
+	let mapping = printf("nmap <LocalLeader>%s :w<cr>:call Send_to_Tmux(printf(\"%s\", bufname(\"\%\")) . \"\\n\")<cr>", a:mapChar, escape(a:programFormat, "\""))
+	" echo mapping
+	exec mapping
+endfunction
+command! -nargs=* TMuxFile call s:CreateNMapTmuxFile(<f-args>)
+
 nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
 nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 nmap <Leader>archive :r!todo.sh archive<CR>
