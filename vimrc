@@ -87,6 +87,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'feuerbach/vim-hs-module-name'
 Bundle 'WebAPI.vim'
+Bundle 'jceb/vim-orgmode'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
