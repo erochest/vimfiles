@@ -88,6 +88,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'feuerbach/vim-hs-module-name'
 Bundle 'WebAPI.vim'
 Bundle 'jceb/vim-orgmode'
+Bundle 'tpope/vim-speeddating'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
