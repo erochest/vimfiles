@@ -1,0 +1,59 @@
+snippet file{
+	file { '${1:name}' :
+		path    => '${2:path}',
+		source  => '${3:source}',
+		content => template('${4:template}'),
+		${5}
+	}
+snippet package{
+	package { '${1:name}' :
+		ensure => installed,
+		${2}
+	}
+snippet service{
+	service { '${1:name}' :
+		ensure => running,
+		enable => true,
+		${2}
+	}
+snippet notify{
+	notify { '${1:message}' : }
+snippet exec{
+	exec { '${1:name}' :
+		command => '${2:command}',
+		path    => ['/bin', '/usr/bin', '/usr/local/bin'],
+		cwd     => '${3:cwd}',
+		creates => '${4:output}',
+		${5}
+	}
+snippet cron{
+	cron { ${1:name} :
+		command  => '${2:command}',
+		hour     => ${3},
+		minute   => ${4},
+		month    => ${5},
+		monthday => ${6},
+		weekday  => ${7},
+	}
+snippet user{
+	user { '${1:name}' :
+		ensure     => present,
+		uid        => '${2:uid}',
+		gid        => '${3:gid}',
+		shell      => '${4:/bin/bash}',
+		home       => '${5:/home/$1}',
+		managehome => ${6:true},
+	}
+snippet group{
+	group { '${1:name}' :
+		ensure     => present,
+		gid        => '${3:gid}',
+	}
+snippet require=
+	require => ${1:Class}['${2:name}'],
+snippet p=
+	${1:attribute} => ${2:value},
+snippet rsc{
+	${1:resource} { '${2:name}' :
+		${3}
+	}
