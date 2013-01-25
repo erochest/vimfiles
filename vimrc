@@ -81,7 +81,7 @@ Bundle 'kevinw/pyflakes-vim.git'
 Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
-" Bundle 'vim-pandoc/vim-pandoc'
+Bundle 'vim-pandoc/vim-pandoc'
 " Bundle "kana/vim-textobj-indent"
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'kien/ctrlp.vim'
@@ -89,6 +89,7 @@ Bundle 'feuerbach/vim-hs-module-name'
 Bundle 'WebAPI.vim'
 Bundle 'jceb/vim-orgmode'
 Bundle 'tpope/vim-speeddating'
+Bundle 'VOoM'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
