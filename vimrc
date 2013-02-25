@@ -254,6 +254,7 @@ nnoremap ; :
 vmap Q gq
 nmap Q gqap
 nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> ,S :set nospell<CR>
 
 " The next four blocks are taken from
 " http://stackoverflow.com/questions/1445992/vim-file-navigation/1446480#1446480
