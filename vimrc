@@ -217,6 +217,10 @@ if !exists('g:neocomplcache_omni_patterns')
 endif
 "}}}
 
+"{{{ ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|cabal-dev)$'
+"}}}
+
 " let vimclojure#WantNailgun = 1
 
 "}}}
