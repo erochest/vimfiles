@@ -254,7 +254,7 @@ endif
 iunmap <C-k>
 
 " From http://nvie.com/posts/how-i-boosted-my-vim/
-nnoremap ; :
+" nnoremap ; :			" Actually, I'd like to use the ; command.
 vmap Q gq
 nmap Q gqap
 nmap <silent> ,/ :nohlsearch<CR>
