@@ -402,6 +402,9 @@ nmap <Leader>dl "+dd
 nmap <Leader>yy "+yy
 nmap <Leader>l ggO<C-R>=strftime("%m-%d-%YT%H:%M:%S %z")<CR><space>\|<space>
 
+imap <Leader>d <C-R>=strftime("%Y-%m-%dT%H:%M:%S %z")<CR>
+nmap <Leader>d i<Leader>d
+
 " For TMux
 vmap <Leader>tmux <Plug>SendSelectionToTmux
 nmap <Leader>tmux vip<Plug>SendSelectionToTmux
