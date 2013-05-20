@@ -90,6 +90,7 @@ Bundle 'WebAPI.vim'
 Bundle 'jceb/vim-orgmode'
 Bundle 'tpope/vim-speeddating'
 Bundle 'VOoM'
+" Bundle 'FredKSchott/CoVim'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
