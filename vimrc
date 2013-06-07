@@ -74,7 +74,7 @@ Bundle 'L9'
 " Bundle 'FuzzyFinder'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pbrisbin/html-template-syntax'
-Bundle 'jgdavey/tslime.vim'
+" Bundle 'jgdavey/tslime.vim'
 Bundle 'walm/jshint.vim'
 Bundle 'clvv/a.vim'
 Bundle 'kevinw/pyflakes-vim.git'
@@ -91,6 +91,7 @@ Bundle 'jceb/vim-orgmode'
 Bundle 'tpope/vim-speeddating'
 Bundle 'VOoM'
 " Bundle 'FredKSchott/CoVim'
+Bundle 'epeli/slimux'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -388,12 +389,12 @@ nmap <leader>R8 :call ShowRunOff78()<cr>
 
 " This creates a nmap that sends the current file name to a program running in
 " tmux.
-function! s:CreateNMapTmuxFile(mapChar, programFormat)
-	let mapping = printf("nmap <LocalLeader>%s :w<cr>:call Send_to_Tmux(printf(\"%s\", bufname(\"\%\")) . \"\\n\")<cr>", a:mapChar, escape(a:programFormat, "\""))
-	" echo mapping
-	exec mapping
-endfunction
-command! -nargs=* TMuxFile call s:CreateNMapTmuxFile(<f-args>)
+" function! s:CreateNMapTmuxFile(mapChar, programFormat)
+" 	let mapping = printf("nmap <LocalLeader>%s :w<cr>:call Send_to_Tmux(printf(\"%s\", bufname(\"\%\")) . \"\\n\")<cr>", a:mapChar, escape(a:programFormat, "\""))
+" 	" echo mapping
+" 	exec mapping
+" endfunction
+" command! -nargs=* TMuxFile call s:CreateNMapTmuxFile(<f-args>)
 
 nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
 nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
@@ -407,9 +408,13 @@ imap <Leader>d <C-R>=strftime("%Y-%m-%dT%H:%M:%S %z")<CR>
 nmap <Leader>d i<Leader>d
 
 " For TMux
-vmap <Leader>tmux <Plug>SendSelectionToTmux
-nmap <Leader>tmux vip<Plug>SendSelectionToTmux
-nmap <Leader>remux <Plug>SetTmuxVars
+vmap <Leader>tmux :SlimuxREPLSendSelection<CR>
+nmap <Leader>tmux :SlimuxREPLSendLine<CR>
+nmap <Leader>remux :SlimuxREPLConfigure<CR>
+
+vmap <Leader>tsh :SlimuxShellPrompt<CR>
+nmap <Leader>ts! :SlimuxShellLast<CR>
+nmap <Leader>retsh :SlimuxShellConfigure<CR>
 
 "}}}
 
