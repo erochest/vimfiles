@@ -92,6 +92,7 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'VOoM'
 " Bundle 'FredKSchott/CoVim'
 Bundle 'epeli/slimux'
+Bundle 'wting/rust'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
