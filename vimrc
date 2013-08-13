@@ -92,7 +92,7 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'VOoM'
 " Bundle 'FredKSchott/CoVim'
 Bundle 'epeli/slimux'
-Bundle 'wting/rust'
+Bundle 'wting/rust.vim'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -306,8 +306,8 @@ vmap t: :Tab /:<CR>
 "}}}
 
 "{{{ File-type Settings
-if filereadable(expand("<sfile>:p:h") . "/.simplenote")
-	source <sfile>:p:h/.simplenote
+if filereadable(expand("<sfile>:p:h") . "/.simplenoterc")
+	source <sfile>:p:h/.simplenoterc
 endif
 "}}}
 
@@ -341,6 +341,7 @@ function! s:GtdMode()
 	set filetype=todotxt
 	sp ~/Dropbox/gtd/todo.txt
 	set filetype=todotxt
+	tabe ~/Dropbox/chrome-state.otl
 	tabe ~/gtd/note/review
 	sp ~/Dropbox/epistle/Inbox.txt
 	tabe ~/Dropbox/links.txt
