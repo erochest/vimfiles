@@ -1,5 +1,6 @@
 
-setlocal expandtab
+" Golang uses tabs. It is an abomination.
+" setlocal expandtab
 setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal softtabstop=4
