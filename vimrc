@@ -339,7 +339,9 @@ function! s:GtdMode()
 	tabonly
 	e ~/Dropbox/gtd/someday.txt
 	set filetype=todotxt
-	sp ~/gtd/gtd.otl
+	sp ~/Dropbox/gtd/gtd.otl
+	sp ~/Dropbox/gtd/todo.txt
+	set filetype=todotxt
 	tabe ~/Dropbox/links.txt
 	normal G
 	tabe ~/Dropbox/quotes
