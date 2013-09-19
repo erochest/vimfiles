@@ -81,7 +81,7 @@ Bundle 'kevinw/pyflakes-vim.git'
 Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
-Bundle 'vim-pandoc/vim-pandoc'
+" Bundle 'vim-pandoc/vim-pandoc'
 " Bundle "kana/vim-textobj-indent"
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'kien/ctrlp.vim'
