@@ -124,6 +124,7 @@ set wildmenu
 set modeline
 set foldmethod=marker
 set number
+set relativenumber
 set wildignore=*.swp,*.bak,*.pyc
 set pastetoggle=<F2>
 set cursorline
