@@ -9,3 +9,7 @@ setlocal foldcolumn=1
 
 setlocal omnifunc=necoghc#omnifunc
 
+nmap <buffer> <localleader>x :wa<cr>:SlimuxShellRun cabal clean<cr>
+nmap <buffer> <localleader>c :wa<cr>:SlimuxShellRun cabal configure<cr>
+nmap <buffer> <localleader>b :wa<cr>:SlimuxShellRun cabal build<cr>
+
