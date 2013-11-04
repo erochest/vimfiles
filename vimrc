@@ -23,8 +23,6 @@ Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://github.com/tpope/vim-surround.git'
 Bundle 'git://github.com/tpope/vim-repeat.git'
 Bundle 'git://repo.or.cz/vcscommand'
-" Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'git://github.com/msanders/snipmate.vim.git'
 Bundle 'git://github.com/vim-ruby/vim-ruby.git'
 Bundle 'git://github.com/tpope/vim-rails.git'
 Bundle 'git://github.com/tpope/vim-endwise.git'
@@ -59,7 +57,7 @@ Bundle 'matthias-guenther/hammer.vim'
 Bundle "dag/vim2hs"
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
+" Bundle 'Shougo/neosnippet'
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'bitc/lushtags'
@@ -94,6 +92,7 @@ Bundle 'VOoM'
 " Bundle 'FredKSchott/CoVim'
 Bundle 'epeli/slimux'
 Bundle 'wting/rust.vim'
+Bundle 'SirVer/ultisnips'
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -187,8 +186,8 @@ let g:neocomplcache_min_syntax_length = 3
 " let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" imap <C-o>     <Plug>(neocomplcache_snippets_expand)
+" smap <C-o>     <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
@@ -254,9 +253,6 @@ endif
 "}}}
 
 "{{{ Mappings
-
-" Take this back from neocompl snippets complete.
-iunmap <C-k>
 
 " From http://nvie.com/posts/how-i-boosted-my-vim/
 " nnoremap ; :			" Actually, I'd like to use the ; command.
