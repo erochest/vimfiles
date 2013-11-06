@@ -225,6 +225,11 @@ endif
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|cabal-dev)$'
 "}}}
 
+" {{{ ultisnips
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" }}}
+
 " let vimclojure#WantNailgun = 1
 
 "}}}
