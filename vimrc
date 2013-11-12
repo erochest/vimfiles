@@ -1,5 +1,5 @@
 
-"{{{ Set up Vundle (git://github.com/gmarik/vundle) and other plugins
+"{{{ Set up Vundle (gmarik/vundle) and other plugins
 set rtp+=~/.vim/vundle/
 " call vundle#rc()
 
@@ -16,33 +16,33 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'git://github.com/sukima/xmledit.git'
+Bundle 'sukima/xmledit'
 " Bundle 'bdd/vim-scala'
-" Bundle 'git://github.com/ewiplayer/vim-scala.git'
-Bundle 'git://github.com/scrooloose/nerdtree.git'
-Bundle 'git://github.com/tpope/vim-surround.git'
-Bundle 'git://github.com/tpope/vim-repeat.git'
+" Bundle 'ewiplayer/vim-scala'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 Bundle 'git://repo.or.cz/vcscommand'
-Bundle 'git://github.com/vim-ruby/vim-ruby.git'
-Bundle 'git://github.com/tpope/vim-rails.git'
-Bundle 'git://github.com/tpope/vim-endwise.git'
-Bundle 'git://github.com/tpope/vim-abolish.git'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/godlygeek/tabular.git'
-Bundle 'git://github.com/tpope/vim-ragtag.git'
-Bundle 'git://github.com/othree/html5.vim.git'
-Bundle 'git://github.com/mrtazz/simplenote.vim.git'
-" Bundle 'git://github.com/afternoon/vim-phpunit.git'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-abolish'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-ragtag'
+Bundle 'othree/html5.vim'
+Bundle 'mrtazz/simplenote.vim'
+" Bundle 'afternoon/vim-phpunit'
 Bundle 'phpcomplete.vim'
-Bundle 'git://github.com/rstacruz/sparkup.git'
+Bundle 'rstacruz/sparkup'
 Bundle 'Gundo'
-Bundle 'git://github.com/kchmck/vim-coffee-script.git'
-Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-fugitive'
 Bundle 'VimClojure'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'git://github.com/tpope/vim-unimpaired.git'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'altercation/vim-colors-solarized'
@@ -53,14 +53,10 @@ Bundle 'vim-scripts/Color-Sampler-Pack'
 Bundle 'tpope/vim-rake'
 Bundle 'majutsushi/tagbar'
 Bundle 'matthias-guenther/hammer.vim'
-" Bundle 'lukerandall/haskellmode-vim'
 Bundle "dag/vim2hs"
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neosnippet'
-Bundle 'eagletmt/ghcmod-vim'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'bitc/lushtags'
 " Add back in:
 Bundle 'VimOutliner'
 Bundle 'vimoutliner-colorscheme-fix'
@@ -76,7 +72,7 @@ Bundle 'pbrisbin/html-template-syntax'
 " Bundle 'jgdavey/tslime.vim'
 Bundle 'walm/jshint.vim'
 Bundle 'clvv/a.vim'
-Bundle 'kevinw/pyflakes-vim.git'
+Bundle 'kevinw/pyflakes-vim'
 Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
@@ -84,7 +80,6 @@ Bundle 'rodjek/vim-puppet'
 " Bundle "kana/vim-textobj-indent"
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'feuerbach/vim-hs-module-name'
 Bundle 'WebAPI.vim'
 Bundle 'jceb/vim-orgmode'
 Bundle 'tpope/vim-speeddating'
@@ -93,6 +88,18 @@ Bundle 'VOoM'
 Bundle 'epeli/slimux'
 Bundle 'wting/rust.vim'
 Bundle 'SirVer/ultisnips'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-sensible'
+
+" {{{ Haskell stuff
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'feuerbach/vim-hs-module-name'
+Bundle 'Twinside/vim-haskellConceal'
+Bundle 'haskellFold'
+Bundle 'lukerandall/haskellmode-vim'
+Bundle 'bitc/lushtags'
+" }}}
 
 " Both of these are broken, so I've added it manually.
 " Bundle 'Conque-Shell'
@@ -112,15 +119,15 @@ syntax on
 
 let mapleader=","
 
-set autoindent
-set backspace=indent,eol,start
+" set autoindent
+" set backspace=indent,eol,start
 set backup
-set history=50
-set ruler
+" set history=50
+" set ruler
 set hlsearch
-set incsearch
+" set incsearch
 set nojoinspaces
-set wildmenu
+" set wildmenu
 set modeline
 set foldmethod=marker
 set number
