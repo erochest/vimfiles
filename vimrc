@@ -99,6 +99,7 @@ Bundle 'Twinside/vim-haskellConceal'
 Bundle 'haskellFold'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'bitc/lushtags'
+Bundle 'bitc/vim-hdevtools'
 " }}}
 
 " Both of these are broken, so I've added it manually.
