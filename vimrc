@@ -133,7 +133,7 @@ set modeline
 set foldmethod=marker
 set number
 set relativenumber
-set wildignore=*.swp,*.bak,*.pyc
+set wildignore=*.swp,*.bak,*.pyc,*.ho,*.hi,*.o
 set pastetoggle=<F2>
 set cursorline
 
