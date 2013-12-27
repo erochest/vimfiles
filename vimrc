@@ -90,6 +90,7 @@ Bundle 'wting/rust.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-sensible'
+Bundle 'blackdust.vim'
 
 " {{{ Haskell stuff
 Bundle 'eagletmt/ghcmod-vim'
