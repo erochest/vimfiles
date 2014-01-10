@@ -93,10 +93,10 @@ Bundle 'tpope/vim-sensible'
 Bundle 'blackdust.vim'
 
 " {{{ Haskell stuff
-Bundle 'eagletmt/ghcmod-vim'
+" Bundle 'eagletmt/ghcmod-vim'
 Bundle 'ujihisa/neco-ghc'
 Bundle 'feuerbach/vim-hs-module-name'
-Bundle 'Twinside/vim-haskellConceal'
+" Bundle 'Twinside/vim-haskellConceal'
 Bundle 'haskellFold'
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'bitc/lushtags'
@@ -314,6 +314,9 @@ vmap t: :Tab /:<CR>
 if filereadable(expand("<sfile>:p:h") . "/.simplenoterc")
 	source <sfile>:p:h/.simplenoterc
 endif
+
+let g:hdevtools_options = '"-g-package-db .cabal-sandbox/x86_64-osx-ghc-7.6.3-packages.conf.d/"'
+let g:haddock_browser   = 'open'
 "}}}
 
 "{{{ Commands & Mappings
