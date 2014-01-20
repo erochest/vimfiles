@@ -253,7 +253,8 @@ elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
 elseif has("gui_running")
 	" set guifont=Bitstream\ Vera\ Sans\ Mono:h13
-	set guifont=Source\ Code\ Pro:h13
+	" set guifont=Source\ Code\ Pro:h13
+	set guifont=Ubuntu\ Mono:h16
 	set transparency=10
 endif
 
@@ -426,9 +427,9 @@ imap <Leader>d <C-R>=strftime("%Y-%m-%dT%H:%M:%S %z")<CR>
 nmap <Leader>d i<Leader>d
 
 " For TMux
-vmap <Leader>tmux :SlimuxREPLSendSelection<CR>
-nmap <Leader>tmux :SlimuxREPLSendLine<CR>
-nmap <Leader>remux :SlimuxREPLConfigure<CR>
+vmap <Leader>x :SlimuxREPLSendSelection<CR>
+nmap <Leader>x :SlimuxREPLSendLine<CR>
+nmap <Leader>tmux :SlimuxREPLConfigure<CR>
 
 vmap <Leader>tsh :SlimuxShellPrompt<CR>
 nmap <Leader>ts! :SlimuxShellLast<CR>
