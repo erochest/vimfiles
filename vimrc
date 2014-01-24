@@ -124,6 +124,8 @@ let mapleader=","
 " set autoindent
 " set backspace=indent,eol,start
 set backup
+" for editing crontab files
+set backupskip=/tmp/*,/private/tmp/*
 " set history=50
 " set ruler
 set hlsearch
