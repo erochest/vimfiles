@@ -92,6 +92,7 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-sensible'
 Bundle 'blackdust.vim'
 Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'leafgarland/typescript-vim'
 
 " {{{ Haskell stuff
 " Bundle 'eagletmt/ghcmod-vim'
