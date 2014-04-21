@@ -308,7 +308,9 @@ nmap <F12> :set nospell<CR>
 " target for that tag, prompt for which to go to. This uses the "t register.
 nmap <c-w><c-]> "tyaw:stjump<space><c-r>t<cr>
 
-nmap <localleader>cd :s/(TODAY)/<C-r>=strftime("%Y-%m-%d %H:%M")<cr>/<cr>
+nmap <localleader>cx :s/\[ \] /[x] <c-r>=strftime("%Y-%m-%d %H:%M")<cr> /<cr>:nohlsearch<cr>
+nmap <localleader>ct /(TODAY)<cr>
+nmap <localleader>ca /(ACTIVE)<cr>
 
 "{{{ Mappings for :Tab
 vmap t= :Tab /=<CR>
@@ -354,7 +356,7 @@ com! TodoList call s:TodoListMode()
 function! s:GtdMode()
 	tabonly
 	e ~/Dropbox/gtd/inbox.txt
-	tabe ~/Dropbox/gtd/outline.org
+	tabe ~/Dropbox/gtd/outline.otl
 	sp
 	tabnext 1
 endfunction
