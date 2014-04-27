@@ -271,6 +271,7 @@ function! s:GtdMode()
 	e ~/Dropbox/gtd/inbox.txt
 	tabe ~/Dropbox/gtd/outline.otl
 	sp
+	tabe ~/tmp/scratch.md
 	tabnext 1
 endfunction
 com! Gtd call s:GtdMode()
