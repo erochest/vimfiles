@@ -16,6 +16,19 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'godlygeek/tabular'
+Bundle 'nvie/vim-flake8'
+Bundle 'bling/vim-airline'
+Bundle 'epeli/slimux'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-endwise'
+Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'VimOutliner'
+Bundle 'vimoutliner-colorscheme-fix'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 syntax on
@@ -50,6 +63,13 @@ nmap <Leader>fcw :copen<CR><C-w>k:grep <C-R>=expand("<cword>")<CR><CR>
 
 set directory=~/.tmp,~/tmp,/tmp
 set backupdir=~/.tmp,~/tmp,/tmp
+
+"{{{2 ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|cabal-dev)$'
+
+"{{{2 NERDTree
+let NERDSpaceDelims=1
+let NERDRemoveExtraSpaces=1
 
 "{{{1 GUI Settings
 
@@ -197,4 +217,13 @@ nmap <Leader>l ggO<C-R>=strftime("%m-%d-%YT%H:%M:%S %z")<CR><space>\|<space>
 
 imap <Leader>d <C-R>=strftime("%Y-%m-%dT%H:%M:%S %z")<CR>
 nmap <Leader>d i<Leader>d
+
+"{{{2
+vmap <Leader>x :SlimuxREPLSendSelection<CR>
+nmap <Leader>x :SlimuxREPLSendLine<CR>
+nmap <Leader>tmux :SlimuxREPLConfigure<CR>
+
+vmap <Leader>tsh :SlimuxShellPrompt<CR>
+nmap <Leader>ts! :SlimuxShellLast<CR>
+nmap <Leader>retsh :SlimuxShellConfigure<CR>
 
