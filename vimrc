@@ -14,6 +14,9 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" I can see what to add back in by going here:
+" https://github.com/erochest/vimfiles/commit/84bbc9af4dd977175bd4d05e501e60fdf38fd1e4
+
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'godlygeek/tabular'
@@ -48,6 +51,7 @@ set relativenumber
 set wildignore=*.swp,*.bak,*.pyc,*.ho,*.hi,*.o
 set pastetoggle=<F2>
 set cursorline
+set wildmenu
 
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
