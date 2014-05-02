@@ -32,6 +32,7 @@ Bundle 'nelstrom/vim-markdown-folding'
 Bundle 'VimOutliner'
 Bundle 'vimoutliner-colorscheme-fix'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on
 syntax on
