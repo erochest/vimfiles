@@ -33,6 +33,9 @@ Bundle 'VimOutliner'
 Bundle 'vimoutliner-colorscheme-fix'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-speeddating'
+Bundle 'othree/html5.vim'
+Bundle 'pbrisbin/html-template-syntax'
 
 filetype plugin indent on
 syntax on
