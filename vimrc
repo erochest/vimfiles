@@ -36,6 +36,10 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-speeddating'
 Bundle 'othree/html5.vim'
 Bundle 'pbrisbin/html-template-syntax'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on
 syntax on
