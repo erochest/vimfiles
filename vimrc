@@ -17,29 +17,30 @@ call vundle#rc()
 " I can see what to add back in by going here:
 " https://github.com/erochest/vimfiles/commit/84bbc9af4dd977175bd4d05e501e60fdf38fd1e4
 
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'godlygeek/tabular'
-Bundle 'nvie/vim-flake8'
-Bundle 'bling/vim-airline'
-Bundle 'epeli/slimux'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-endwise'
-Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'Shougo/neocomplete.vim'
 Bundle 'VimOutliner'
-Bundle 'vimoutliner-colorscheme-fix'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-speeddating'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'epeli/slimux'
+Bundle 'gmarik/vundle'
+Bundle 'godlygeek/tabular'
+Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'nelstrom/vim-markdown-folding'
+Bundle 'nvie/vim-flake8'
 Bundle 'othree/html5.vim'
 Bundle 'pbrisbin/html-template-syntax'
-Bundle 'derekwyatt/vim-scala'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'majutsushi/tagbar'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vimoutliner-colorscheme-fix'
 
 filetype plugin indent on
 syntax on
@@ -75,6 +76,27 @@ nmap <Leader>fcw :copen<CR><C-w>k:grep <C-R>=expand("<cword>")<CR><CR>
 
 set directory=~/.tmp,~/tmp,/tmp
 set backupdir=~/.tmp,~/tmp,/tmp
+
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+"{{{2 neocomplete
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
+
+if !exists("g:neocomplete#sources#omni#input_patterns")
+	let g:neocomplete#sources#omni#input_patterns = {}
+endif
+
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup() . "\<C-h>"
+inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-e> neocomplete#cancel_popup()
 
 "{{{2 ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|cabal-dev)$'
