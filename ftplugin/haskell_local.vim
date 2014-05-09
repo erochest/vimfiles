@@ -20,3 +20,6 @@ nmap <buffer> <localleader>hi :HdevtoolsInfo<cr>
 
 setlocal conceallevel=0
 
+let g:haddock_browser="open"
+let g:haddock_browser_callformat = "%s %s"
+
