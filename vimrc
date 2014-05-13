@@ -45,6 +45,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-unimpaired'
@@ -85,10 +86,6 @@ nmap <Leader>fcw :copen<CR><C-w>k:grep <C-R>=expand("<cword>")<CR><CR>
 
 set directory=~/.tmp,~/tmp,/tmp
 set backupdir=~/.tmp,~/tmp,/tmp
-
-"{{{2 markdown settings
-
-autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 "{{{2 neocomplete
 

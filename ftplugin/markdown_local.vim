@@ -9,6 +9,8 @@ setlocal foldcolumn=1
 
 setlocal foldmethod=indent
 
+let g:markdown_fold_style = 'nested'
+
 setlocal autoindent
 
 setlocal fileformat=unix
