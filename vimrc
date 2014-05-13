@@ -86,6 +86,8 @@ nmap <Leader>fcw :copen<CR><C-w>k:grep <C-R>=expand("<cword>")<CR><CR>
 set directory=~/.tmp,~/tmp,/tmp
 set backupdir=~/.tmp,~/tmp,/tmp
 
+"{{{2 markdown settings
+
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 "{{{2 neocomplete
@@ -109,9 +111,9 @@ inoremap <expr><C-e> neocomplete#cancel_popup()
 
 "{{{2 neosnippet
 
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
+" imap <C-k> <Plug>(neosnippet_expand_or_jump)
+" smap <C-k> <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k> <Plug>(neosnippet_expand_target)
 
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 			\ "\<Plug>(neosnippet_expand_or_jump)"
