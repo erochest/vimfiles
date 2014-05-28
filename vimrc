@@ -62,6 +62,7 @@ let mapleader=","
 
 set backup
 set backupskip=/tmp/*,/private/tmp/*
+set backspace=indent,eol,start
 set hlsearch
 set nojoinspaces
 set modeline
