@@ -217,7 +217,7 @@ com! TodoList call s:TodoListMode()
 function! s:GtdMode()
 	tabonly
 	e ~/Dropbox/gtd/inbox.txt
-	tabe ~/Dropbox/gtd/outline.otl
+	tabe ~/Dropbox/gtd/outline.md
 	sp
 	tabe ~/tmp/scratch.md
 	tabnext 1
