@@ -34,6 +34,7 @@ Bundle 'epeli/slimux'
 Bundle 'feuerbach/vim-hs-module-name'
 Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
+Bundle 'idris-hackers/idris-vim'
 Bundle 'iyf/vimrepress'
 " Bundle 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
 Bundle 'majutsushi/tagbar'
@@ -217,8 +218,9 @@ com! TodoList call s:TodoListMode()
 function! s:GtdMode()
 	tabonly
 	e ~/Dropbox/gtd/inbox.txt
-	tabe ~/Dropbox/gtd/outline.md
+	tabe ~/Dropbox/gtd/daily-schedules.md
 	sp
+	e ~/Dropbox/gtd/todos.md
 	tabe ~/tmp/scratch.md
 	tabnext 1
 endfunction
