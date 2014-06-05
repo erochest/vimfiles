@@ -25,7 +25,7 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Twinside/vim-haskellFold'
 Bundle 'VimOutliner'
 Bundle 'altercation/vim-colors-solarized'
-" Bundle 'bitc/vim-hdevtools'      " hdevtools is currently broken on GHC 7.8
+Bundle 'bitc/vim-hdevtools'
 Bundle 'bling/vim-airline'
 Bundle 'dag/vim2hs'
 Bundle 'derekwyatt/vim-scala'
