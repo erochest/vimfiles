@@ -12,6 +12,7 @@ setlocal omnifunc=necoghc#omnifunc
 nmap <buffer> <localleader>x :wa<cr>:SlimuxShellRun cabal clean<cr>
 nmap <buffer> <localleader>c :wa<cr>:SlimuxShellRun cabal configure<cr>
 nmap <buffer> <localleader>b :wa<cr>:SlimuxShellRun cabal build<cr>
+nmap <buffer> <localleader>t :wa<cr>:SlimuxShellRun cabal test --test-option=--color<cr>
 nmap <buffer> <localleader>s :w<cr>:%!stylish-haskell<cr>
 
 nmap <buffer> <localleader>ht :HdevtoolsType<cr>
