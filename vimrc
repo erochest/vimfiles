@@ -269,6 +269,21 @@ function! ShiftWin()
 	nmap <c-w>k <c-w>k<c-w>_
 endfunction
 
+" From https://gist.github.com/lmullen/426094d4cac517bbb292:
+"
+" Add all flags in the style {TODO: description} or {PAGE} in current document
+" to quickfix list
+function! ListTodo()
+	vimgrep /\v\{[A-Z]+(:\_.{-})?\}/gj %
+	copen
+endfunction
+
+" Do the same for all Markdown documents in this directory and subdirectories
+function! ListTodoR()
+	vimgrep /\v\{[A-Z]+(:\_.{-})?\}/gj ./**/*.md
+	copen
+endfunction
+
 nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
 nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 nmap <Leader>archive :r!todo.sh archive<CR>
