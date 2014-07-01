@@ -284,6 +284,33 @@ function! ListTodoR()
 	copen
 endfunction
 
+" From http://www.kornerstoane.com/2014/06/why-i-cant-stop-using-vim/
+" Search for any .vimsettings files in the path to the file.
+" Source them if you find them.
+function! ApplyLocalSettings(dirname)
+    " Don't try to walk a remote directory tree -- takes too long, too many
+    " what if's
+    let l:netrwProtocol = strpart(a:dirname, 0, stridx(a:dirname, "://"))
+    if l:netrwProtocol != ""
+        return
+    endif
+
+    " Convert windows paths to unix style (they still work)
+    let l:curDir = substitute(a:dirname, "", "/", "g")
+    let l:parentDir = strpart(l:curDir, 0, strridx(l:curDir, "/"))
+    if isdirectory(l:parentDir)
+        call ApplyLocalSettings(l:parentDir)
+    endif
+
+    " Now walk back up the path and source .vimsettings as you find them. This
+    " way child directories can 'inherit' from their parents
+    let l:settingsFile = a:dirname . "/.vimsettings"
+    if filereadable(l:settingsFile)
+        exec ":source " . l:settingsFile
+    endif
+endfunction
+autocmd! BufEnter * call ApplyLocalSettings(expand("<afile>:p:h"))
+
 nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
 nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 nmap <Leader>archive :r!todo.sh archive<CR>
