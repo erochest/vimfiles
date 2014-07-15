@@ -185,14 +185,14 @@ nmap <F12> :set nospell<CR>
 nmap <c-w><c-]> "tyaw:stjump<space><c-r>t<cr>
 
 nmap <localleader>cx :s/\[ \] /[x] <c-r>=strftime("%Y-%m-%d %H:%M")<cr> /<cr>:nohlsearch<cr>
-nmap <localleader>ct /\[TODAY]<cr>
+nmap <localleader>ct /\[TODAY]<cr>zvzz
 nmap <localleader>cT :s/\[ \] /&[TODAY] /<cr>
-nmap <localleader>ca /\[ACTIVE]<cr>
+nmap <localleader>ca /\[ACTIVE]<cr>zvzz
 nmap <localleader>cA :s/\[ \] /&[ACTIVE] /<cr>
 
 "{{{2 Mappings for :Tab
 vmap t= :Tab /=<CR>
-vmap t> :Tab /[=-]><CR>
+vmap t> :Tab /[=-]*><CR>
 vmap t: :Tab /:<CR>
 
 "{{{1 Commands & Mappings
