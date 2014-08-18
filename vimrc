@@ -221,9 +221,9 @@ function! s:GtdMode()
 	tabonly
 	e ~/Dropbox/gtd/inbox.txt
 	tabe ~/Dropbox/gtd/daily-schedules.md
-	sp
-	e ~/Dropbox/gtd/todos.md
 	tabe ~/tmp/scratch.md
+	tabe ~/Dropbox/links.txt
+	tabe ~/Dropbox/gtd/todos.md
 	tabnext 1
 endfunction
 com! Gtd call s:GtdMode()
