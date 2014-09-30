@@ -21,6 +21,8 @@ nmap <buffer> <localleader>ht :HdevtoolsType<cr>
 nmap <buffer> <localleader>hc :HdevtoolsClear<cr>
 nmap <buffer> <localleader>hi :HdevtoolsInfo<cr>
 
+vmap <buffer> <localleader>in :!hindent --style johan-tibell<cr>
+
 setlocal conceallevel=0
 compiler cabal
 
