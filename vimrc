@@ -56,6 +56,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vimoutliner-colorscheme-fix'
+Bundle 'whatyouhide/vim-gotham'
 
 filetype plugin indent on
 syntax on
