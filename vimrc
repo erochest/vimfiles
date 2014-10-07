@@ -226,6 +226,7 @@ function! s:GtdMode()
 	tabe ~/Dropbox/gtd/daily-schedules.md
 	tabe ~/tmp/scratch.md
 	tabe ~/Dropbox/links.txt
+	tabe ~/Dropbox/quotes
 	tabe ~/Dropbox/gtd/todos.md
 	tabnext 1
 endfunction
