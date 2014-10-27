@@ -34,6 +34,7 @@ Bundle 'epeli/slimux'
 Bundle 'feuerbach/vim-hs-module-name'
 Bundle 'gmarik/vundle'
 Bundle 'godlygeek/tabular'
+Bundle 'honza/vim-snippets'
 Bundle 'idris-hackers/idris-vim'
 Bundle 'iyf/vimrepress'
 " Bundle 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
@@ -125,6 +126,8 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 			\ "\<Plug>(neosnippet_expand_or_jump)"
 			\: pumvisible() ? "\<C-n>" : "\<TAB>"
+
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 "{{{2 Unity
 
