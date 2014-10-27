@@ -40,3 +40,5 @@ compiler cabal
 let g:haskell_autotags = 1
 let g:haskell_tags_generator = 'hasktags'
 
+let g:haskell_multiline_strings = 1
+
