@@ -17,6 +17,15 @@ nmap <buffer> <localleader>t :wa<cr>:SlimuxShellRun cabal test --test-option=--c
 nmap <buffer> <localleader>r :wa<cr>:SlimuxShellRun cabal run<cr>
 nmap <buffer> <localleader>s :w<cr>:%!stylish-haskell<cr>
 
+nmap <buffer> <localleader>C :wa<cr>:SlimuxShellRun make configure<cr>
+nmap <buffer> <localleader>D :wa<cr>:SlimuxShellRun make deps<cr>
+nmap <buffer> <localleader>B :wa<cr>:SlimuxShellRun make build<cr>
+nmap <buffer> <localleader>T :wa<cr>:SlimuxShellRun make test<cr>
+nmap <buffer> <localleader>S :wa<cr>:SlimuxShellRun make specs<cr>
+nmap <buffer> <localleader>R :wa<cr>:SlimuxShellRun make run<cr>
+
+nmap <buffer> <localleader>L :wa<cr>:SlimuxShellRun :reload<cr>
+
 nmap <buffer> <localleader>ht :HdevtoolsType<cr>
 nmap <buffer> <localleader>hc :HdevtoolsClear<cr>
 nmap <buffer> <localleader>hi :HdevtoolsInfo<cr>
