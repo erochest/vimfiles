@@ -42,3 +42,11 @@ let g:haskell_tags_generator = 'hasktags'
 
 let g:haskell_multiline_strings = 1
 
+function! s:OpenHaddock()
+	call inputsave()
+	let package = input('Open haddocks for package: ')
+	call inputrestore()
+	execute ('!open-haddock open ' . package)
+endfunction
+com! OpenHaddock call s:OpenHaddock()
+
