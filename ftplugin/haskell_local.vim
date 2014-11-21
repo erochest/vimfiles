@@ -48,5 +48,13 @@ function! s:OpenHaddock()
 	call inputrestore()
 	execute ('!open-haddock open ' . package)
 endfunction
-com! OpenHaddock call s:OpenHaddock()
+com! HaddockOpen call s:OpenHaddock()
+
+function! s:OpenModule()
+	call inputsave()
+	let module = input('Open haddocks for module: ')
+	call inputrestore()
+	execute ('!open-haddock module ' . module)
+endfunction
+com! ModuleOpen call s:OpenModule()
 
