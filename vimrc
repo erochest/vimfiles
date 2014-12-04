@@ -251,7 +251,8 @@ endfunction
 map <LocalLeader>http :call Browser()<CR>
 
 function! s:ExpandWindow()
-	set lines=56 columns=120
+	" set lines=56 columns=120
+	set lines=46 columns=90
 endfunction
 com! ExpandWindow call s:ExpandWindow()
 
