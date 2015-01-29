@@ -257,6 +257,13 @@ function! s:ExpandWindow()
 endfunction
 com! ExpandWindow call s:ExpandWindow()
 
+function! s:List100()
+	mark l
+	put =range(1, 100)
+	'l,.s/^\d\+$/&.	/
+endfunction
+com! List100 call s:List100()
+
 function! ShowRunOff()
 	highlight RunOff term=bold ctermbg=darkgrey guibg=#592929
 	call matchadd("RunOff", "\\%" . &textwidth . "v.*")
