@@ -232,6 +232,7 @@ function! s:GtdMode()
 	tabe ~/Dropbox/links.txt
 	tabe ~/Dropbox/quotes
 	tabe ~/Dropbox/gtd/todos.md
+	tabe ~/Dropbox/journal.md
 	tabnext 1
 endfunction
 com! Gtd call s:GtdMode()
