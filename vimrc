@@ -58,7 +58,7 @@ Bundle 'whatyouhide/vim-gotham'
 
 " Haskell plugins
 Bundle 'Twinside/vim-haskellFold'
-Bundle 'bitc/vim-hdevtools'
+" Bundle 'bitc/vim-hdevtools'
 Bundle 'dag/vim2hs'
 Bundle 'eagletmt/neco-ghc'
 Bundle 'feuerbach/vim-hs-module-name'
