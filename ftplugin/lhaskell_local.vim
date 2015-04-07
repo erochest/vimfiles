@@ -8,6 +8,7 @@ setlocal textwidth=0
 setlocal foldcolumn=1
 
 setlocal omnifunc=necoghc#omnifunc
+let g:syntastic_lhaskell_checkers = []
 
 nmap <buffer> <localleader>x :wa<cr>:SlimuxShellRun cabal clean<cr>
 nmap <buffer> <localleader>c :wa<cr>:SlimuxShellRun cabal configure<cr>
@@ -26,9 +27,9 @@ nmap <buffer> <localleader>R :wa<cr>:SlimuxShellRun make run<cr>
 
 nmap <buffer> <localleader>L :wa<cr>:SlimuxShellRun :reload<cr>
 
-nmap <buffer> <localleader>ht :HdevtoolsType<cr>
-nmap <buffer> <localleader>hc :HdevtoolsClear<cr>
-nmap <buffer> <localleader>hi :HdevtoolsInfo<cr>
+" nmap <buffer> <localleader>ht :HdevtoolsType<cr>
+" nmap <buffer> <localleader>hc :HdevtoolsClear<cr>
+" nmap <buffer> <localleader>hi :HdevtoolsInfo<cr>
 
 vmap <buffer> <localleader>in :!hindent --style johan-tibell<cr>
 
