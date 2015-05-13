@@ -243,8 +243,7 @@ com! TodoList call s:TodoListMode()
 
 function! s:GtdMode()
 	tabonly
-	e ~/Dropbox/gtd/daily-schedules.md
-	tabe ~/tmp/scratch.md
+	e ~/tmp/scratch.md
 	tabe ~/Dropbox/links.txt
 	tabe ~/Dropbox/quotes
 	tabe ~/Dropbox/gtd/todos.md
