@@ -17,9 +17,9 @@ call vundle#rc()
 " I can see what to add back in by going here:
 " https://github.com/erochest/vimfiles/commit/84bbc9af4dd977175bd4d05e501e60fdf38fd1e4
 
-" Bundle 'Shougo/neocomplete.vim'
-" Bundle 'Shougo/neosnippet'
-" Bundle 'Shougo/neosnippet-snippets'
+Bundle 'Shougo/neocomplete.vim'
+Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'VimOutliner'
@@ -114,23 +114,23 @@ let g:syntastic_check_on_wq = 0
 
 "{{{2 neocomplete
 
-" let g:acp_enableAtStartup = 0
-" let g:neocomplete#enable_at_startup = 1
-" let g:neocomplete#enable_smart_case = 1
-" let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 
-" inoremap <expr><C-g> neocomplete#undo_completion()
-" inoremap <expr><C-l> neocomplete#complete_common_string()
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
 
-" if !exists("g:neocomplete#sources#omni#input_patterns")
-	" let g:neocomplete#sources#omni#input_patterns = {}
-" endif
+if !exists("g:neocomplete#sources#omni#input_patterns")
+	let g:neocomplete#sources#omni#input_patterns = {}
+endif
 
-" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-" inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<C-h>"
-" inoremap <expr><BS> neocomplete#smart_close_popup() . "\<C-h>"
-" inoremap <expr><C-y> neocomplete#close_popup()
-" inoremap <expr><C-e> neocomplete#cancel_popup()
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup() . "\<C-h>"
+inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-e> neocomplete#cancel_popup()
 
 "{{{2 neosnippet
 
@@ -138,14 +138,14 @@ let g:syntastic_check_on_wq = 0
 " smap <C-k> <Plug>(neosnippet_expand_or_jump)
 " xmap <C-k> <Plug>(neosnippet_expand_target)
 
-" imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			" \ "\<Plug>(neosnippet_expand_or_jump)"
-			" \: pumvisible() ? "\<C-n>" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			" \ "\<Plug>(neosnippet_expand_or_jump)"
-			" \: pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 "{{{2 Unity
 
