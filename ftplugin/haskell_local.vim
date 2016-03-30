@@ -27,6 +27,14 @@ nmap <buffer> <localleader>R :wa<cr>:SlimuxShellRun make run<cr>
 
 nmap <buffer> <localleader>L :wa<cr>:SlimuxShellRun :reload<cr>
 
+nmap <buffer> <localleader>ht :GhcModType<cr>
+nmap <buffer> <localleader>hC :GhcModTypeClear<cr>
+nmap <buffer> <localleader>hi :GhcModTypeInsert<cr>
+nmap <buffer> <localleader>hl :GhcModLint<cr>
+nmap <buffer> <localleader>hc :GhcModCheck<cr>
+
+autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+
 " nmap <buffer> <localleader>ht :HdevtoolsType<cr>
 " nmap <buffer> <localleader>hc :HdevtoolsClear<cr>
 " nmap <buffer> <localleader>hi :HdevtoolsInfo<cr>
@@ -34,7 +42,7 @@ nmap <buffer> <localleader>L :wa<cr>:SlimuxShellRun :reload<cr>
 vmap <buffer> <localleader>in :!hindent --style johan-tibell<cr>
 
 setlocal conceallevel=0
-compiler cabal
+" compiler stack
 
 " let g:haddock_browser="open"
 " let g:haddock_browser_callformat = "%s %s"
