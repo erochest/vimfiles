@@ -5,6 +5,7 @@ setlocal shiftwidth=4
 setlocal softtabstop=4
 setlocal smarttab
 setlocal textwidth=0
+setlocal foldmethod=indent
 setlocal foldcolumn=1
 
 setlocal omnifunc=necoghc#omnifunc

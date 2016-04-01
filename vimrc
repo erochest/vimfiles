@@ -17,6 +17,7 @@ call vundle#rc()
 " I can see what to add back in by going here:
 " https://github.com/erochest/vimfiles/commit/84bbc9af4dd977175bd4d05e501e60fdf38fd1e4
 
+Plugin 'Konfekt/FastFold'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
