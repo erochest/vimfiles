@@ -78,6 +78,8 @@ Plugin 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plugin 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plugin 'Twinside/vim-hoogle', { 'for': 'haskell' }
 Plugin 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
+Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
+Plugin 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
 
 filetype plugin indent on
 syntax on
