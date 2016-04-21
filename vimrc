@@ -1,86 +1,81 @@
 
-"{{{1 Set up Vundle (gmarik/vundle) and other plugins
-set rtp+=~/.vim/vundle/
-" call vundle#rc()
-
+" Set up Vundle (gmarik/vundle) and other plugins
 filetype off
 
-if has('win32')
-	set rtp+=~/vimfiles/bundle/vundle
-else
-	set rtp+=~/.vim/bundle/vundle/
-endif
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+Plugin 'VundleVim/Vundle.vim'
 
-" I can see what to add back in by going here:
-" https://github.com/erochest/vimfiles/commit/84bbc9af4dd977175bd4d05e501e60fdf38fd1e4
-
+Plugin 'ervandew/supertab.git'
 Plugin 'Konfekt/FastFold'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/neosnippet.vim'
-Plugin 'Shougo/neosnippet-snippets'
+" Plugin 'Shougo/neosnippet.vim'
+" Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
 Plugin 'VimOutliner'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'benekastah/neomake'
 Plugin 'bling/vim-airline'
-Plugin 'derekwyatt/vim-scala'
+" Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'epeli/slimux'
-Plugin 'fatih/vim-go'
-Plugin 'forth.vim'
-Plugin 'gmarik/vundle'
+" Plugin 'fatih/vim-go'
+" Plugin 'forth.vim'
 Plugin 'godlygeek/tabular'
-Plugin 'honza/vim-snippets'
-Plugin 'idris-hackers/idris-vim'
-Plugin 'int3/vim-extradite'
-Plugin 'iyf/vimrepress'
+" Plugin 'honza/vim-snippets'
+" Plugin 'idris-hackers/idris-vim'
+" Plugin 'int3/vim-extradite'
+" Plugin 'iyf/vimrepress'
 Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'majutsushi/tagbar'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'majutsushi/tagbar'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'nvie/vim-flake8'
 Plugin 'othree/html5.vim'
 Plugin 'pbrisbin/html-template-syntax'
-Plugin 'raichoo/purescript-vim'
+" Plugin 'raichoo/purescript-vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'seebi/semweb.vim'
-Plugin 'tpope/vim-endwise'
+" Plugin 'seebi/semweb.vim'
+" Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-ruby/vim-ruby'
+" Plugin 'tpope/vim-unimpaired'
+" Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/gitignore'
-Plugin 'vimoutliner-colorscheme-fix'
-Plugin 'whatyouhide/vim-gotham'
+" Plugin 'vimoutliner-colorscheme-fix'
+" Plugin 'whatyouhide/vim-gotham'
+" 
+" " Python plugins
+Plugin 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
-" Haskell plugins
-" Plugin 'Twinside/vim-haskellFold'
-" " Plugin 'bitc/vim-hdevtools'
-" Plugin 'dag/vim2hs'
-" Plugin 'eagletmt/neco-ghc'
-" Plugin 'feuerbach/vim-hs-module-name'
-" " Plugin 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
-
-Plugin 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-" Plugin 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
+" " Haskell plugins
+" " Plugin 'Twinside/vim-haskellFold'
+" " " Plugin 'bitc/vim-hdevtools'
+" " Plugin 'dag/vim2hs'
+" " Plugin 'eagletmt/neco-ghc'
+" " Plugin 'feuerbach/vim-hs-module-name'
+" " " Plugin 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
+" 
+" Plugin 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+" " Plugin 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
 Plugin 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plugin 'eagletmt/neco-ghc', { 'for': 'haskell' }
-Plugin 'Twinside/vim-hoogle', { 'for': 'haskell' }
-Plugin 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
-Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
-Plugin 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
-Plugin 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
+" Plugin 'Twinside/vim-hoogle', { 'for': 'haskell' }
+" Plugin 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
+" Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
+" Plugin 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
+" Plugin 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
+
+call vundle#end()
 
 filetype plugin indent on
 syntax on
