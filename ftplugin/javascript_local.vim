@@ -7,5 +7,5 @@ setlocal smarttab
 setlocal textwidth=0
 setlocal foldcolumn=1
 setlocal foldmethod=indent
-setlocal omnifunc=javascriptcomplete#CompleteJS
+"setlocal omnifunc=javascriptcomplete#CompleteJS
 

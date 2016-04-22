@@ -7,7 +7,7 @@ setlocal smarttab
 setlocal textwidth=0
 setlocal foldcolumn=1
 setlocal foldmethod=indent
-setlocal omnifunc=pythoncomplete#Complete
+"setlocal omnifunc=pythoncomplete#Complete
 
 " compiler pylint
 " let g:pylint_onwrite = 0
@@ -28,3 +28,7 @@ function! s:PySkelSetup()
 endfunction
 com! PySkelSetup s:PySkelSetup
 
+function! s:Py3()
+	let g:syntastic_python_python_exec = 'python3'
+endfunction
+com! Py3 s:Py3

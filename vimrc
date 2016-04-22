@@ -7,73 +7,78 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab.git'
-Plugin 'Konfekt/FastFold'
-Plugin 'Shougo/neocomplete.vim'
-" Plugin 'Shougo/neosnippet.vim'
-" Plugin 'Shougo/neosnippet-snippets'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
-Plugin 'VimOutliner'
+"Plugin 'Konfekt/FastFold'
+"Plugin 'Shougo/neocomplete.vim'
+"" Plugin 'Shougo/neosnippet.vim'
+"" Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'Shougo/unite.vim'
+"Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
+"Plugin 'VimOutliner'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'benekastah/neomake'
+"Plugin 'benekastah/neomake'
 Plugin 'bling/vim-airline'
-" Plugin 'derekwyatt/vim-scala'
+"" Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'epeli/slimux'
-" Plugin 'fatih/vim-go'
-" Plugin 'forth.vim'
+"" Plugin 'fatih/vim-go'
+"" Plugin 'forth.vim'
 Plugin 'godlygeek/tabular'
-" Plugin 'honza/vim-snippets'
-" Plugin 'idris-hackers/idris-vim'
-" Plugin 'int3/vim-extradite'
-" Plugin 'iyf/vimrepress'
+Plugin 'honza/vim-snippets'
+"" Plugin 'idris-hackers/idris-vim'
+Plugin 'int3/vim-extradite'
+"" Plugin 'iyf/vimrepress'
 Plugin 'jmcantrell/vim-virtualenv'
-" Plugin 'kchmck/vim-coffee-script'
-" Plugin 'majutsushi/tagbar'
+"" Plugin 'kchmck/vim-coffee-script'
+Plugin 'majutsushi/tagbar'
+Plugin 'mattn/emmet-vim'
 Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 Plugin 'othree/html5.vim'
-Plugin 'pbrisbin/html-template-syntax'
-" Plugin 'raichoo/purescript-vim'
+Plugin 'pangloss/vim-javascript'
+"Plugin 'pbrisbin/html-template-syntax'
+"" Plugin 'raichoo/purescript-vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-" Plugin 'seebi/semweb.vim'
-" Plugin 'tpope/vim-endwise'
+"" Plugin 'seebi/semweb.vim'
+"" Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-obsession'
-" Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-speeddating'
+"" Plugin 'tpope/vim-rails'
+"Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
-" Plugin 'tpope/vim-unimpaired'
-" Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'valloric/youcompleteme'
+"" Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/gitignore'
-" Plugin 'vimoutliner-colorscheme-fix'
-" Plugin 'whatyouhide/vim-gotham'
-" 
-" " Python plugins
-Plugin 'vim-scripts/indentpython.vim', { 'for': 'python' }
-
-" " Haskell plugins
-" " Plugin 'Twinside/vim-haskellFold'
-" " " Plugin 'bitc/vim-hdevtools'
-" " Plugin 'dag/vim2hs'
-" " Plugin 'eagletmt/neco-ghc'
-" " Plugin 'feuerbach/vim-hs-module-name'
-" " " Plugin 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
-" 
-" Plugin 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-" " Plugin 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
+"" Plugin 'vimoutliner-colorscheme-fix'
+"" Plugin 'whatyouhide/vim-gotham'
+"" 
+"" " Python plugins
+"Plugin 'vim-scripts/indentpython.vim', { 'for': 'python' }
+"
+"" " Haskell plugins
+"" " Plugin 'Twinside/vim-haskellFold'
+"" " " Plugin 'bitc/vim-hdevtools'
+"" " Plugin 'dag/vim2hs'
+"" " Plugin 'eagletmt/neco-ghc'
+"" " Plugin 'feuerbach/vim-hs-module-name'
+"" " " Plugin 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
+"" 
+"" Plugin 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+"" " Plugin 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
 Plugin 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plugin 'eagletmt/neco-ghc', { 'for': 'haskell' }
-" Plugin 'Twinside/vim-hoogle', { 'for': 'haskell' }
-" Plugin 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
-" Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
-" Plugin 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
-" Plugin 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
+"" Plugin 'Twinside/vim-hoogle', { 'for': 'haskell' }
+"" Plugin 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
+"" Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
+"" Plugin 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
+"" Plugin 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
 
 call vundle#end()
 
@@ -113,57 +118,32 @@ nmap <Leader>fcw :copen<CR><C-w>k:grep <C-R>=expand("<cword>")<CR><CR>
 set directory=~/.tmp,~/tmp,/tmp
 set backupdir=~/.tmp,~/tmp,/tmp
 
+"{{{2 ctrlp
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 "{{{2 syntastic
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"{{{2 neocomplete
+"{{{2 pencil
 
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-inoremap <expr><C-g> neocomplete#undo_completion()
-inoremap <expr><C-l> neocomplete#complete_common_string()
-
-if !exists("g:neocomplete#sources#omni#input_patterns")
-	let g:neocomplete#sources#omni#input_patterns = {}
-endif
-
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><C-h> neocomplete#smart_close_popup() . "\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup() . "\<C-h>"
-inoremap <expr><C-y> neocomplete#close_popup()
-inoremap <expr><C-e> neocomplete#cancel_popup()
-
-"{{{2 neosnippet
-
-" imap <C-k> <Plug>(neosnippet_expand_or_jump)
-" smap <C-k> <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k> <Plug>(neosnippet_expand_target)
-
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)"
-			\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)"
-			\: pumvisible() ? "\<C-n>" : "\<TAB>"
-
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-
-"{{{2 Unity
-
-nnoremap <C-p> :Unite file_rec/async<cr>
+augroup pencil
+	autocmd!
+	autocmd FileType markdown,mkd call pencil#init()
+	autocmd FileType text         call pencil#init()
+augroup END
 
 "{{{2 NERDTree
+
 let NERDSpaceDelims=1
 let NERDRemoveExtraSpaces=1
 
@@ -222,15 +202,15 @@ nmap <F12> :set nospell<CR>
 nmap <c-w><c-]> "tyaw:stjump<space><c-r>t<cr>
 
 nmap <localleader>cx :s/\[ \] /[x] <c-r>=strftime("%Y-%m-%d %H:%M")<cr> /<cr>:nohlsearch<cr>
-nmap <localleader>ct /\[TODAY]<cr>zvzz
-nmap <localleader>cT :s/\[ \] /&[TODAY] /<cr>
-nmap <localleader>ca /\[ACTIVE]<cr>zvzz
-nmap <localleader>cA :s/\[ \] /&[ACTIVE] /<cr>
+"nmap <localleader>ct /\[TODAY]<cr>zvzz
+"nmap <localleader>cT :s/\[ \] /&[TODAY] /<cr>
+"nmap <localleader>ca /\[ACTIVE]<cr>zvzz
+"nmap <localleader>cA :s/\[ \] /&[ACTIVE] /<cr>
 
 "{{{2 Mappings for :Tab
-vmap t= :Tab /=<CR>
-vmap t> :Tab /[=-]*><CR>
-vmap t: :Tab /:<CR>
+"vmap t= :Tab /=<CR>
+"vmap t> :Tab /[=-]*><CR>
+"vmap t: :Tab /:<CR>
 
 "{{{1 Commands & Mappings
 
@@ -244,27 +224,27 @@ function s:StripWS()
 endfunction
 com! StripWS call s:StripWS()
 
-function! s:TodoListMode()
-	e ~/gtd/todo.txt
-	Calendar
-	wincmd l
-	tabnew ~/gtd/journal.mkd
-	tabfirst
-	" or 'norm! zMzr
-endfunction!
-com! TodoList call s:TodoListMode()
-
-function! s:GtdMode()
-	tabonly
-	e ~/Dropbox/gtd/inbox.txt
-	tabe ~/tmp/scratch.md
-	tabe ~/Dropbox/links.txt
-	tabe ~/Dropbox/quotes
-	tabe ~/Dropbox/gtd/todos.md
-	tabe ~/Dropbox/journal.md
-	tabnext 1
-endfunction
-com! Gtd call s:GtdMode()
+"function! s:TodoListMode()
+"	e ~/gtd/todo.txt
+"	Calendar
+"	wincmd l
+"	tabnew ~/gtd/journal.mkd
+"	tabfirst
+"	" or 'norm! zMzr
+"endfunction!
+"com! TodoList call s:TodoListMode()
+"
+"function! s:GtdMode()
+"	tabonly
+"	e ~/Dropbox/gtd/inbox.txt
+"	tabe ~/tmp/scratch.md
+"	tabe ~/Dropbox/links.txt
+"	tabe ~/Dropbox/quotes
+"	tabe ~/Dropbox/gtd/todos.md
+"	tabe ~/Dropbox/journal.md
+"	tabnext 1
+"endfunction
+"com! Gtd call s:GtdMode()
 
 function! s:DiffWithSaved()
 	let filetype=&ft
@@ -359,7 +339,7 @@ autocmd! BufEnter * call ApplyLocalSettings(expand("<afile>:p:h"))
 
 nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
 nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
-nmap <Leader>archive :r!todo.sh archive<CR>
+"nmap <Leader>archive :r!todo.sh archive<CR>
 nmap <Leader>pl o<ESC>"+p
 nmap <Leader>dl "+dd
 nmap <Leader>yy "+yy

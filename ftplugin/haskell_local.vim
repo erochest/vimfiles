@@ -8,33 +8,29 @@ setlocal textwidth=0
 setlocal foldmethod=indent
 setlocal foldcolumn=1
 
-setlocal omnifunc=necoghc#omnifunc
-let g:syntastic_haskell_checkers = []
+" setlocal omnifunc=necoghc#omnifunc
+" let g:syntastic_haskell_checkers = []
+let g:ycm_semantic_triggers = {'haskell': ['.']}
 
-nmap <buffer> <localleader>x :wa<cr>:SlimuxShellRun cabal clean<cr>
-nmap <buffer> <localleader>c :wa<cr>:SlimuxShellRun cabal configure<cr>
-nmap <buffer> <localleader>b :wa<cr>:SlimuxShellRun cabal build<cr>
-nmap <buffer> <localleader>d :wa<cr>:SlimuxShellRun cabal install --only-dependencies --enable-tests<cr>
-nmap <buffer> <localleader>t :wa<cr>:SlimuxShellRun cabal test --test-option=--color<cr>
-nmap <buffer> <localleader>r :wa<cr>:SlimuxShellRun cabal run<cr>
+nmap <buffer> <localleader>x :wa<cr>:SlimuxShellRun stack clean<cr>
+nmap <buffer> <localleader>b :wa<cr>:SlimuxShellRun stack build<cr>
+nmap <buffer> <localleader>t :wa<cr>:SlimuxShellRun stack test<cr>
 nmap <buffer> <localleader>s :w<cr>:%!stylish-haskell<cr>
 
 nmap <buffer> <localleader>C :wa<cr>:SlimuxShellRun make configure<cr>
-nmap <buffer> <localleader>D :wa<cr>:SlimuxShellRun make deps<cr>
 nmap <buffer> <localleader>B :wa<cr>:SlimuxShellRun make build<cr>
 nmap <buffer> <localleader>T :wa<cr>:SlimuxShellRun make test<cr>
-nmap <buffer> <localleader>S :wa<cr>:SlimuxShellRun make specs<cr>
 nmap <buffer> <localleader>R :wa<cr>:SlimuxShellRun make run<cr>
 
 nmap <buffer> <localleader>L :wa<cr>:SlimuxShellRun :reload<cr>
 
-nmap <buffer> <localleader>ht :GhcModType<cr>
-nmap <buffer> <localleader>hC :GhcModTypeClear<cr>
-nmap <buffer> <localleader>hi :GhcModTypeInsert<cr>
-nmap <buffer> <localleader>hl :GhcModLint<cr>
-nmap <buffer> <localleader>hc :GhcModCheck<cr>
+"nmap <buffer> <localleader>ht :GhcModType<cr>
+"nmap <buffer> <localleader>hC :GhcModTypeClear<cr>
+"nmap <buffer> <localleader>hi :GhcModTypeInsert<cr>
+"nmap <buffer> <localleader>hl :GhcModLint<cr>
+"nmap <buffer> <localleader>hc :GhcModCheck<cr>
 
-autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+"autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 
 " nmap <buffer> <localleader>ht :HdevtoolsType<cr>
 " nmap <buffer> <localleader>hc :HdevtoolsClear<cr>
@@ -47,10 +43,10 @@ setlocal conceallevel=0
 
 " let g:haddock_browser="open"
 " let g:haddock_browser_callformat = "%s %s"
-let g:haskell_autotags = 1
-let g:haskell_tags_generator = 'hasktags'
+"let g:haskell_autotags = 1
+"let g:haskell_tags_generator = 'hasktags'
 
-let g:haskell_multiline_strings = 1
+"let g:haskell_multiline_strings = 1
 
 set tags=tags;/,codex.tags;/
 

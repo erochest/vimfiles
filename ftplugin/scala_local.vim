@@ -8,5 +8,5 @@ setlocal textwidth=0
 setlocal foldcolumn=1
 " setlocal foldmethod=indent
 
-setlocal makeprg=jruby\ -S\ buildr
+"setlocal makeprg=jruby\ -S\ buildr
 
