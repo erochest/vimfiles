@@ -28,7 +28,4 @@ function! s:PySkelSetup()
 endfunction
 com! PySkelSetup s:PySkelSetup
 
-function! s:Py3()
-	let g:syntastic_python_python_exec = 'python3'
-endfunction
-com! Py3 s:Py3
+let g:syntastic_python_python_exec = 'python3'
