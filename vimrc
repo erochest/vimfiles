@@ -15,7 +15,7 @@ Plugin 'ervandew/supertab.git'
 "" Plugin 'Shougo/neosnippet.vim'
 "" Plugin 'Shougo/neosnippet-snippets'
 "Plugin 'Shougo/unite.vim'
-"Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
+Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
 "Plugin 'VimOutliner'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'benekastah/neomake'
