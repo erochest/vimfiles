@@ -22,7 +22,7 @@ Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'benekastah/neomake'
 Plugin 'bling/vim-airline'
-"" Plugin 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'epeli/slimux'
 "" Plugin 'fatih/vim-go'
