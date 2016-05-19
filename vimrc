@@ -24,6 +24,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'embear/vim-localvimrc'
 Plugin 'epeli/slimux'
 "" Plugin 'fatih/vim-go'
 "" Plugin 'forth.vim'
@@ -58,6 +59,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'valloric/youcompleteme'
 "" Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/gitignore'
+Plugin 'vim-scripts/bufkill.vim'
 "" Plugin 'vimoutliner-colorscheme-fix'
 "" Plugin 'whatyouhide/vim-gotham'
 "" 
@@ -78,7 +80,7 @@ Plugin 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plugin 'eagletmt/neco-ghc', { 'for': 'haskell' }
 "" Plugin 'Twinside/vim-hoogle', { 'for': 'haskell' }
 "" Plugin 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
-"" Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
+Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
 "" Plugin 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
 "" Plugin 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
 
