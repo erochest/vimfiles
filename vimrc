@@ -168,9 +168,9 @@ elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
 elseif has("gui_running")
 	" set guifont=Bitstream\ Vera\ Sans\ Mono:h13
-	set guifont=Source\ Code\ Pro:h15
+	" set guifont=Source\ Code\ Pro:h15
 	" set guifont=DejaVu\ Sans\ Mono:h15
-	" set guifont=Ubuntu\ Mono:h16
+	set guifont=Ubuntu\ Mono:h16
 	" set guifont=Monoid\ Regular:h15
 	set transparency=1
 endif
