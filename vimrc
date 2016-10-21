@@ -54,7 +54,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-obsession'
 "" Plugin 'tpope/vim-rails'
-"Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'valloric/youcompleteme'
@@ -168,9 +167,9 @@ elseif has("win32")
 	set guifont=Bitstream_Vera_Sans_Mono:h9:cANSI
 elseif has("gui_running")
 	" set guifont=Bitstream\ Vera\ Sans\ Mono:h13
-	" set guifont=Source\ Code\ Pro:h15
+	set guifont=Source\ Code\ Pro:h15
 	" set guifont=DejaVu\ Sans\ Mono:h15
-	set guifont=Ubuntu\ Mono:h16
+	" set guifont=Ubuntu\ Mono:h16
 	" set guifont=Monoid\ Regular:h15
 	set transparency=1
 endif
@@ -213,9 +212,9 @@ nmap <localleader>cx :s/\[ \] /[x] <c-r>=strftime("%Y-%m-%d %H:%M")<cr> /<cr>:no
 "nmap <localleader>cA :s/\[ \] /&[ACTIVE] /<cr>
 
 "{{{2 Mappings for :Tab
-"vmap t= :Tab /=<CR>
-"vmap t> :Tab /[=-]*><CR>
-"vmap t: :Tab /:<CR>
+vmap t= :Tab /=<CR>
+vmap t> :Tab /[=-]*><CR>
+vmap t: :Tab /:<CR>
 
 "{{{1 Commands & Mappings
 
