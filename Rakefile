@@ -57,7 +57,7 @@ end
 
 desc 'This runs "make -f make_mac.mak" for vimproc.'
 task :vimproc do
-  sh %{pushd bundle/vimproc ; make -f make_mac.mak ; popd}
+  sh %{pushd bundle/vimproc.vim ; make -f make_mac.mak ; popd}
 end
 
 desc 'This compiles Command-T.'
