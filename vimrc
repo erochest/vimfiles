@@ -11,7 +11,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim-fish'
-Plug 'ervandew/supertab.git'
+"Plug 'ervandew/supertab.git'
 "Plug 'Konfekt/FastFold'
 "Plug 'Shougo/neocomplete.vim'
 "" Plug 'Shougo/neosnippet.vim'
@@ -82,7 +82,7 @@ Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 "" Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
 Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
 "" Plug 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
-"" Plug 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
+Plug 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
 
 call plug#end()
 
