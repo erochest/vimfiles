@@ -4,8 +4,6 @@ filetype off
 
 call plug#begin()
 
-Plug 'VundleVim/Vundle.vim'
-
 Plug 'nightsense/vim-crunchbang'
 Plug 'aaronbieber/vim-quicktask'
 Plug 'jceb/vim-orgmode'
