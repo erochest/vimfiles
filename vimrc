@@ -2,93 +2,91 @@
 " Set up Vundle (gmarik/vundle) and other plugins
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
-Plugin 'aaronbieber/vim-quicktask'
-Plugin 'jceb/vim-orgmode'
-Plugin 'tpope/vim-speeddating'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'ervandew/supertab.git'
-"Plugin 'Konfekt/FastFold'
-"Plugin 'Shougo/neocomplete.vim'
-"" Plugin 'Shougo/neosnippet.vim'
-"" Plugin 'Shougo/neosnippet-snippets'
-"Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc.vim', { 'do': 'make' }
-"Plugin 'VimOutliner'
-Plugin 'altercation/vim-colors-solarized'
-"Plugin 'benekastah/neomake'
-Plugin 'bling/vim-airline'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'embear/vim-localvimrc'
-Plugin 'epeli/slimux'
-"" Plugin 'fatih/vim-go'
-"" Plugin 'forth.vim'
-Plugin 'FrigoEU/psc-ide-vim'
-Plugin 'godlygeek/tabular'
-Plugin 'honza/vim-snippets'
-"" Plugin 'idris-hackers/idris-vim'
-Plugin 'int3/vim-extradite'
-"" Plugin 'iyf/vimrepress'
-Plugin 'jmcantrell/vim-virtualenv'
-"" Plugin 'kchmck/vim-coffee-script'
-Plugin 'majutsushi/tagbar'
-Plugin 'mattn/emmet-vim'
-Plugin 'nelstrom/vim-markdown-folding'
-"Plugin 'nvie/vim-flake8'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-"Plugin 'pbrisbin/html-template-syntax'
-Plugin 'raichoo/purescript-vim'
-Plugin 'reedes/vim-pencil'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-"" Plugin 'seebi/semweb.vim'
-"" Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-obsession'
-"" Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'valloric/youcompleteme'
-"" Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/gitignore'
-Plugin 'vim-scripts/bufkill.vim'
-"" Plugin 'vimoutliner-colorscheme-fix'
-"" Plugin 'whatyouhide/vim-gotham'
+Plug 'nightsense/vim-crunchbang'
+Plug 'aaronbieber/vim-quicktask'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dag/vim-fish'
+Plug 'ervandew/supertab.git'
+"Plug 'Konfekt/FastFold'
+"Plug 'Shougo/neocomplete.vim'
+"" Plug 'Shougo/neosnippet.vim'
+"" Plug 'Shougo/neosnippet-snippets'
+"Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+"Plug 'VimOutliner'
+Plug 'altercation/vim-colors-solarized'
+"Plug 'benekastah/neomake'
+Plug 'bling/vim-airline'
+Plug 'derekwyatt/vim-scala'
+Plug 'easymotion/vim-easymotion'
+Plug 'embear/vim-localvimrc'
+Plug 'epeli/slimux'
+"" Plug 'fatih/vim-go'
+"" Plug 'forth.vim'
+Plug 'FrigoEU/psc-ide-vim'
+Plug 'godlygeek/tabular'
+Plug 'honza/vim-snippets'
+"" Plug 'idris-hackers/idris-vim'
+Plug 'int3/vim-extradite'
+"" Plug 'iyf/vimrepress'
+Plug 'jmcantrell/vim-virtualenv'
+"" Plug 'kchmck/vim-coffee-script'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'nelstrom/vim-markdown-folding'
+"Plug 'nvie/vim-flake8'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+"Plug 'pbrisbin/html-template-syntax'
+Plug 'raichoo/purescript-vim'
+Plug 'reedes/vim-pencil'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+"" Plug 'seebi/semweb.vim'
+"" Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-obsession'
+"" Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'valloric/youcompleteme'
+"" Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/gitignore'
+Plug 'vim-scripts/bufkill.vim'
+"" Plug 'vimoutliner-colorscheme-fix'
+"" Plug 'whatyouhide/vim-gotham'
 "" 
 "" " Python plugins
-"Plugin 'vim-scripts/indentpython.vim', { 'for': 'python' }
+"Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 "
 "" " Haskell plugins
-"" " Plugin 'Twinside/vim-haskellFold'
-"" " " Plugin 'bitc/vim-hdevtools'
-"" " Plugin 'dag/vim2hs'
-"" " Plugin 'eagletmt/neco-ghc'
-"" " Plugin 'feuerbach/vim-hs-module-name'
-"" " " Plugin 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
+"" " Plug 'Twinside/vim-haskellFold'
+"" " " Plug 'bitc/vim-hdevtools'
+"" " Plug 'dag/vim2hs'
+"" " Plug 'eagletmt/neco-ghc'
+"" " Plug 'feuerbach/vim-hs-module-name'
+"" " " Plug 'kana/vim-filetype-haskell'    " This screws up the shiftwidth
 "" 
-"" Plugin 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-"" " Plugin 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
-Plugin 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
-Plugin 'eagletmt/neco-ghc', { 'for': 'haskell' }
-"" Plugin 'Twinside/vim-hoogle', { 'for': 'haskell' }
-"" Plugin 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
-Plugin 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
-"" Plugin 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
-"" Plugin 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
+"" Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+"" " Plug 'enomsg/vim-haskellConcealPlus', { 'for': 'haskell' }
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+"" Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
+"" Plug 'mpickering/hlint-refactor-vim', { 'for': 'haskell' }
+Plug 'itchyny/vim-haskell-indent', { 'for': 'haskell' }
+"" Plug 'feuerbach/vim-hs-module-name', { 'for': 'haskell' }
+"" Plug 'nbouscal/vim-stylish-haskell', { 'for': 'haskell' }
 
-call vundle#end()
-
-filetype plugin indent on
-syntax on
+call plug#end()
 
 "{{{1 Global settings
 
