@@ -15,3 +15,11 @@ vim.opt.wildignore= "*.swp,*.bak,*.pyc,*.ho,*.hi,*.o"
 vim.opt.cursorline = true
 vim.opt.wildmenu = true
 
+vim.g.mapleader = " "
+
+-- vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
+vim.keymap.set("v", "Q", "gq")
+vim.keymap.set("n", "Q", "gqap")
+vim.keymap.set("n", "<silent><leader>/", ":nohlsearch<CR>")
+vim.keymap.set("n", "<silent><leader>S", ":set nospell<CR>")
+
