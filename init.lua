@@ -2,7 +2,7 @@
 -- Nothing to see here. Move along, citizen.
 
 vim.opt.backup = true
-vim.opt.backupskip = ["/tmp/*", "/private/tmp/*"]
+vim.opt.backupskip = "/tmp/*,/private/tmp/*"
 vim.opt.backspace = "indent,eol,start"
 vim.opt.hlsearch = true
 vim.opt.joinspaces = false
