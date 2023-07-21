@@ -18,12 +18,22 @@ vim.opt.wildmenu = true
 vim.g.mapleader = " "
 
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
-vim.keymap.set("v", "Q", "gq")
-vim.keymap.set("n", "Q", "gqap")
-vim.keymap.set("n", "<silent><leader>/", ":nohlsearch<CR>")
-vim.keymap.set("n", "<silent><leader>S", ":set nospell<CR>")
+vim.keymap.set("v", "Q", "gq",   { desc = "Reformat the selection." })
+vim.keymap.set("n", "Q", "gqap", { desc = "Reformat the current paragraph." })
+vim.keymap.set("n", "<leader>/", function()
+	vim.opt.hlsearch = false
+end, {
+	desc = "Turn off search highlighting.",
+	silent = true
+})
+vim.keymap.set("n", "<leader>S", function()
+	vim.opt.spell = false
+end, {
+	desc = "Turn off spell checking.",
+	silent = true
+})
 
-vim.keymap.set("n", "<C-n>", ":next<CR>")
+vim.keymap.set("n", "<C-n>", ":next<CR>", { desc = "Move to the next file in args." })
 
 -- function s:ChCwd()
 -- 	execute "chdir " . escape(expand("%:p:h"), ' ')
