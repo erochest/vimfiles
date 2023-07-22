@@ -48,12 +48,22 @@ vim.api.nvim_create_user_command('StripWS', '%s/\\s\\+$//ge', {
 })
 
 vim.api.nvim_create_user_command('DiffWithSaved', function()
--- 	let filetype=&ft
--- 	diffthis
--- 	vnew | r # | normal! 1Gdd
--- 	diffthis
--- 	exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+	filetype = vim.bo.filetype
 
+	vim.api.nvim_command('diffthis')
+
+	vim.api.nvim_command('vnew')
+	vim.api.nvim_command('r #')
+	vim.api.nvim_command('normal! 1Gdd')
+
+	vim.api.nvim_command('diffthis')
+
+	vim.opt_local.buftype = 'nofile'
+	vim.opt_local.bufhidden = 'wipe'
+	vim.opt_local.buflisted = false
+	vim.opt_local.swapfile = false
+	vim.opt_local.readonly = true
+	vim.opt_local.filetype = filetype
 end, {
 	nargs = 0,
 	bang = false,
