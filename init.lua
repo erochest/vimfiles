@@ -69,12 +69,19 @@ end, {
 	bang = false,
 })
 
--- function! Browser()
--- 	let line = getline(".")
--- 	exec "!open '" . substitute(line, '^\s*', '', '') . "'"
--- endfunction
--- map <LocalLeader>http :call Browser()<CR>
---
+vim.api.nvim_create_user_command('Browser', function()
+	url = vim.fn.getline("."):gsub("^%s*(.-)%s*$", "%1")
+
+	if vim.fn.has('macunix') == 1 then
+		vim.print("open " .. url)
+		os.execute("open " .. url)
+	elseif vim.fn.has('win64') == 1 then
+		vim.print("start " .. url)
+		os.execute("start " .. url)
+	end
+end, {})
+vim.keymap.set("n", "<leader>http", vim.cmd.Browser)
+
 -- function! s:ExpandWindow()
 -- 	" set lines=56 columns=120
 -- 	set lines=46 columns=90
