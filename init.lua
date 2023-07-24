@@ -98,18 +98,20 @@ end, {
 	count = 100
 })
 
--- function! ShowRunOff()
--- 	highlight RunOff term=bold ctermbg=darkgrey guibg=#592929
--- 	call matchadd("RunOff", "\\%" . &textwidth . "v.*")
--- endfunction
--- nmap <leader>R :call ShowRunOff()<cr>
---
--- function! ShowRunOff78()
--- 	highlight RunOff term=bold ctermbg=darkgrey guibg=#592929
--- 	call matchadd("RunOff", "\\%78v.*")
--- endfunction
--- nmap <leader>R8 :call ShowRunOff78()<cr>
---
+vim.api.nvim_create_user_command('ShowRunOff', function()
+	vim.cmd.highlight({'RunOff', 'term=bold', 'ctermbg=darkgrey', 'guibg=#592929' })
+	vim.fn.matchadd('RunOff', '\\%' .. vim.opt.textwidth:get() .. 'v.*')
+end, {
+	desc = 'Highlight lines that are longer than the textwidth.'
+})
+
+vim.api.nvim_create_user_command('ShowRunOff78', function()
+	vim.cmd.highlight({'RunOff', 'term=bold', 'ctermbg=darkgrey', 'guibg=#592929' })
+	vim.fn.matchadd('RunOff', '\\%78v.*')
+end, {
+	desc = 'Highlight lines that are longer than the textwidth.'
+})
+
 -- function! ShiftWin()
 -- 	" For automatically resizing windows when you navigate.
 -- 	set winheight=5
