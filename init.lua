@@ -76,22 +76,28 @@ vim.api.nvim_create_user_command('Browser', function()
 		vim.print("start " .. url)
 		os.execute("start " .. url)
 	end
-end, {})
+end, {
+	desc = 'Open the URL on the current line in the system browser.'
+})
 vim.keymap.set("n", "<leader>http", vim.cmd.Browser)
 
--- function! s:ExpandWindow()
--- 	" set lines=56 columns=120
--- 	set lines=46 columns=90
--- endfunction
--- com! ExpandWindow call s:ExpandWindow()
---
--- function! s:List100()
--- 	mark l
--- 	put =range(1, 100)
--- 	'l,.s/^\d\+$/&.	/
--- endfunction
--- com! List100 call s:List100()
---
+vim.api.nvim_create_user_command('List100', function(opts)
+	count = opts.count
+	pad_to = #tostring(count)
+	format = '%' .. pad_to .. 'd. '
+
+	buffer = {}
+	for i = 1, count do
+		buffer[#buffer+1] = string.format(format, i)
+	end
+
+	current_line = vim.fn.getcurpos()[2]
+	vim.api.nvim_buf_set_lines(0, current_line, current_line, false, buffer)
+end, {
+	desc = 'Create a numbered markdown list.',
+	count = 100
+})
+
 -- function! ShowRunOff()
 -- 	highlight RunOff term=bold ctermbg=darkgrey guibg=#592929
 -- 	call matchadd("RunOff", "\\%" . &textwidth . "v.*")
