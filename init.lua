@@ -38,13 +38,11 @@ vim.keymap.set("n", "<C-n>", ":next<CR>", { desc = "Move to the next file in arg
 -- vim.api.nvim_create_user_command('Test', 'echo "It works!"', {})
 
 vim.api.nvim_create_user_command('ChCwd', 'chdir %:p:h', {
-	nargs = 0,
-	bang = false,
+	desc = 'Change the current directory to the directory for the current file.'
 })
 
 vim.api.nvim_create_user_command('StripWS', '%s/\\s\\+$//ge', {
-	nargs = 0,
-	bang = false,
+	desc = 'Strip all trailing whitespace from the file.'
 })
 
 vim.api.nvim_create_user_command('DiffWithSaved', function()
@@ -65,8 +63,7 @@ vim.api.nvim_create_user_command('DiffWithSaved', function()
 	vim.opt_local.readonly = true
 	vim.opt_local.filetype = filetype
 end, {
-	nargs = 0,
-	bang = false,
+	desc = "Diff the current buffer with what's saved to disk."
 })
 
 vim.api.nvim_create_user_command('Browser', function()
