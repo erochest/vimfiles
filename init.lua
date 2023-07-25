@@ -112,15 +112,16 @@ end, {
 	desc = 'Highlight lines that are longer than the textwidth.'
 })
 
--- function! ShiftWin()
--- 	" For automatically resizing windows when you navigate.
--- 	set winheight=5
--- 	set winminheight=5
--- 	set winheight=999
--- 	nmap <c-w>j <c-w>j<c-w>_
--- 	nmap <c-w>k <c-w>k<c-w>_
--- endfunction
---
+vim.api.nvim_create_user_command('ShiftWin', function()
+	vim.opt.winheight = 5
+	vim.opt.winminheight = 5
+	vim.opt.winheight = 999
+	vim.keymap.set("n", "<C-w>j", "<C-w>j<C-w>_", { silent = true })
+	vim.keymap.set("n", "<C-w>k", "<C-w>k<C-w>_", { silent = true })
+end, {
+	desc = 'For automatically resizing windows when you navigate.'
+})
+
 -- " From https://gist.github.com/lmullen/426094d4cac517bbb292:
 -- "
 -- " Add all flags in the style {TODO: description} or {PAGE} in current document
