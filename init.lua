@@ -141,30 +141,37 @@ end, {
 	desc = 'Add all flags in the style {TODO: description} or {PAGE} in current document and subdirectories to quickfix list.'
 })
 
--- " From http://www.kornerstoane.com/2014/06/why-i-cant-stop-using-vim/
--- " Search for any .vimsettings files in the path to the file.
--- " Source them if you find them.
--- function! ApplyLocalSettings(dirname)
---     " Don't try to walk a remote directory tree -- takes too long, too many
---     " what if's
---     let l:netrwProtocol = strpart(a:dirname, 0, stridx(a:dirname, "://"))
---     if l:netrwProtocol != ""
---         return
---     endif
+-- I really haven't tested this one, and I don't remember using it much, so
+-- Imma just comment it away.
 --
---     " Convert windows paths to unix style (they still work)
---     let l:curDir = substitute(a:dirname, "", "/", "g")
---     let l:parentDir = strpart(l:curDir, 0, strridx(l:curDir, "/"))
---     if isdirectory(l:parentDir)
---         call ApplyLocalSettings(l:parentDir)
---     endif
+-- -- " From http://www.kornerstoane.com/2014/06/why-i-cant-stop-using-vim/
+-- -- " Search for any .vimsettings files in the path to the file.
+-- -- " Source them if you find them.
+-- vim.api.nvim_create_user_command('ApplyLocalSettings', function()
+-- 	-- First don't try to walk a remote directory tree.
+-- 	netrwProtocol = string.sub(vim.fn.getcwd(), 0, string.find(vim.fn.getcwd(), "://"))
+-- 	if netrwProtocol ~= "" then
+-- 		return
+-- 	end
 --
---     " Now walk back up the path and source .vimsettings as you find them. This
---     " way child directories can 'inherit' from their parents
---     let l:settingsFile = a:dirname . "/.vimsettings"
---     if filereadable(l:settingsFile)
---         exec ":source " . l:settingsFile
---     endif
--- endfunction
--- autocmd! BufEnter * call ApplyLocalSettings(expand("<afile>:p:h"))
+-- 	-- convert windows paths to unix style (they still work)
+-- 	curDir = vim.fn.substitute(vim.fn.getcwd(), "\\", "/", "g")
+-- 	parentDir = string.sub(curDir, 0, string.find(curDir, "/[^/]*$"))
+-- 	if vim.fn.isdirectory(parentDir) == 1 then
+-- 		vim.cmd.ApplyLocalSettings(parentDir)
+-- 	end
+--
+-- 	-- now walk up the path and source .vimsettings as you find them. This way
+-- 	-- child directories can 'inherit' from their parents
+-- 	settingsFile = vim.fn.getcwd() .. "/.vimsettings"
+-- 	if vim.fn.filereadable(settingsFile) == 1 then
+-- 		vim.cmd.source(settingsFile)
+-- 	end
+-- end, {
+-- 	desc = 'Search for any .vimsettings files in the path to the file. Source them if you find them.'
+-- })
+-- vim.api.nvim_create_autocmd({'BufEnter'}, {
+-- 	pattern = '*',
+-- 	callback = vim.cmd.ApplyLocalSettings,
+-- })
 --
