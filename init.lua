@@ -126,17 +126,21 @@ end, {
 -- "
 -- " Add all flags in the style {TODO: description} or {PAGE} in current document
 -- " to quickfix list
--- function! ListTodo()
--- 	vimgrep /\v\{[A-Z]+(:\_.{-})?\}/gj %
--- 	copen
--- endfunction
---
--- " Do the same for all Markdown documents in this directory and subdirectories
--- function! ListTodoR()
--- 	vimgrep /\v\{[A-Z]+(:\_.{-})?\}/gj ./**/*.md
--- 	copen
--- endfunction
---
+vim.api.nvim_create_user_command('ListTodo', function()
+	vim.cmd.vimgrep('/\\v\\{[A-Z]+(:\\_.{-})?\\}/gj', '%')
+	vim.cmd.copen()
+end, {
+	desc = 'Add all flags in the style {TODO: description} or {PAGE} in current document to quickfix list.'
+})
+
+
+vim.api.nvim_create_user_command('ListTodoR', function()
+	vim.cmd.vimgrep('/\\v\\{[A-Z]+(:\\_.{-})?\\}/gj', './**/*.md')
+	vim.cmd.copen()
+end, {
+	desc = 'Add all flags in the style {TODO: description} or {PAGE} in current document and subdirectories to quickfix list.'
+})
+
 -- " From http://www.kornerstoane.com/2014/06/why-i-cant-stop-using-vim/
 -- " Search for any .vimsettings files in the path to the file.
 -- " Source them if you find them.
