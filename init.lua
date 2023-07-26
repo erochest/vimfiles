@@ -176,18 +176,19 @@ end, {
 -- })
 
 
--- nmap <Leader>j ggO# Date: <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><CR>
+vim.keymap.set("n", "<leader>j", "ggO# Date: <C-R>=strftime('%a, %d %b %Y %H:%M:%S %z')<CR><CR>", { silent = true })
+
 -- nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 -- "nmap <Leader>archive :r!todo.sh archive<CR>
--- nmap <Leader>pl o<ESC>"+p
--- nmap <Leader>dl "+dd
--- nmap <Leader>yy "+yy
--- nmap <Leader>l ggO<C-R>=strftime("%m-%d-%YT%H:%M:%S %z")<CR><space>\|<space>
---
--- imap <Leader>d <C-R>=strftime("%Y-%m-%dT%H:%M:%S %z")<CR>
--- nmap <Leader>d i<Leader>d
---
--- "{{{2
+
+vim.keymap.set("n", "<leader>pl", "o<ESC>\"+p", { silent = true })
+vim.keymap.set("n", "<leader>dl", "\"+dd", { silent = true })
+vim.keymap.set("n", "<leader>yy", "\"+yy", { silent = true })
+vim.keymap.set("n", "<leader>l", "ggO<C-R>=strftime('%Y-%m-%dT%H:%M:%S %z')<CR><space>\\|<space>", { silent = true })
+
+vim.keymap.set("i", "<leader>d", "<C-R>=strftime('%Y-%m-%dT%H:%M:%S%z')<CR>", { silent = true })
+vim.keymap.set("n", "<leader>d", "i<leader>d", { silent = true })
+
 -- vmap <Leader>x :SlimuxREPLSendSelection<CR>
 -- nmap <Leader>x :SlimuxREPLSendLine<CR>
 -- nmap <Leader>tmux :SlimuxREPLConfigure<CR>
@@ -195,4 +196,6 @@ end, {
 -- vmap <Leader>tsh :SlimuxShellPrompt<CR>
 -- nmap <Leader>ts! :SlimuxShellLast<CR>
 -- nmap <Leader>retsh :SlimuxShellConfigure<CR>
+
+-- https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/#plugin-manager
 
