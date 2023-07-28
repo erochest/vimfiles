@@ -198,4 +198,5 @@ vim.keymap.set("n", "<leader>d", "i<leader>d", { silent = true })
 -- nmap <Leader>retsh :SlimuxShellConfigure<CR>
 
 -- https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/#plugin-manager
+-- Finally adding a plugin manager: lazy.nvim
 
