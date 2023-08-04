@@ -200,3 +200,17 @@ vim.keymap.set("n", "<leader>d", "i<leader>d", { silent = true })
 -- https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/#plugin-manager
 -- Finally adding a plugin manager: lazy.nvim
 
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	print("Installing lazy.nvim...")
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
