@@ -232,3 +232,4 @@ require("lazy").setup({
 -- TODO: statusline
 -- TODO: python
 -- TODO: rust
+-- TODO: break plugins out into separate files under `lua/plugins`
