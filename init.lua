@@ -220,3 +220,15 @@ require("lazy").setup({
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	}
 })
+
+-- TODO: telescope.nvim
+-- TODO: nvim-lspconfig
+-- TODO: nvim-cmp
+-- TODO: nvim-treesitter
+-- TODO: nvim-dap
+-- TODO: nvim-dap-ui
+-- TODO: telescope-undo
+-- TODO: copilot-cmp
+-- TODO: statusline
+-- TODO: python
+-- TODO: rust
