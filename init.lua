@@ -269,7 +269,7 @@ require("lazy").setup({
 
 })
 
--- TODO: nvim-cmp
+-- TODO: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
 -- TODO: nvim-treesitter
 -- TODO: nvim-dap
 -- TODO: nvim-dap-ui
