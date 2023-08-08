@@ -226,10 +226,31 @@ require("lazy").setup({
 			{ '<leader>fs', '<cmd>Telescope spell_suggest<cr>', desc = 'Spelling suggestions for current word' },
 			{ '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>', desc = 'Fuzzy find in current buffer' }
 		}
-	}
+	},
+	{
+		"williamboman/mason.nvim",
+		-- dependencies = { 
+		-- 	"williamboman/mason-lspconfig.nvim",
+		-- },
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		-- dependencies = { "neovim/nvim-lspconfig" },
+		opts = {
+			ensure_installed = {
+				"lua_ls",
+				"pylsp",
+				"rust_analyzer",
+			},
+		},
+	},
+	{ "neovim/nvim-lspconfig" },
 })
 
 -- TODO: nvim-lspconfig
+-- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/mason-lspconfig.txt#L42
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- https://github.com/python-lsp/python-lsp-server
 -- TODO: nvim-cmp
 -- TODO: nvim-treesitter
 -- TODO: nvim-dap
