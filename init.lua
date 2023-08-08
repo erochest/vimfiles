@@ -229,13 +229,11 @@ require("lazy").setup({
 	},
 	{
 		"williamboman/mason.nvim",
-		-- dependencies = { 
-		-- 	"williamboman/mason-lspconfig.nvim",
-		-- },
+		config = true,
+		dependencies = { "williamboman/mason-lspconfig.nvim" },
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		-- dependencies = { "neovim/nvim-lspconfig" },
 		opts = {
 			ensure_installed = {
 				"lua_ls",
@@ -247,10 +245,6 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig" },
 })
 
--- TODO: nvim-lspconfig
--- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/mason-lspconfig.txt#L42
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
--- https://github.com/python-lsp/python-lsp-server
 -- TODO: nvim-cmp
 -- TODO: nvim-treesitter
 -- TODO: nvim-dap
