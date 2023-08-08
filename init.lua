@@ -227,31 +227,61 @@ require("lazy").setup({
 			{ '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>', desc = 'Fuzzy find in current buffer' }
 		}
 	},
+
+	{ "neovim/nvim-lspconfig", },
 	{
-		"williamboman/mason.nvim",
+    "williamboman/mason.nvim",
+		lazy = false,
 		config = true,
-		dependencies = { "williamboman/mason-lspconfig.nvim" },
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		lazy = false,
 		opts = {
-			ensure_installed = {
-				"lua_ls",
-				"pylsp",
-				"rust_analyzer",
-			},
+			ensure_installed = { "lua_ls", "rust_analyzer", "pylsp", },
 		},
 	},
-	{ "neovim/nvim-lspconfig" },
+
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	dependencies = {
+	-- 		"hrsh7th/cmp-nvim-lsp",
+	-- 		"hrsh7th/cmp-nvim-lua",
+	-- 		"hrsh7th/cmp-buffer",
+	-- 		"hrsh7th/cmp-path",
+	-- 		-- "hrsh7th/cmp-cmdline",
+	-- 		-- "saadparwaiz1/cmp_luasnip",
+	-- 		-- "L3MON4D3/LuaSnip",
+	-- 	},
+	-- 	opts = function(cmp, opts)
+	-- 		print(cmp)
+	-- 		print(opts)
+	-- 		opts.sources = cmp.config.sources({
+	-- 				{ name = "nvim_lsp" },
+	-- 				{ name = "nvim_lua" },
+	-- 			}, {
+	-- 				{ name = "buffer" },
+	-- 				{ name = "path" },
+	-- 			})
+	-- 		return opts
+	-- 	end,
+	-- },
+
 })
 
 -- TODO: nvim-cmp
 -- TODO: nvim-treesitter
 -- TODO: nvim-dap
 -- TODO: nvim-dap-ui
+-- TODO: snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
+-- TODO: linters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
+-- TODO: formatters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 -- TODO: telescope-undo
 -- TODO: copilot-cmp
 -- TODO: statusline
--- TODO: python
--- TODO: rust
+--
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- TODO: python https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
+-- TODO: rust https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+--
 -- TODO: break plugins out into separate files under `lua/plugins`
