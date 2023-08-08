@@ -217,11 +217,18 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{
 		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		dependencies = { 'nvim-lua/plenary.nvim' }
+		dependencies = { 'nvim-lua/plenary.nvim' },
+		keys = {
+			{ '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
+			{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'grep' },
+			{ '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find buffer' },
+			{ '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Help pages' },
+			{ '<leader>fs', '<cmd>Telescope spell_suggest<cr>', desc = 'Spelling suggestions for current word' },
+			{ '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>', desc = 'Fuzzy find in current buffer' }
+		}
 	}
 })
 
--- TODO: telescope.nvim
 -- TODO: nvim-lspconfig
 -- TODO: nvim-cmp
 -- TODO: nvim-treesitter
