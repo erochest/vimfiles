@@ -230,7 +230,7 @@ require("lazy").setup({
 
 	{ "neovim/nvim-lspconfig", },
 	{
-    "williamboman/mason.nvim",
+		"williamboman/mason.nvim",
 		lazy = false,
 		config = true,
 	},
@@ -271,10 +271,47 @@ require("lazy").setup({
 		end,
 	},
 
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function () 
+			local configs = require("nvim-treesitter.configs")
+
+			configs.setup({
+				-- add from https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
+				ensure_installed = {
+					"css",
+					"html",
+					"git_rebase",
+					"gitcommit",
+					"gitignore",
+					"graphql",
+					"javascript",
+					"jsonc",
+					"lua",
+					"make",
+					"markdown_inline",
+					"python",
+					"query",
+					"rust",
+					"todotxt",
+					"toml",
+					"typescript",
+					"vim",
+					"vimdoc",
+					"yaml",
+				},
+				sync_install = false,
+				highlight = { enable = true },
+				indent = { enable = true },
+			})
+		end
+	},
+
 })
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
--- TODO: nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
+-- DONE: nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
 -- TODO: nvim-dap
 -- TODO: nvim-dap-ui
 -- TODO: snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
