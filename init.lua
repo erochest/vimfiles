@@ -238,7 +238,11 @@ require("lazy").setup({
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
 		opts = {
-			ensure_installed = { "lua_ls", "rust_analyzer", "pylsp", },
+			ensure_installed = {
+				"lua_ls",
+				"pylsp",
+				"rust_analyzer",
+			},
 		},
 	},
 
@@ -308,23 +312,39 @@ require("lazy").setup({
 		end
 	},
 
+	{
+		"mfussenegger/nvim-dap",
+		dependencies = {
+			"mfussenegger/nvim-dap-python",
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+		},
+	},
+	{ "mfussenegger/nvim-dap-python", },
+	{ "theHamsta/nvim-dap-virtual-text", },
+	{ "rcarriga/nvim-dap-ui", },
 })
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
 -- DONE: nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
--- TODO: nvim-dap
--- TODO: nvim-dap-ui
+-- DONE: nvim-dap https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/
+-- DONE: nvim-dap-ui https://github.com/rcarriga/nvim-dap-ui#usage
 -- TODO: snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 -- TODO: linters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 -- TODO: formatters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 -- TODO: telescope-undo
 -- TODO: copilot-cmp
 -- TODO: statusline
+-- TODO: nvim-tree
+-- TODO: which-key
+-- TODO: possession
 --
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- TODO: lsp keybindings
 -- TODO: lsp cmp capabilities
--- TODO: python https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
--- TODO: rust https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+-- TODO: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
+-- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
+-- TODO: rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+-- TODO: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
 --
 -- TODO: break plugins out into separate files under `lua/plugins`
