@@ -273,8 +273,8 @@ require("lazy").setup({
 
 })
 
--- TODO: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
--- TODO: nvim-treesitter
+-- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
+-- TODO: nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
 -- TODO: nvim-dap
 -- TODO: nvim-dap-ui
 -- TODO: snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
@@ -285,6 +285,8 @@ require("lazy").setup({
 -- TODO: statusline
 --
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- TODO: lsp keybindings
+-- TODO: lsp cmp capabilities
 -- TODO: python https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
 -- TODO: rust https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 --
