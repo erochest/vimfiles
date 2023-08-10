@@ -323,13 +323,39 @@ require("lazy").setup({
 	{ "mfussenegger/nvim-dap-python", },
 	{ "theHamsta/nvim-dap-virtual-text", },
 	{ "rcarriga/nvim-dap-ui", },
+
+	{
+		"norcalli/snippets.nvim",
+		keys = {
+			{
+				"<c-k>",
+				function() return require("snippets").expand_or_advance(1) end,
+				mode = "i",
+				desc = "Expand the snippet",
+			},
+			{
+				"<c-j>",
+				function() return require("snippets").advance_snippet(-1) end,
+				mode = "i",
+				desc = "Previous snippet",
+			},
+		},
+		config = function()
+			require("snippets").snippets = {
+				_global = {
+					date = os.date;
+					now = function() return os.date("%Y-%m-%d %H:%M:%S") end;
+				},
+			}
+		end,
+	},
 })
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
 -- DONE: nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
 -- DONE: nvim-dap https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/
 -- DONE: nvim-dap-ui https://github.com/rcarriga/nvim-dap-ui#usage
--- TODO: snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
+-- DONE: snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 -- TODO: linters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 -- TODO: formatters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 -- TODO: telescope-undo
