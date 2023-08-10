@@ -186,8 +186,8 @@ vim.keymap.set("n", "<leader>dl", "\"+dd", { silent = true })
 vim.keymap.set("n", "<leader>yy", "\"+yy", { silent = true })
 vim.keymap.set("n", "<leader>l", "ggO<C-R>=strftime('%Y-%m-%dT%H:%M:%S %z')<CR><space>\\|<space>", { silent = true })
 
-vim.keymap.set("i", "<leader>d", "<C-R>=strftime('%Y-%m-%dT%H:%M:%S%z')<CR>", { silent = true })
-vim.keymap.set("n", "<leader>d", "i<leader>d", { silent = true })
+vim.keymap.set("i", "<leader>now", "<C-R>=strftime('%Y-%m-%dT%H:%M:%S%z')<CR>", { silent = true })
+vim.keymap.set("n", "<leader>now", "i<leader>d", { silent = true })
 
 -- vmap <Leader>x :SlimuxREPLSendSelection<CR>
 -- nmap <Leader>x :SlimuxREPLSendLine<CR>
@@ -199,6 +199,12 @@ vim.keymap.set("n", "<leader>d", "i<leader>d", { silent = true })
 
 -- https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/#plugin-manager
 -- Finally adding a plugin manager: lazy.nvim
+
+local has_words_before = function()
+  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
+end
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -273,7 +279,7 @@ require("lazy").setup({
 			"hrsh7th/cmp-nvim-lua",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-cmdline"
+			"hrsh7th/cmp-cmdline",
 			-- 		-- "saadparwaiz1/cmp_luasnip",
 			-- 		-- "L3MON4D3/LuaSnip",
 		},
@@ -288,6 +294,28 @@ require("lazy").setup({
 			return opts
 		end,
 	},
+	{
+		"github/copilot.vim",
+		cmd = { "Copilot", },
+		keys = {
+			{
+				"<leader>cp",
+				"<cmd>Copilot<CR>",
+				mode = "n",
+				desc = "Copilot",
+			},
+		},
+	},
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	cmd = "Copilot",
+	-- 	event = "InsertEnter",
+	-- },
+	-- {
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	dependencies = { "github/copilot.vim", },
+	-- 	config = true,
+	-- },
 
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -499,6 +527,7 @@ require("lazy").setup({
 		config = true,
 		lazy = false,
 	},
+
 })
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
@@ -518,9 +547,12 @@ require("lazy").setup({
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- TODO: lsp keybindings
 -- TODO: lsp cmp capabilities
+-- TODO: connect snippets to nvim-cmp
 -- TODO: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
 -- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
 -- TODO: rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 -- TODO: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
 --
 -- TODO: break plugins out into separate files under `lua/plugins`
+-- TODO: lspkind https://github.com/onsails/lspkind.nvim
+-- -- and copilot-cmp
