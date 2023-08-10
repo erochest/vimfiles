@@ -463,6 +463,21 @@ require("lazy").setup({
 			-- refer to the configuration section below
 		}
 	},
+
+	{
+		"jedrzejboczar/possession.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", },
+		cmd = {
+			"PossessionSave",
+			"PossessionLoad",
+			"PossessionRename",
+			"PossessionClose",
+			"PossessionDelete",
+			"PossessionShow",
+			"PossessionList",
+			"PossessionMigrate",
+		},
+	},
 })
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
@@ -477,7 +492,7 @@ require("lazy").setup({
 -- TODO: statusline
 -- DONE: nvim-tree
 -- DONE: which-key
--- TODO: possession
+-- DONE: possession
 --
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- TODO: lsp keybindings
