@@ -478,6 +478,13 @@ require("lazy").setup({
 			"PossessionMigrate",
 		},
 	},
+
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons", },
+		config = true,
+		lazy = false,
+	},
 })
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
@@ -489,7 +496,7 @@ require("lazy").setup({
 -- DONE: formatters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 -- TODO: telescope-undo
 -- TODO: copilot-cmp
--- TODO: statusline
+-- DONE: statusline
 -- DONE: nvim-tree
 -- DONE: which-key
 -- DONE: possession
