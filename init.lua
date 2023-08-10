@@ -433,6 +433,22 @@ require("lazy").setup({
 			})
 		end,
 	},
+
+	{
+		"nvim-tree/nvim-tree.lua",
+		cmd = {
+			"NvimTreeToggle",
+			"NvimTreeOpen",
+			"NvimTreeClose",
+			"NvimTreeRefresh",
+			"NvimTreeFindFile",
+		},
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = true,
+	},
+	{ "nvim-tree/nvim-web-devicons", },
 })
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
@@ -445,7 +461,7 @@ require("lazy").setup({
 -- TODO: telescope-undo
 -- TODO: copilot-cmp
 -- TODO: statusline
--- TODO: nvim-tree
+-- DONE: nvim-tree
 -- TODO: which-key
 -- TODO: possession
 --
