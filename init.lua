@@ -217,15 +217,29 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{
 		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		dependencies = { 'nvim-lua/plenary.nvim' },
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			"debugloop/telescope-undo.nvim",
+		},
 		keys = {
 			{ '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
 			{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'grep' },
 			{ '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find buffer' },
 			{ '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Help pages' },
 			{ '<leader>fs', '<cmd>Telescope spell_suggest<cr>', desc = 'Spelling suggestions for current word' },
-			{ '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>', desc = 'Fuzzy find in current buffer' }
-		}
+			{ '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>', desc = 'Fuzzy find in current buffer' },
+			{ "<leader>fu", "<cmd>Telescope undo<cr>", desc = "Undo history" },
+		},
+		config = function()
+			require("telescope").setup({
+				extensions = {
+					undo = {
+						-- telescope-undo.nvim config, see below
+					},
+				},
+			})
+			require("telescope").load_extension("undo")
+		end,
 	},
 
 	{ "neovim/nvim-lspconfig", },
@@ -494,7 +508,7 @@ require("lazy").setup({
 -- DONE: snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 -- DONE: linters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 -- DONE: formatters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
--- TODO: telescope-undo
+-- DONE: telescope-undo
 -- TODO: copilot-cmp
 -- DONE: statusline
 -- DONE: nvim-tree
