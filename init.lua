@@ -432,6 +432,45 @@ require("lazy").setup({
 	{ "rcarriga/nvim-dap-ui", },
 
 	{
+		"L3MON4D3/LuaSnip",
+		keys = {
+			{
+				"<c-K>",
+				function() return require("luasnip").expand() end,
+				mode = "i",
+				silent = true,
+				desc = "Expand the snippet",
+			},
+			{
+				"<c-J>",
+				function() return require("luasnip").jump(-1) end,
+				mode = { "i", "s", },
+				silent = true,
+				desc = "Previous snippet",
+			},
+			{
+				"<c-J>",
+				function() return require("luasnip").jump( 1) end,
+				mode = { "i", "s", },
+				silent = true,
+				desc = "Next snippet",
+			},
+			{
+				"<c-E>",
+				function()
+					local ls = require("luasnip")
+					if ls.choice_active() then
+						ls.change_choice(1)
+					end
+				end,
+				mode = { "i", "s", },
+				silent = true,
+				desc = "Change choice",
+			},
+		},
+	},
+
+	{
 		"norcalli/snippets.nvim",
 		keys = {
 			{
@@ -612,7 +651,7 @@ require("lazy").setup({
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- DONE: lsp keybindings
 -- DONE: lsp cmp capabilities
--- TODO: add mason/bin to path
+-- DONE: add mason/bin to path
 -- TODO: connect snippets to nvim-cmp
 -- TODO: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
 -- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
@@ -622,3 +661,16 @@ require("lazy").setup({
 -- TODO: break plugins out into separate files under `lua/plugins`
 -- TODO: lspkind https://github.com/onsails/lspkind.nvim
 -- -- and copilot-cmp
+-- TODO: keymap for NvimTreeToggle
+-- TODO: colorschema
+-- TODO: todotxt
+-- TODO: ctrl-p
+-- TODO: tweak code complete a lot
+-- TODO: code actions
+-- TODO: ; to list buffers
+-- TODO: line length settings for linting
+-- TODO: stop with <leader> = <space> in insert mode already!
+-- TODO: comment plugin and keymappings
+-- TODO: hierarchy panel
+-- TODO: terminal?
+-- TODO: use pylint and other tools from the current venv
