@@ -251,29 +251,6 @@ require("lazy").setup({
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			vim.api.nvim_create_autocmd({
-				"BufNewFile",
-				"BufRead",
-			},
-			{
-				pattern = "*.py",
-        callback = function()
-					local lspconfig = require("lspconfig")
-					lspconfig.pylsp.setup({})
-				end,
-			})
-			vim.api.nvim_create_autocmd({
-				"BufNewFile",
-				"BufRead",
-			},
-			{
-				pattern = "*.rs",
-        callback = function()
-					local lspconfig = require("lspconfig")
-					lspconfig.rust_analyzer.setup({})
-				end,
-			})
-
 			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
 			vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 			vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
@@ -285,9 +262,6 @@ require("lazy").setup({
 			vim.api.nvim_create_autocmd('LspAttach', {
 				group = vim.api.nvim_create_augroup('UserLspConfig', {}),
 				callback = function(ev)
-					-- Enable completion triggered by <c-x><c-o>
-					vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-
 					-- Buffer local mappings.
 					-- See `:help vim.lsp.*` for documentation on any of the below functions
 					local opts = { buffer = ev.buf }
@@ -346,15 +320,42 @@ require("lazy").setup({
 			-- 		-- "saadparwaiz1/cmp_luasnip",
 			-- 		-- "L3MON4D3/LuaSnip",
 		},
-		opts = function(_, opts)
-			opts.sources = require("cmp").config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "nvim_lua" },
-			}, {
-				{ name = "buffer" },
-				{ name = "path" },
+		config = function()
+			require("cmp").setup({
+				sources = {
+					{ name = "nvim_lsp", group_index = 1, },
+					{ name = "nvim_lua", group_index = 1, },
+					{ name = "buffer", group_index = 2, },
+					{ name = "path", group_index = 2, },
+				}
 			})
-			return opts
+			vim.api.nvim_create_autocmd({
+				"BufNewFile",
+				"BufRead",
+			}, {
+				pattern = "*.py",
+				callback = function()
+					print('starting pylsp')
+					local capabilities = require("cmp_nvim_lsp").default_capabilities()
+					require("lspconfig").pylsp.setup({
+						capabilities = capabilities,
+					})
+				end,
+			})
+			vim.api.nvim_create_autocmd({
+				"BufNewFile",
+				"BufRead",
+			}, {
+				pattern = "*.rs",
+        callback = function()
+					print('starting rust-analyzer')
+					local lspconfig = require("lspconfig")
+					local capabilities = require("cmp_nvim_lsp").default_capabilities()
+					lspconfig.rust_analyzer.setup({
+						capabilities = capabilities,
+					})
+				end,
+			})
 		end,
 	},
 
@@ -609,8 +610,9 @@ require("lazy").setup({
 -- DONE: possession
 --
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
--- TODO: lsp keybindings
--- TODO: lsp cmp capabilities
+-- DONE: lsp keybindings
+-- DONE: lsp cmp capabilities
+-- TODO: add mason/bin to path
 -- TODO: connect snippets to nvim-cmp
 -- TODO: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
 -- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
