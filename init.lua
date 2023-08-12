@@ -308,6 +308,7 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-buffer", },
 	{ "hrsh7th/cmp-path", },
 	{ "hrsh7th/cmp-cmdline", },
+	{ "saadparwaiz1/cmp_luasnip", },
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -317,18 +318,35 @@ require("lazy").setup({
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
-			-- 		-- "saadparwaiz1/cmp_luasnip",
-			-- 		-- "L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
+			"L3MON4D3/LuaSnip",
 		},
 		config = function()
-			require("cmp").setup({
-				sources = {
+			local cmp = require("cmp")
+			cmp.setup({
+				snippet = {
+					expand = function(args)
+						require("luasnip").lsp_expand(args.body)
+					end,
+				},
+				sources = cmp.config.sources({
 					{ name = "nvim_lsp", group_index = 1, },
 					{ name = "nvim_lua", group_index = 1, },
+					{ name = "luasnip", group_index = 1, },
+				}, {
 					{ name = "buffer", group_index = 2, },
 					{ name = "path", group_index = 2, },
-				}
+				}),
+				mapping = cmp.mapping.preset.insert({
+					['<C-b>'] = cmp.mapping.scroll_docs(-4),
+					['<C-f>'] = cmp.mapping.scroll_docs(4),
+					['<C-Space>'] = cmp.mapping.complete(),
+					['<C-e>'] = cmp.mapping.abort(),
+					['<CR>'] = cmp.mapping.confirm({ select = true }),
+					-- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+				}),
 			})
+
 			vim.api.nvim_create_autocmd({
 				"BufNewFile",
 				"BufRead",
@@ -430,6 +448,30 @@ require("lazy").setup({
 	{ "mfussenegger/nvim-dap-python", },
 	{ "theHamsta/nvim-dap-virtual-text", },
 	{ "rcarriga/nvim-dap-ui", },
+
+	{
+		"L3MON4D3/LuaSnip",
+		version = "2.*",
+		keys = {
+			{ "<C-K>", function() require("luasnip").expand() end, mode = {"i"}, silent = true, },
+			{ "<C-L>", function() require("luasnip").jump( 1) end, mode = {"i", "s"}, silent = true, },
+			{ "<C-J>", function() require("luasnip").jump(-1) end, mode = {"i", "s"}, silent = true, },
+			{
+				"<C-E>",
+				function()
+					local ls = require("luasnip")
+					if ls.choice_active() then
+						ls.change_choice(1)
+					end
+				end,
+				mode = {"i"}, silent = true,
+			},
+		},
+		config = function()
+			require("luasnip").setup({})
+			require("luasnip.loaders.from_snipmate").lazy_load()
+		end,
+	},
 
 	{
 		"norcalli/snippets.nvim",
@@ -612,8 +654,8 @@ require("lazy").setup({
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- DONE: lsp keybindings
 -- DONE: lsp cmp capabilities
--- TODO: add mason/bin to path
--- TODO: connect snippets to nvim-cmp
+-- DONE: add mason/bin to path
+-- DONE: connect snippets to nvim-cmp
 -- TODO: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
 -- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
 -- TODO: rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
