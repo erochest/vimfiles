@@ -228,13 +228,28 @@ require("lazy").setup({
 			"debugloop/telescope-undo.nvim",
 		},
 		keys = {
-			{ '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
-			{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'grep' },
-			{ '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Find buffer' },
-			{ '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Help pages' },
-			{ '<leader>fs', '<cmd>Telescope spell_suggest<cr>', desc = 'Spelling suggestions for current word' },
-			{ '<leader>fz', '<cmd>Telescope current_buffer_fuzzy_find<cr>', desc = 'Fuzzy find in current buffer' },
-			{ "<leader>fu", "<cmd>Telescope undo<cr>", desc = "Undo history" },
+			{ '<C-p>', '<cmd>Telescope find_files<cr>', desc = 'Find files', mode = "n", },
+			{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'grep', mode = "n", },
+			{ ';', '<cmd>Telescope buffers<cr>', desc = 'Find buffer', mode = "n", },
+			{ '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Help pages', mode = "n", },
+			{
+				'<leader>fs',
+				'<cmd>Telescope spell_suggest<cr>',
+				desc = 'Spelling suggestions for current word',
+				mode = "n",
+			},
+			{
+				'<leader>fz',
+				'<cmd>Telescope current_buffer_fuzzy_find<cr>',
+				desc = 'Fuzzy find in current buffer',
+				mode = "n",
+			},
+			{
+				"<leader>fu",
+				"<cmd>Telescope undo<cr>",
+				desc = "Undo history",
+				mode = "n",
+			},
 		},
 		config = function()
 			require("telescope").setup({
