@@ -785,6 +785,11 @@ require("lazy").setup({
 		end,
 	},
 	{ 'MunifTanjim/nui.nvim', },
+
+	{
+		"tpope/vim-commentary",
+		keys = { "gc", "gcc", "gcu", },
+	},
 })
 
 vim.o.background = "dark"
@@ -832,7 +837,7 @@ vim.g.material_style = "oceanic"
 -- DONE: ; to list buffers
 -- TODO: line length settings for linting
 -- TODO: stop with <leader> = <space> in insert mode already!
--- TODO: comment plugin and keymappings
+-- DONE: comment plugin and keymappings
 -- TODO: hierarchy panel
 -- TODO: terminal?
 -- TODO: use pylint and other tools from the current venv
