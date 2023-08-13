@@ -736,10 +736,10 @@ require("lazy").setup({
 -- TODO: keymap for NvimTreeToggle
 -- TODO: colorschema
 -- TODO: todotxt
--- TODO: ctrl-p
+-- DONE: ctrl-p
 -- TODO: tweak code complete a lot
 -- TODO: code actions
--- TODO: ; to list buffers
+-- DONE: ; to list buffers
 -- TODO: line length settings for linting
 -- TODO: stop with <leader> = <space> in insert mode already!
 -- TODO: comment plugin and keymappings
