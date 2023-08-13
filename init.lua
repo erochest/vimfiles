@@ -314,7 +314,7 @@ require("lazy").setup({
 		opts = {
 			ensure_installed = {
 				"lua_ls",
-				"pylsp",
+				"jedi_language_server",
 				"rust_analyzer",
 			},
 		},
@@ -381,9 +381,9 @@ require("lazy").setup({
 			}, {
 				pattern = "*.py",
 				callback = function()
-					print('starting pylsp')
+					print('starting python language server')
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
-					require("lspconfig").pylsp.setup({
+					require("lspconfig").jedi_language_server.setup({
 						capabilities = capabilities,
 					})
 				end,
@@ -743,8 +743,8 @@ require("lazy").setup({
 -- DONE: add mason/bin to path
 -- DONE: connect snippets to nvim-cmp
 -- DONE: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
--- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
--- TODO: rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+-- DONE: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
+-- DONE: rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 -- DONE: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
 --
 -- TODO: break plugins out into separate files under `lua/plugins`
@@ -763,3 +763,4 @@ require("lazy").setup({
 -- TODO: hierarchy panel
 -- TODO: terminal?
 -- TODO: use pylint and other tools from the current venv
+-- TODO: https://github.com/microsoft/pyright
