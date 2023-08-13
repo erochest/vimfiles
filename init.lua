@@ -661,6 +661,10 @@ require("lazy").setup({
 			"NvimTreeRefresh",
 			"NvimTreeFindFile",
 		},
+		keys = {
+			{ "<leader>nt", "<cmd>NvimTreeToggle<CR>", mode = "n", desc = "Toggle the file tree", },
+			{ "<leader>nf", "<cmd>NvimTreeFindFile<CR>", mode = "n", desc = "Find a file in the file tree", },
+		},
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
@@ -725,7 +729,7 @@ require("lazy").setup({
 -- DONE: lsp cmp capabilities
 -- DONE: add mason/bin to path
 -- DONE: connect snippets to nvim-cmp
--- TODO: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
+-- DONE: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
 -- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
 -- TODO: rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
 -- TODO: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
@@ -733,7 +737,7 @@ require("lazy").setup({
 -- TODO: break plugins out into separate files under `lua/plugins`
 -- TODO: lspkind https://github.com/onsails/lspkind.nvim
 -- -- and copilot-cmp
--- TODO: keymap for NvimTreeToggle
+-- DONE: keymap for NvimTreeToggle
 -- TODO: colorschema
 -- TODO: todotxt
 -- DONE: ctrl-p
