@@ -20,6 +20,8 @@ vim.g.mapleader = " "
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
 vim.keymap.set("v", "Q", "gq",   { desc = "Reformat the selection." })
 vim.keymap.set("n", "Q", "gqap", { desc = "Reformat the current paragraph." })
+vim.keymap.set("n", "gn", ":tabn<cr>", { desc = "Go to the next tab." })
+vim.keymap.set("n", "gN", ":tabN<cr>", { desc = "Go to the previous tab." })
 vim.keymap.set("n", "<leader>/", function()
 	vim.opt.hlsearch = false
 end, {
@@ -732,7 +734,7 @@ require("lazy").setup({
 -- DONE: dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
 -- TODO: python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
 -- TODO: rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
--- TODO: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
+-- DONE: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
 --
 -- TODO: break plugins out into separate files under `lua/plugins`
 -- TODO: lspkind https://github.com/onsails/lspkind.nvim
