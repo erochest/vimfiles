@@ -452,17 +452,32 @@ require("lazy").setup({
 		end
 	},
 
+	{ "mfussenegger/nvim-dap", },
 	{
-		"mfussenegger/nvim-dap",
-		dependencies = {
-			"mfussenegger/nvim-dap-python",
-			"theHamsta/nvim-dap-virtual-text",
-			"rcarriga/nvim-dap-ui",
-		},
+		"mfussenegger/nvim-dap-python",
+		dependencies = { "mfussenegger/nvim-dap", },
 	},
-	{ "mfussenegger/nvim-dap-python", },
-	{ "theHamsta/nvim-dap-virtual-text", },
-	{ "rcarriga/nvim-dap-ui", },
+	{
+		"theHamsta/nvim-dap-virtual-text",
+		dependencies = { "mfussenegger/nvim-dap", },
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = { "mfussenegger/nvim-dap", },
+		config = function()
+			local dap, dapui = require("dap"), require("dapui")
+			dapui.setup()
+			dap.listeners.after.event_initialized["dapui_config"] = function()
+				dapui.open()
+			end
+			dap.listeners.before.event_terminated["dapui_config"] = function()
+				dapui.close()
+			end
+			dap.listeners.before.event_exited["dapui_config"] = function()
+				dapui.close()
+			end
+		end,
+	},
 
 	{
 		"L3MON4D3/LuaSnip",
