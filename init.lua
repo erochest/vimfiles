@@ -326,6 +326,7 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-path", },
 	{ "hrsh7th/cmp-cmdline", },
 	{ "saadparwaiz1/cmp_luasnip", },
+	{ "onsails/lspkind.nvim", },
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -337,9 +338,12 @@ require("lazy").setup({
 			"hrsh7th/cmp-cmdline",
 			"saadparwaiz1/cmp_luasnip",
 			"L3MON4D3/LuaSnip",
+			"onsails/lspkind.nvim",
 		},
 		config = function()
 			local cmp = require("cmp")
+			local lspkind = require('lspkind')
+
 			cmp.setup({
 				snippet = {
 					expand = function(args)
@@ -362,6 +366,13 @@ require("lazy").setup({
 					['<CR>'] = cmp.mapping.confirm({ select = true }),
 					-- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = 'symbol',
+						maxwidth = 50,
+						ellipsis_char = '...',
+					})
+				}
 			})
 
 			vim.api.nvim_create_autocmd({
@@ -737,7 +748,7 @@ require("lazy").setup({
 -- DONE: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
 --
 -- TODO: break plugins out into separate files under `lua/plugins`
--- TODO: lspkind https://github.com/onsails/lspkind.nvim
+-- DONE: lspkind https://github.com/onsails/lspkind.nvim
 -- -- and copilot-cmp
 -- DONE: keymap for NvimTreeToggle
 -- TODO: colorschema
