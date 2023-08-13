@@ -1,0 +1,51 @@
+x nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
+x nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
+x nvim-dap https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/
+x nvim-dap-ui https://github.com/rcarriga/nvim-dap-ui#usage
+x snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
+x linters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
+x formatters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
+x telescope-undo
+copilot-cmp
+x statusline
+x nvim-tree
+x which-key
+x possession
+--
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+x lsp keybindings
+x lsp cmp capabilities
+x add mason/bin to path
+x connect snippets to nvim-cmp
+x dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
+x python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
+x rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
+x tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
+--
+break plugins out into separate files under `lua/plugins`
+--       https://github.com/folke/lazy.nvim#-structuring-your-plugins
+--       https://www.reddit.com/r/neovim/comments/tjnxxb/file_structure_for_adjusting_plugin_options/
+x lspkind https://github.com/onsails/lspkind.nvim
+-- -- and copilot-cmp
+x keymap for NvimTreeToggle
+x colorschema
+x todotxt
+x ctrl-p
+tweak code complete a lot
+code actions
+x ; to list buffers
+line length settings for linting
+stop with <leader> = <space> in insert mode already!
+x comment plugin and keymappings
+x hierarchy panel
+x terminal?
+use pylint and other tools from the current venv
+https://github.com/microsoft/pyright
+check out plugins from material options
+python rope
+descriptions for telescope
+x move these todos into a `todo.txt` file in the `vimfiles` directory
+https://nvimdev.github.io/lspsaga/
+keymaps for `:AerialToggle` and `:AerialClose`
+configure lualine (with navic)
+more config for terminals https://github.com/akinsho/toggleterm.nvim
