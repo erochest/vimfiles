@@ -753,6 +753,38 @@ require("lazy").setup({
 		lazy = false,
 	},
 
+	{
+		'arnarg/todotxt.nvim',
+		dependencies = { 'MunifTanjim/nui.nvim', },
+		cmd = {
+			"ToDoTxtCapture",
+			"ToDoTxtTasksToggle",
+		},
+		keys = {
+			{ "<leader>tt", "<cmd>ToDoTxtTasksToggle<cr>", desc = "Toggle the todo list", mode = "n", },
+			{ "<leader>tc", "<cmd>ToDoTxtCapture<cr>", desc = "Capture a new todo", mode = "n", },
+		},
+		config = function()
+			local filenames = {
+				"./todo.txt",
+				"~/todo.txt",
+				"~/.todo.txt",
+				"~/.todo/todo.txt",
+				"~/Dropbox/todo.txt",
+			}
+			local todo_file = nil
+			for _, filename in ipairs(filenames) do
+				if vim.fn.filereadable(filename) == 1 then
+					todo_file = filename
+					break
+				end
+			end
+			require('todotxt-nvim').setup({
+				todo_file = todo_file,
+			})
+		end,
+	},
+	{ 'MunifTanjim/nui.nvim', },
 })
 
 vim.o.background = "dark"
@@ -793,7 +825,7 @@ vim.g.material_style = "oceanic"
 -- -- and copilot-cmp
 -- DONE: keymap for NvimTreeToggle
 -- DONE: colorschema
--- TODO: todotxt
+-- DONE: todotxt
 -- DONE: ctrl-p
 -- TODO: tweak code complete a lot
 -- TODO: code actions
@@ -806,3 +838,5 @@ vim.g.material_style = "oceanic"
 -- TODO: use pylint and other tools from the current venv
 -- TODO: https://github.com/microsoft/pyright
 -- TODO: check out plugins from material options
+-- TODO: python rope
+-- TODO: descriptions for telescope
