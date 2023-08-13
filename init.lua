@@ -223,6 +223,33 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{ "shaunsingh/nord.nvim", lazy = true, },
+	{
+		"marko-cerovac/material.nvim",
+		lazy = true,
+		setup = {
+			plugins = {
+				"dap",
+				-- "dashboard",
+				-- "gitsigns",
+				-- "hop",
+				-- "indent-blankline",
+				-- "lspsaga",
+				-- "mini",
+				-- "neogit",
+				-- "neorg",
+				"nvim-cmp",
+				-- "nvim-navic",
+				"nvim-tree",
+				"nvim-web-devicons",
+				-- "sneak",
+				"telescope",
+				-- "trouble",
+				"which-key",
+			},
+		},
+	},
+
 	{
 		'nvim-telescope/telescope.nvim', branch = '0.1.x',
 		dependencies = {
@@ -717,11 +744,25 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons", },
-		config = true,
+		setup = {
+			options = {
+				-- theme = "nord",
+				theme = "auto",
+			},
+		},
 		lazy = false,
 	},
 
 })
+
+vim.o.background = "dark"
+-- vim.cmd("colorscheme nord")
+vim.cmd("colorscheme material")
+-- vim.g.material_style = "darker"
+-- vim.g.material_style = "lighter"
+-- vim.g.material_style = "deep ocean"
+vim.g.material_style = "oceanic"
+-- vim.g.material_style = "palenight"
 
 -- DONE: nvim-cmp https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
 -- DONE: nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter
@@ -751,7 +792,7 @@ require("lazy").setup({
 -- DONE: lspkind https://github.com/onsails/lspkind.nvim
 -- -- and copilot-cmp
 -- DONE: keymap for NvimTreeToggle
--- TODO: colorschema
+-- DONE: colorschema
 -- TODO: todotxt
 -- DONE: ctrl-p
 -- TODO: tweak code complete a lot
@@ -764,3 +805,4 @@ require("lazy").setup({
 -- TODO: terminal?
 -- TODO: use pylint and other tools from the current venv
 -- TODO: https://github.com/microsoft/pyright
+-- TODO: check out plugins from material options
