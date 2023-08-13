@@ -366,6 +366,7 @@ require("lazy").setup({
 			"saadparwaiz1/cmp_luasnip",
 			"L3MON4D3/LuaSnip",
 			"onsails/lspkind.nvim",
+			"SmiteshP/nvim-navic",
 		},
 		config = function()
 			local cmp = require("cmp")
@@ -412,6 +413,10 @@ require("lazy").setup({
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
 					require("lspconfig").jedi_language_server.setup({
 						capabilities = capabilities,
+						on_attach = function(client, buffer)
+							print('attaching nvim-navic')
+							require("nvim-navic").attach(client, buffer)
+						end,
 					})
 				end,
 			})
@@ -426,6 +431,10 @@ require("lazy").setup({
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
 					lspconfig.rust_analyzer.setup({
 						capabilities = capabilities,
+						on_attach = function(client, buffer)
+							print('attaching nvim-navic')
+							require("nvim-navic").attach(client, buffer)
+						end,
 					})
 				end,
 			})
@@ -743,11 +752,22 @@ require("lazy").setup({
 
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons", },
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+			"SmiteshP/nvim-navic",
+		},
 		setup = {
 			options = {
 				-- theme = "nord",
 				theme = "auto",
+			},
+			sections = {
+				lualine_a = {'mode'},
+				lualine_b = {'branch', 'diff', 'diagnostics'},
+				lualine_c = {'filename'},
+				lualine_x = {'encoding', 'fileformat', 'filetype'},
+				lualine_y = {'progress'},
+				lualine_z = {'location', 'navic'},
 			},
 		},
 		lazy = false,
@@ -790,6 +810,18 @@ require("lazy").setup({
 		"tpope/vim-commentary",
 		keys = { "gc", "gcc", "gcu", },
 	},
+
+	{
+		'stevearc/aerial.nvim',
+		opts = {},
+		-- Optional dependencies
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons"
+		},
+	},
+
+	{ "SmiteshP/nvim-navic", },
 })
 
 vim.o.background = "dark"
@@ -826,6 +858,8 @@ vim.g.material_style = "oceanic"
 -- DONE: tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
 --
 -- TODO: break plugins out into separate files under `lua/plugins`
+--       https://github.com/folke/lazy.nvim#-structuring-your-plugins
+--       https://www.reddit.com/r/neovim/comments/tjnxxb/file_structure_for_adjusting_plugin_options/
 -- DONE: lspkind https://github.com/onsails/lspkind.nvim
 -- -- and copilot-cmp
 -- DONE: keymap for NvimTreeToggle
@@ -838,10 +872,14 @@ vim.g.material_style = "oceanic"
 -- TODO: line length settings for linting
 -- TODO: stop with <leader> = <space> in insert mode already!
 -- DONE: comment plugin and keymappings
--- TODO: hierarchy panel
+-- DONE: hierarchy panel
 -- TODO: terminal?
 -- TODO: use pylint and other tools from the current venv
 -- TODO: https://github.com/microsoft/pyright
 -- TODO: check out plugins from material options
 -- TODO: python rope
 -- TODO: descriptions for telescope
+-- TODO: move these todos into a `todo.txt` file in the `vimfiles` directory
+-- TODO: https://nvimdev.github.io/lspsaga/
+-- TODO: keymaps for `:AerialToggle` and `:AerialClose`
+-- TODO: configure lualine (with navic)
