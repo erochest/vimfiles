@@ -6,7 +6,7 @@ x snippets https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 x linters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 x formatters https://github.com/williamboman/mason.nvim#how-to-use-installed-packages
 x telescope-undo
-copilot-cmp
+2023-08-14 copilot-cmp
 x statusline
 x nvim-tree
 x which-key
@@ -18,34 +18,35 @@ x connect snippets to nvim-cmp
 x dapui usage https://github.com/rcarriga/nvim-dap-ui#usage
 x python file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pylsp
 x rust file handler https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
-x tab nav keybindings (eg, `gh` for next tab, `gl` for previous tab)
+x tab nav keybindings (eg, `gh` for tab, `gl` for previous tab) pri:B
 x break plugins out into separate files under `lua/plugins` https://github.com/folke/lazy.nvim#-structuring-your-plugins https://www.reddit.com/r/neovim/comments/tjnxxb/file_structure_for_adjusting_plugin_options/
 x lspkind https://github.com/onsails/lspkind.nvim and copilot-cmp
 x keymap for NvimTreeToggle
 x colorschema
 x todotxt
 x ctrl-p
-tweak code complete a lot
-code actions
+2023-08-14 tweak code complete a lot
+x 2023-08-14 2023-08-14 code actions
 x ; to list buffers
-line length settings for linting
-stop with <leader> = <space> in insert mode already!
+2023-08-14 line length settings for linting
+2023-08-14 stop with <leader> = <space> in insert mode already!
 x comment plugin and keymappings
 x hierarchy panel
 x terminal?
-use pylint and other tools from the current venv
-https://github.com/microsoft/pyright
-check out plugins from material options
-python rope
-descriptions for telescope
+2023-08-14 use pylint and other tools from the current venv
+2023-08-14 https://github.com/microsoft/pyright
+2023-08-14 check out plugins from material options
+2023-08-14 python rope
+2023-08-14 descriptions for telescope
 x move these todos into a `todo.txt` file in the `vimfiles` directory
-https://nvimdev.github.io/lspsaga/
-keymaps for `:AerialToggle` and `:AerialClose`
-configure lualine (with navic)
-more config for terminals https://github.com/akinsho/toggleterm.nvim
-https://github.com/NeogitOrg/neogit
-https://github.com/folke/neodev.nvim
-https://github.com/folke/edgy.nvim
-https://github.com/folke/neoconf.nvim
-https://github.com/nvim-neorg/neorg
-fix navic and lualine configs
+2023-08-14 https://nvimdev.github.io/lspsaga/
+2023-08-14 keymaps for and `:AerialClose`
+2023-08-14 configure lualine (with navic)
+2023-08-14 more config for terminals https://github.com/akinsho/toggleterm.nvim
+2023-08-14 https://github.com/NeogitOrg/neogit
+2023-08-14 https://github.com/folke/neodev.nvim
+2023-08-14 https://github.com/folke/edgy.nvim
+2023-08-14 https://github.com/folke/neoconf.nvim
+2023-08-14 https://github.com/nvim-neorg/neorg
+2023-08-14 fix navic and lualine configs
+2023-08-14 make this config the default

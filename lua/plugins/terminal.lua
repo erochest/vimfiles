@@ -3,7 +3,9 @@ return {
 		'akinsho/toggleterm.nvim',
 		version = "*",
 		cmd = { "ToggleTerm", "ToggleTermOpenAll", "ToggleTermCloseAll", },
-		key = { "<c-\\>", },
+		key = {
+			{ "<c-\\>", "<cmd>ToggleTerm<cr>", },
+		},
 		config = function()
 			-- from https://www.reddit.com/r/neovim/comments/xq5lyl/neovim_toggleterm_windows_1011/
 			local status, toggleterm = pcall(require, 'toggleterm')

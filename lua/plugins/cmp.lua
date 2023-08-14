@@ -63,7 +63,7 @@ return {
 				callback = function()
 					print('starting python language server')
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
-					require("lspconfig").jedi_language_server.setup({
+					require("lspconfig").pyright.setup({
 						capabilities = capabilities,
 						on_attach = function(client, buffer)
 							print('attaching nvim-navic')
