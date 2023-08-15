@@ -50,3 +50,7 @@ x move these todos into a `todo.txt` file in the `vimfiles` directory
 2023-08-14 https://github.com/nvim-neorg/neorg
 2023-08-14 fix navic and lualine configs
 2023-08-14 make this config the default
+2023-08-15 enable backspacing over tabs
+2023-08-15 tab width/shift width
+2023-08-15 expand tabs
+2023-08-15 change todotxt plugin
