@@ -48,7 +48,7 @@ return {
 			vim.api.nvim_create_autocmd({"LspAttach"}, {
 				pattern = "*",
 				callback = function(args)
-					print("args: ", vim.inspect(args))
+					-- print("args: ", vim.inspect(args))
 					local bufnr = args.buf
 					local client = vim.lsp.get_client_by_id(args.data.client_id)
 					require("nvim-navic").attach(client, bufnr)

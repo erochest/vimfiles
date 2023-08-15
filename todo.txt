@@ -56,3 +56,9 @@ x 2023-08-15 2023-08-14 fix navic and lualine configs
 x 2023-08-15 2023-08-15 change todotxt plugin
 2023-08-15 https://github.com/folke/trouble.nvim
 2023-08-15 https://github.com/SmiteshP/nvim-navbuddy
+x 2023-08-15 2023-08-15 fix possession
+2023-08-15 ToggleTerminal keymap doesn't work until it's loaded
+2023-08-15 toggleterminal keymaps when in terminal
+2023-08-15 sending commands to the terminal
+2023-08-15 shorten branch name in lualine to just the story number
+2023-08-15 better syntax color highlighting in gitcommit (include diffs)
