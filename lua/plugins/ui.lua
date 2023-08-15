@@ -16,7 +16,7 @@ return {
 				-- "neogit",
 				-- "neorg",
 				"nvim-cmp",
-				-- "nvim-navic",
+				"nvim-navic",
 				"nvim-tree",
 				"nvim-web-devicons",
 				-- "sneak",
@@ -33,18 +33,9 @@ return {
 			"nvim-tree/nvim-web-devicons",
 			"SmiteshP/nvim-navic",
 		},
-		setup = {
-			options = {
-				-- theme = "nord",
-				theme = "auto",
-			},
+		opts = {
 			sections = {
-				lualine_a = {'mode'},
-				lualine_b = {'branch', 'diff', 'diagnostics'},
-				lualine_c = {'filename'},
-				lualine_x = {'encoding', 'fileformat', 'filetype'},
-				lualine_y = {'progress'},
-				lualine_z = {'location', 'navic'},
+				lualine_c = {'navic'},
 			},
 		},
 		lazy = false,
