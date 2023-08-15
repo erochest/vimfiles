@@ -34,7 +34,7 @@ x comment plugin and keymappings
 x hierarchy panel
 x terminal?
 2023-08-14 use pylint and other tools from the current venv
-2023-08-14 https://github.com/microsoft/pyright
+x 2023-08-14 2023-08-14 https://github.com/microsoft/pyright
 2023-08-14 check out plugins from material options
 2023-08-14 python rope
 2023-08-14 descriptions for telescope
@@ -53,4 +53,5 @@ x move these todos into a `todo.txt` file in the `vimfiles` directory
 2023-08-15 enable backspacing over tabs
 2023-08-15 tab width/shift width
 2023-08-15 expand tabs
-2023-08-15 change todotxt plugin
+x 2023-08-15 2023-08-15 change todotxt plugin
+2023-08-15 https://github.com/folke/trouble.nvim
