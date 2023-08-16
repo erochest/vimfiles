@@ -1,7 +1,7 @@
 return {
-	{
-		"tpope/vim-commentary",
-		keys = { "gc", "gcc", "gcu", },
-	},
+    {
+        "tpope/vim-commentary",
+        keys = { "gc", "gcc", "gcu", },
+    },
 
 }
