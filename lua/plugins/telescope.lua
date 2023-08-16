@@ -7,6 +7,7 @@ return {
 			'nvim-lua/plenary.nvim',
 			"debugloop/telescope-undo.nvim",
 		},
+        cmd = { "Telescope", },
 		keys = {
 			{ '<C-p>', '<cmd>Telescope find_files<cr>', desc = 'Find files', mode = "n", },
 			{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'grep', mode = "n", },
