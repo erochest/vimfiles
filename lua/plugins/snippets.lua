@@ -3,9 +3,9 @@ return {
         "L3MON4D3/LuaSnip",
         version = "2.*",
         keys = {
-            { "<C-K>", function() require("luasnip").expand() end, mode = {"i"}, silent = true, },
-            { "<C-L>", function() require("luasnip").jump( 1) end, mode = {"i", "s"}, silent = true, },
-            { "<C-J>", function() require("luasnip").jump(-1) end, mode = {"i", "s"}, silent = true, },
+            { "<C-K>", function() require("luasnip").expand() end, mode = {"i"}, silent = true, desc = "Expand snippet" },
+            { "<C-L>", function() require("luasnip").jump( 1) end, mode = {"i", "s"}, silent = true, desc = "Next snippet expansion" },
+            { "<C-J>", function() require("luasnip").jump(-1) end, mode = {"i", "s"}, silent = true, desc = "Previous snippet expansion" },
             {
                 "<C-E>",
                 function()
@@ -15,6 +15,7 @@ return {
                     end
                 end,
                 mode = {"i"}, silent = true,
+                desc = "Change active choice",
             },
         },
         config = function()

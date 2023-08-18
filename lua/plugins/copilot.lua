@@ -4,7 +4,7 @@ return {
         cmd = { "Copilot", },
         keys = {
             {
-                "<leader>cp",
+                "<leader>co",
                 "<cmd>Copilot<CR>",
                 mode = "n",
                 desc = "Copilot",

@@ -17,7 +17,6 @@ vim.opt.wildmenu = true
 
 vim.g.mapleader = " "
 
--- vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
 vim.keymap.set("v", "Q", "gq",   { desc = "Reformat the selection." })
 vim.keymap.set("n", "Q", "gqap", { desc = "Reformat the current paragraph." })
 vim.keymap.set("n", "gn", ":tabn<cr>", { desc = "Go to the next tab." })
@@ -81,7 +80,7 @@ vim.api.nvim_create_user_command('Browser', function()
 end, {
 	desc = 'Open the URL on the current line in the system browser.'
 })
-vim.keymap.set("n", "<leader>http", vim.cmd.Browser)
+-- vim.keymap.set("n", "<leader>http", vim.cmd.Browser)
 
 vim.api.nvim_create_user_command('List100', function(opts)
 	count = opts.count
@@ -177,19 +176,27 @@ end, {
 -- 	callback = vim.cmd.ApplyLocalSettings,
 -- })
 
-
-vim.keymap.set("n", "<leader>j", "ggO# Date: <C-R>=strftime('%a, %d %b %Y %H:%M:%S %z')<CR><CR>", { silent = true })
-
 -- nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 -- "nmap <Leader>archive :r!todo.sh archive<CR>
 
-vim.keymap.set("n", "<leader>pl", "o<ESC>\"+p", { silent = true })
-vim.keymap.set("n", "<leader>dl", "\"+dd", { silent = true })
-vim.keymap.set("n", "<leader>yy", "\"+yy", { silent = true })
-vim.keymap.set("n", "<leader>l", "ggO<C-R>=strftime('%Y-%m-%dT%H:%M:%S %z')<CR><space>\\|<space>", { silent = true })
+vim.keymap.set("n", "<leader>cp", "o<ESC>\"+p", { silent = true, desc = "Paste onto a new line" })
+vim.keymap.set("n", "<leader>cd", "\"+dd", { silent = true, desc = "Cut this line" })
+vim.keymap.set("n", "<leader>cy", "\"+yy", { silent = true, desc = "Copy this line" })
+vim.keymap.set("n", "<leader>l", "ggO<C-R>=strftime('%Y-%m-%dT%H:%M:%S %z')<CR><space>\\|<space>", {
+    silent = true,
+    desc = "Insert a timestamp at the top of the file.",
+})
 
-vim.keymap.set("i", "<leader>now", "<C-R>=strftime('%Y-%m-%dT%H:%M:%S%z')<CR>", { silent = true })
-vim.keymap.set("n", "<leader>now", "i<leader>d", { silent = true })
+-- TODO: replace these with a snippet
+-- vim.keymap.set("n", "<leader>j", "ggO# Date: <C-R>=strftime('%a, %d %b %Y %H:%M:%S %z')<CR><CR>", {
+    -- silent = true,
+    -- desc = "Insert a Markdown date header",
+-- })
+-- vim.keymap.set("i", "<leader>now", "<C-R>=strftime('%Y-%m-%dT%H:%M:%S%z')<CR>", {
+    -- silent = true,
+    -- desc = "Insert a timestamp",
+-- })
+-- vim.keymap.set("n", "<leader>now", "i<leader>d", { silent = true, desc = "Insert a timestamp" })
 
 -- vmap <Leader>x :SlimuxREPLSendSelection<CR>
 -- nmap <Leader>x :SlimuxREPLSendLine<CR>
