@@ -24,11 +24,20 @@ return {
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
+        config = function()
+            local wk = require("which-key")
+            wk.setup({})
+            wk.register({
+                ["<leader>c"] = { name = "Code" },
+                ["<leader>C"] = { name = "Clipboard" },
+                ["<leader>d"] = { name = "Code Diagnostic" },
+                ["<leader>f"] = { name = "Find" },
+                ["<leader>F"] = { name = "Format" },
+                ["<leader>g"] = { name = "Go" },
+                ["<leader>n"] = { name = "Navigation File Tree" },
+                ["<leader>z"] = { name = "Folds" },
+            })
+        end,
     },
 
     {

@@ -6,6 +6,7 @@
 ### c
 
 p -- copilot
+a -- action
 
 ###  d
 
@@ -35,6 +36,14 @@ w -- (insert date)
 
 l -- `o<esc>"+p`
 
+###  w
+
+a
+
+l
+
+r
+
 ###  y
 
 y -- `"+yy`
@@ -43,3 +52,4 @@ y -- `"+yy`
 
 `<leader>e`
 
+almost all `keymap` calls in `lsp.lua`

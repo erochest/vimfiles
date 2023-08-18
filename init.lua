@@ -179,9 +179,9 @@ end, {
 -- nmap <Leader>J <Leader>j<CR><ESC>k:r!~/bin/todo.sh archive<CR>{zz
 -- "nmap <Leader>archive :r!todo.sh archive<CR>
 
-vim.keymap.set("n", "<leader>cp", "o<ESC>\"+p", { silent = true, desc = "Paste onto a new line" })
-vim.keymap.set("n", "<leader>cd", "\"+dd", { silent = true, desc = "Cut this line" })
-vim.keymap.set("n", "<leader>cy", "\"+yy", { silent = true, desc = "Copy this line" })
+vim.keymap.set("n", "<leader>Cp", "o<ESC>\"+p", { silent = true, desc = "Paste onto a new line" })
+vim.keymap.set("n", "<leader>Cd", "\"+dd", { silent = true, desc = "Cut this line" })
+vim.keymap.set("n", "<leader>Cy", "\"+yy", { silent = true, desc = "Copy this line" })
 vim.keymap.set("n", "<leader>l", "ggO<C-R>=strftime('%Y-%m-%dT%H:%M:%S %z')<CR><space>\\|<space>", {
     silent = true,
     desc = "Insert a timestamp at the top of the file.",

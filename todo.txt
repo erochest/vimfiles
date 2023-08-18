@@ -28,7 +28,7 @@ x ctrl-p
 2023-08-14 tweak code complete a lot
 x 2023-08-14 2023-08-14 code actions
 x ; to list buffers
-2023-08-14 line length settings for linting
+x 2023-08-18 2023-08-14 line length settings for linting
 2023-08-14 stop with <leader> = <space> in insert mode already!
 x comment plugin and keymappings
 x hierarchy panel
@@ -37,7 +37,7 @@ x terminal?
 x 2023-08-14 2023-08-14 https://github.com/microsoft/pyright
 x 2023-08-16 2023-08-14 check out plugins from material options
 2023-08-14 python rope
-2023-08-14 descriptions for https://github.com/folke/which-key.nvim (https://www.reddit.com/r/neovim/comments/vwud6m/whichkeynvim_whats_the_best_workflow/)
+x 2023-08-18 2023-08-14 descriptions for https://github.com/folke/which-key.nvim (https://www.reddit.com/r/neovim/comments/vwud6m/whichkeynvim_whats_the_best_workflow/)
 x move these todos into a `todo.txt` file in the `vimfiles` directory
 2023-08-14 https://nvimdev.github.io/lspsaga/
 2023-08-14 keymaps for and `:AerialClose`

@@ -3,13 +3,13 @@ return {
         "mhartington/formatter.nvim",
         keys = {
             {
-                "<leader>fm",
+                "<leader>Fm",
                 "<cmd>Format<CR>",
                 mode = "n",
                 desc = "Format the current buffer",
             },
             {
-                "<leader>fM",
+                "<leader>FM",
                 "<cmd>FormatWrite<CR>",
                 mode = "n",
                 desc = "Format the current buffer and write it to disk",
