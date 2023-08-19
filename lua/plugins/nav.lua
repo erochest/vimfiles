@@ -34,6 +34,7 @@ return {
                 ["<leader>f"] = { name = "Find" },
                 ["<leader>F"] = { name = "Format" },
                 ["<leader>g"] = { name = "Go" },
+                ["<leader>l"] = { name = "LSP" },
                 ["<leader>n"] = { name = "Navigation File Tree" },
                 ["<leader>z"] = { name = "Folds" },
             })

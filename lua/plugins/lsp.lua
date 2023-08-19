@@ -1,6 +1,12 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        keys = {
+            { "<leader>ls", "<cmd>LspStart<cr>", desc = "Start LSP Server", },
+            { "<leader>lr", "<cmd>LspRestart<cr>", desc = "Restart LSP Server", },
+            { "<leader>li", "<cmd>LspInfo<cr>", desc = "LSP Info", },
+            { "<leader>ll", "<cmd>LspLog<cr>", desc = "LSP Log", },
+        },
         config = function()
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions
             vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, {desc="Open diagnostic float"})
@@ -37,11 +43,13 @@ return {
             })
         end,
     },
+
     {
         "williamboman/mason.nvim",
         lazy = false,
         config = true,
     },
+
     {
         "williamboman/mason-lspconfig.nvim",
         lazy = false,
@@ -54,5 +62,7 @@ return {
             },
         },
     },
+
+    { "folke/neodev.nvim", opts = {} },
 
 }
