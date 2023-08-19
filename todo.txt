@@ -42,8 +42,8 @@ x move these todos into a `todo.txt` file in the `vimfiles` directory
 2023-08-14 https://nvimdev.github.io/lspsaga/
 x 2023-08-18 2023-08-14 keymaps for and `:AerialClose`
 x 2023-08-15 2023-08-14 configure lualine (with navic)
-2023-08-14 more config for terminals https://github.com/akinsho/toggleterm.nvim
-2023-08-14 https://github.com/NeogitOrg/neogit
+x 2023-08-18 2023-08-14 more config for terminals https://github.com/akinsho/toggleterm.nvim
+x 2023-08-18 2023-08-14 https://github.com/NeogitOrg/neogit
 2023-08-14 https://github.com/folke/neodev.nvim
 2023-08-14 https://github.com/folke/edgy.nvim
 2023-08-14 https://github.com/folke/neoconf.nvim

@@ -3,8 +3,8 @@ return {
         'akinsho/toggleterm.nvim',
         version = "*",
         cmd = { "ToggleTerm", "ToggleTermOpenAll", "ToggleTermCloseAll", },
-        key = {
-            { "<c-\\>", "<cmd>ToggleTerm<cr>", },
+        keys = {
+            { "<c-\\>", "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" },
         },
         config = function()
             -- from https://www.reddit.com/r/neovim/comments/xq5lyl/neovim_toggleterm_windows_1011/
