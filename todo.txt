@@ -71,5 +71,5 @@ x 2023-08-15 2023-08-15 fix possession
 2023-08-16 indent-blankline
 2023-08-16 mini
 2023-08-16 sneak
-2023-08-18 would https://github.com/rafamadriz/friendly-snippets let me insert the current timestamp or date?
+x 2023-08-18 2023-08-18 would https://github.com/rafamadriz/friendly-snippets let me insert the current timestamp or date?
 2023-08-18 https://gitlab.com/systemticks/c4-dsl-language-server
