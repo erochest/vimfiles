@@ -187,17 +187,6 @@ vim.keymap.set("n", "<leader>l", "ggO<C-R>=strftime('%Y-%m-%dT%H:%M:%S %z')<CR><
     desc = "Insert a timestamp at the top of the file.",
 })
 
--- TODO: replace these with a snippet
--- vim.keymap.set("n", "<leader>j", "ggO# Date: <C-R>=strftime('%a, %d %b %Y %H:%M:%S %z')<CR><CR>", {
-    -- silent = true,
-    -- desc = "Insert a Markdown date header",
--- })
--- vim.keymap.set("i", "<leader>now", "<C-R>=strftime('%Y-%m-%dT%H:%M:%S%z')<CR>", {
-    -- silent = true,
-    -- desc = "Insert a timestamp",
--- })
--- vim.keymap.set("n", "<leader>now", "i<leader>d", { silent = true, desc = "Insert a timestamp" })
-
 -- vmap <Leader>x :SlimuxREPLSendSelection<CR>
 -- nmap <Leader>x :SlimuxREPLSendLine<CR>
 -- nmap <Leader>tmux :SlimuxREPLConfigure<CR>

@@ -1,0 +1,13 @@
+{
+  "name": "Eric's Snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "markdown"
+        ],
+        "path": "./snippets/markdown.json"
+      }
+    ]
+  }
+}
