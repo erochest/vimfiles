@@ -7,6 +7,9 @@ return {
             { "<leader>li", "<cmd>LspInfo<cr>", desc = "LSP Info", },
             { "<leader>ll", "<cmd>LspLog<cr>", desc = "LSP Log", },
         },
+        dependencies = {
+            "folke/neoconf.nvim",
+        },
         config = function()
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions
             vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, {desc="Open diagnostic float"})
@@ -64,5 +67,9 @@ return {
     },
 
     { "folke/neodev.nvim", opts = {} },
+
+    {
+        "folke/neoconf.nvim",
+    },
 
 }
