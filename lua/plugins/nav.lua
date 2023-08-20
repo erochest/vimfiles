@@ -36,6 +36,7 @@ return {
                 ["<leader>g"] = { name = "Go" },
                 ["<leader>l"] = { name = "LSP" },
                 ["<leader>n"] = { name = "Navigation File Tree" },
+                ["<leader>w"] = { name = "Workspace" },
                 ["<leader>z"] = { name = "Folds" },
             })
         end,

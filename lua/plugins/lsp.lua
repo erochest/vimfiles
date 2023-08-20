@@ -37,7 +37,7 @@ return {
                         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
                     end, {buffer=ev.buf, desc="List Workspace Folders"})
                     vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, {buffer=ev.buf, desc="Type Definition"})
-                    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {buffer=ev.buf, desc="Rename"})
+                    vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, {buffer=ev.buf, desc="Rename"})
                     vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {buffer=ev.buf, desc="Code Action"})
                     vim.keymap.set('n', 'gr', vim.lsp.buf.references, {buffer=ev.buf, desc="References"})
                     vim.keymap.set('n', '<leader>f', function()
