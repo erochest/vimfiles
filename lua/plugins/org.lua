@@ -17,10 +17,12 @@ return {
                     ["core.dirman"] = { -- Manages Neorg workspaces
                         config = {
                             workspaces = {
+                                -- Can have multiple for, say, work and personal.
                                 notes = "~/Dropbox/notes",
                             },
                         },
                     },
+                    ["core.export.markdown"] = {},
                 },
             })
         end,
