@@ -37,6 +37,7 @@ return {
             sections = {
                 -- this is the default for section b
                 -- i want to change it to look for the branch, and if it's contains "CODE-\d+" then only show the number
+                -- https://github.com/nvim-lualine/lualine.nvim
                 -- lualine_b = {'branch', 'diff', 'diagnostics'},
 
                 lualine_c = {'navic'},
