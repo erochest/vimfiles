@@ -8,3 +8,8 @@ setlocal textwidth=0
 setlocal foldcolumn=1
 setlocal foldmethod=indent
 
+lua <<EOF
+vim.keymap.set("n", "<leader>cp", function() require("erochest.python").PyTestFile() end, {
+	desc="Run pytest on current file",
+})
+EOF
