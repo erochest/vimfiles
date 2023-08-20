@@ -66,7 +66,7 @@ x 2023-08-20 2023-08-16 https://github.com/lotabout/skim (or fzf with telescope 
 x 2023-08-20 2023-08-16 how to close the cmp window after <space>?
 x 2023-08-20 2023-08-16 dashboard
 x 2023-08-20 2023-08-16 gitsigns
-2023-08-16 hop
+x 2023-08-20 2023-08-16 hop
 2023-08-16 indent-blankline
 2023-08-16 mini
 2023-08-16 sneak
