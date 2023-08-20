@@ -16,4 +16,30 @@ return {
         },
         config = true,
     },
+
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        keys = {
+            { "<leader>dx", function() require("trouble").toggle() end,
+                desc = "Toggle Trouble",
+            },
+            { "<leader>dw", function() require("trouble").open("workspace_diagnostics") end,
+                desc = "Trouble Workspace Diagnostics",
+            },
+            { "<leader>dd", function() require("trouble").open("document_diagnostics") end,
+                desc = "Trouble Document Diagnostics",
+            },
+            { "<leader>dq", function() require("trouble").open("quickfix") end,
+                desc = "Trouble quickfix",
+            },
+            { "<leader>dl", function() require("trouble").open("loclist") end,
+                desc = "Trouble loclist",
+            },
+            { "gR", function() require("trouble").open("lsp_references") end,
+                desc = "Trouble LSP References",
+            },
+        },
+        opts = {},
+    }
 }

@@ -46,14 +46,14 @@ x 2023-08-18 2023-08-14 more config for terminals https://github.com/akinsho/tog
 x 2023-08-18 2023-08-14 https://github.com/NeogitOrg/neogit
 x 2023-08-19 023-08-14 https://github.com/folke/neodev.nvim
 x 2023-08-19 2023-08-14 https://github.com/folke/neoconf.nvim
-2023-08-14 https://github.com/nvim-neorg/neorg
+x 2023-08-20 2023-08-14 https://github.com/nvim-neorg/neorg
 x 2023-08-15 2023-08-14 fix navic and lualine configs
-2023-08-14 make this config the default
+x 2023-08-20 2023-08-14 make this config the default
 2023-08-15 enable backspacing over tabs
-2023-08-15 tab width/shift width
-2023-08-15 expand tabs
+x 2023-08-20 2023-08-15 tab width/shift width
+x 2023-08-20 2023-08-15 expand tabs
 x 2023-08-15 2023-08-15 change todotxt plugin
-2023-08-15 https://github.com/folke/trouble.nvim
+x 2023-08-20 2023-08-15 https://github.com/folke/trouble.nvim
 2023-08-15 https://github.com/SmiteshP/nvim-navbuddy
 x 2023-08-15 2023-08-15 fix possession
 2023-08-15 ToggleTerminal keymap doesn't work until it's loaded

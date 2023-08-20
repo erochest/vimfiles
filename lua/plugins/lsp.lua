@@ -15,7 +15,7 @@ return {
             vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, {desc="Open diagnostic float"})
             vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {desc="Go to previous error"})
             vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {desc="Go to next error"})
-            vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, {desc="Set location list from errors"})
+            -- vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, {desc="Set location list from errors"})
 
             -- Use LspAttach autocommand to only map the following keys
             -- after the language server attaches to the current buffer
