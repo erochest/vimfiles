@@ -35,6 +35,10 @@ return {
         },
         opts = {
             sections = {
+                -- this is the default for section b
+                -- i want to change it to look for the branch, and if it's contains "CODE-\d+" then only show the number
+                -- lualine_b = {'branch', 'diff', 'diagnostics'},
+
                 lualine_c = {'navic'},
             },
         },
