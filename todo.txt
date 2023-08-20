@@ -54,9 +54,9 @@ x 2023-08-20 2023-08-15 tab width/shift width
 x 2023-08-20 2023-08-15 expand tabs
 x 2023-08-15 2023-08-15 change todotxt plugin
 x 2023-08-20 2023-08-15 https://github.com/folke/trouble.nvim
-2023-08-15 https://github.com/SmiteshP/nvim-navbuddy
+x 2023-08-20 2023-08-15 https://github.com/SmiteshP/nvim-navbuddy
 x 2023-08-15 2023-08-15 fix possession
-2023-08-15 ToggleTerminal keymap doesn't work until it's loaded
+x 2023-08-20 2023-08-15 ToggleTerminal keymap doesn't work until it's loaded
 2023-08-15 toggleterminal keymaps when in terminal
 2023-08-15 sending commands to the terminal
 2023-08-15 shorten branch name in lualine to just the story number
@@ -75,3 +75,4 @@ x 2023-08-18 2023-08-18 would https://github.com/rafamadriz/friendly-snippets le
 2023-08-19 https://github.com/rcarriga/nvim-notify
 2023-08-19 https://github.com/folke/noice.nvim
 2023-08-14 https://github.com/folke/edgy.nvim
+2023-08-20 decide between Aerial and navbuddy

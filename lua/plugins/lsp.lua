@@ -9,6 +9,7 @@ return {
         },
         dependencies = {
             "folke/neoconf.nvim",
+            "SmiteshP/nvim-navbuddy",
         },
         config = function()
             -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -68,8 +69,17 @@ return {
 
     { "folke/neodev.nvim", opts = {} },
 
-    {
-        "folke/neoconf.nvim",
-    },
+    { "folke/neoconf.nvim", },
 
+    {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim"
+        },
+        keys = {
+            { "<leader>cn", "<cmd>Navbuddy<cr>", desc = "Open navbuddy" },
+        },
+        opts = { lsp = { auto_attach = true } }
+    }
 }
