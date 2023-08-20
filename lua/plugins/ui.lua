@@ -46,4 +46,5 @@ return {
         lazy = false,
     },
 
+  { "lukas-reineke/indent-blankline.nvim", },
 }
