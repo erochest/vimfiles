@@ -68,7 +68,7 @@ x 2023-08-20 2023-08-16 dashboard
 x 2023-08-20 2023-08-16 gitsigns
 x 2023-08-20 2023-08-16 hop
 x 2023-08-20 2023-08-16 indent-blankline
-2023-08-16 mini
+x 2023-08-20 2023-08-16 mini
 2023-08-16 sneak
 x 2023-08-18 2023-08-18 would https://github.com/rafamadriz/friendly-snippets let me insert the current timestamp or date?
 2023-08-18 https://gitlab.com/systemticks/c4-dsl-language-server
