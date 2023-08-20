@@ -18,6 +18,12 @@ return {
     },
 
     {
+        "lewis6991/gitsigns.nvim",
+        cmd = { "Gitsigns" },
+        config = true,
+    },
+
+    {
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
         keys = {
@@ -43,3 +49,4 @@ return {
         opts = {},
     }
 }
+
