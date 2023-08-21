@@ -52,4 +52,6 @@ return {
       end, {remap=true, desc="Hop to previous character after cursor"})
     end,
   },
+
+  { "tpope/vim-repeat", },
 }

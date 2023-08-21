@@ -80,4 +80,13 @@ return {
       })
     end,
   },
+
+  {
+    "ggandor/leap.nvim",
+    dependencies = { "tpope/vim-repeat", },
+    keys = { "s", "S", },
+    config = function()
+      require("leap").add_default_mappings()
+    end,
+  },
 }
