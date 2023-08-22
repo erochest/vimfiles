@@ -71,7 +71,7 @@ x 2023-08-20 2023-08-16 indent-blankline
 x 2023-08-20 2023-08-16 mini
 x 2023-08-21 2023-08-16 sneak/lightspeed/leap
 x 2023-08-18 2023-08-18 would https://github.com/rafamadriz/friendly-snippets let me insert the current timestamp or date?
-2023-08-18 https://gitlab.com/systemticks/c4-dsl-language-server
+x 2023-08-22 2023-08-18 https://gitlab.com/systemticks/c4-dsl-language-server
 2023-08-19 https://github.com/rcarriga/nvim-notify
 2023-08-19 https://github.com/folke/noice.nvim
 2023-08-14 https://github.com/folke/edgy.nvim
@@ -82,3 +82,7 @@ x 2023-08-18 2023-08-18 would https://github.com/rafamadriz/friendly-snippets le
 2023-08-21 https://github.com/tpope/vim-repeat
 2023-08-21 https://github.com/ggandor/leap-spooky.nvim
 2023-08-21 https://github.com/ggandor/leap-ast.nvim
+2023-08-21 "date" keymaps
+2023-08-21 vim+obsidian plugin
+2023-08-21 how many language servers get spun up per project?
+2023-08-21 https://github.com/hkupty/runes.nvim

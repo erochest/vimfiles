@@ -75,7 +75,9 @@ return {
           -- print("args: ", vim.inspect(args))
           local bufnr = args.buf
           local client = vim.lsp.get_client_by_id(args.data.client_id)
-          require("nvim-navic").attach(client, bufnr)
+          if client.server_capabilities.documentSymbolProvider then
+            require("nvim-navic").attach(client, bufnr)
+          end
         end,
       })
     end,
