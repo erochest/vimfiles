@@ -6,6 +6,7 @@ function M.setup(opts)
     name = "Structurizr C4 DSL",
     cmd = {'c4-language-server'},
     root_dir = vim.fs.dirname(vim.fs.find('.git', {upward=true, type='directory'})[0]),
+    filetypes = {"structurizr"}
   }
 
   for k, v in pairs(opts) do
