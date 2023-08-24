@@ -46,4 +46,6 @@ return {
     },
 
   { "lukas-reineke/indent-blankline.nvim", },
+
+  { "rcarriga/nvim-notify", },
 }
