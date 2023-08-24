@@ -59,5 +59,15 @@ return {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     }
-  }
+  },
+
+  {
+    "Pocco81/true-zen.nvim",
+    keys = {
+      { "<leader>zn", "<cmd>TZNarrow<cr>", mode = { "n", "v" }, desc = "Narrow Zen", },
+      { "<leader>zf", "<cmd>TZFocus<cr>", mode = "n", desc = "Zen Focus", },
+      { "<leader>zm", "<cmd>TZMinimalist<cr>", mode = "n", desc = "Minimalist Zen", },
+      { "<leader>za", "<cmd>TZAtaraxis<cr>", mode = "n", desc = "Zen Ataraxis", },
+    },
+  },
 }

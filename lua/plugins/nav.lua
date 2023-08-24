@@ -37,7 +37,7 @@ return {
         ["<leader>l"] = { name = "LSP" },
         ["<leader>n"] = { name = "Navigation File Tree" },
         ["<leader>w"] = { name = "Workspace" },
-        ["<leader>z"] = { name = "Folds" },
+        ["<leader>z"] = { name = "Zen" },
       })
     end,
   },
