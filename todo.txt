@@ -59,7 +59,7 @@ x 2023-08-15 2023-08-15 fix possession
 x 2023-08-20 2023-08-15 ToggleTerminal keymap doesn't work until it's loaded
 x 2023-08-20 2023-08-15 toggleterminal keymaps when in terminal
 x 2023-08-20 2023-08-15 sending commands to the terminal
-2023-08-15 shorten branch name in lualine to just the story number
+x 2023-08-24 2023-08-15 shorten branch name in lualine to just the story number
 2023-08-15 better syntax color highlighting in gitcommit (include diffs)
 x 2023-08-20 2023-08-15 https://github.com/mfussenegger/nvim-dap-python
 x 2023-08-20 2023-08-16 https://github.com/lotabout/skim (or fzf with telescope https://github.com/nvim-telescope/telescope-fzf-native.nvim)
@@ -72,8 +72,8 @@ x 2023-08-20 2023-08-16 mini
 x 2023-08-21 2023-08-16 sneak/lightspeed/leap
 x 2023-08-18 2023-08-18 would https://github.com/rafamadriz/friendly-snippets let me insert the current timestamp or date?
 x 2023-08-22 2023-08-18 https://gitlab.com/systemticks/c4-dsl-language-server
-2023-08-19 https://github.com/rcarriga/nvim-notify
-2023-08-19 https://github.com/folke/noice.nvim
+x 2023-08-24 2023-08-19 https://github.com/rcarriga/nvim-notify
+x 2023-08-24 2023-08-19 https://github.com/folke/noice.nvim
 2023-08-14 https://github.com/folke/edgy.nvim
 2023-08-20 decide between Aerial and navbuddy
 2023-08-20 https://github.com/pocco81/true-zen.nvim
