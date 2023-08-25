@@ -222,8 +222,8 @@ require("lazy").setup("plugins")
 
 vim.o.background = "dark"
 -- vim.cmd("colorscheme nord")
-vim.cmd("colorscheme material")
 vim.g.material_style = "darker"
+vim.cmd("colorscheme material")
 -- vim.g.material_style = "lighter"
 -- vim.g.material_style = "deep ocean"
 -- vim.g.material_style = "oceanic"
