@@ -1,5 +1,5 @@
 
-local branch_ticket = require('erochest.ui').branch_ticket
+-- local branch_ticket = require('erochest.ui').branch_ticket
 
 return {
     { "shaunsingh/nord.nvim", lazy = true, },
@@ -38,7 +38,7 @@ return {
         opts = {
             sections = {
                 -- lualine_b = {'branch', 'diff', 'diagnostics'},
-                lualine_b = {branch_ticket, 'diff', 'diagnostics'},
+                -- lualine_b = {branch_ticket, 'diff', 'diagnostics'},
                 lualine_c = {'navic'},
             },
         },
