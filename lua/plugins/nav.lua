@@ -91,4 +91,12 @@ return {
       require("leap").add_default_mappings()
     end,
   },
+
+  {
+    "ggandor/leap-ast.nvim",
+    dependencies = { "ggandor/leap.nvim", },
+    keys = {
+      { "u", function() require("leap-ast").leap() end, mode = { "n", "x", "o" }, desc = "Leap AST" },
+    },
+  },
 }

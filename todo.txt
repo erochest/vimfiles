@@ -79,9 +79,8 @@ x 2023-08-24 2023-08-19 https://github.com/folke/noice.nvim
 x 2023-08-24 2023-08-20 https://github.com/pocco81/true-zen.nvim
 2023-08-20 https://github.com/milisims/nvim-luaref
 2023-08-21 colors for indent-blankline
-2023-08-21 https://github.com/tpope/vim-repeat
 2023-08-21 https://github.com/ggandor/leap-spooky.nvim
-2023-08-21 https://github.com/ggandor/leap-ast.nvim
+x 2023-08-25 2023-08-21 https://github.com/ggandor/leap-ast.nvim
 2023-08-21 "date" keymaps
 2023-08-21 vim+obsidian plugin
 2023-08-21 how many language servers get spun up per project?
