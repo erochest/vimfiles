@@ -140,9 +140,9 @@ vmap [r   zRmr:%RecursiveIndentSort<CR>'r
 
 " abbreviations
 " can put these in .vimrc if useful for other file types
-iab ddate <c-r>=strftime("%Y-%m-%d")<cr>
-iab xdate <c-r>=strftime("%Y-%m-%d %H:%M")<cr>
-iab tdate <c-r>=strftime("(%m/%d)")<cr>
+" iab ddate <c-r>=strftime("%Y-%m-%d")<cr>
+" iab xdate <c-r>=strftime("%Y-%m-%d %H:%M")<cr>
+" iab tdate <c-r>=strftime("(%m/%d)")<cr>
 "iab 7date <c-r>=strftime("(%m/%d)", localtime() + 3600*24*7)<cr>
 "iab 1date <c-r>=strftime("(%m/%d)", localtime() + 3600*24*1)<cr>
 "iab 2date <c-r>=strftime("(%m/%d)", localtime() + 3600*24*2)<cr>
