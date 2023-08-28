@@ -77,12 +77,12 @@ x 2023-08-24 2023-08-19 https://github.com/folke/noice.nvim
 2023-08-14 https://github.com/folke/edgy.nvim
 2023-08-20 decide between Aerial and navbuddy
 x 2023-08-24 2023-08-20 https://github.com/pocco81/true-zen.nvim
-(A) 2023-08-24 not a git repo in erochest.ui
+x 2023-08-27 2023-08-24 not a git repo in erochest.ui pri:A
 2023-08-20 https://github.com/milisims/nvim-luaref
 x 2023-08-25 2023-08-21 colors for indent-blankline
 2023-08-21 https://github.com/ggandor/leap-spooky.nvim
 x 2023-08-25 2023-08-21 https://github.com/ggandor/leap-ast.nvim
 x 2023-08-25 2023-08-21 "date" keymaps
-2023-08-21 vim+obsidian plugin
+x 2023-08-27 2023-08-21 vim+obsidian plugin
 2023-08-21 how many language servers get spun up per project?
-2023-08-21 https://github.com/hkupty/runes.nvim
+2023-08-21 busted and testing frameworks

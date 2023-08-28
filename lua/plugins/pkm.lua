@@ -16,7 +16,23 @@
 -- https://github.com/epwalsh/obsidian.nvim/issues/115
 -- https://github.com/epwalsh/obsidian.nvim/issues/88
 
-local vault = vim.fn.expand("~/Dropbox/g")
+local vault_locations = {
+  "~/Dropbox/g",
+  "~/Dropbox/n/omni",
+  "~/Dropbox/garden",
+}
+
+local function find_vault()
+  for vault in vault_locations do
+    local vault = vim.fn.expand(vault)
+    if vim.fn.isdirectory(vault) then
+      return vault
+    end
+  end
+  return nil
+end
+
+local vault = find_vault()
 
 return {
   {
@@ -34,7 +50,28 @@ return {
     opts = {
       dir = vault,
 
-      -- see below for full list of options 👇
+      completion = {
+        nvim_cmp = true,
+        new_notes_location = "currentdir",
+      },
+
+      mappings = {
+        ["gf"] = require("obsidian.mappings").gf_passthrough(),
+      },
+
+      templates = {
+        subdir = "templates",
+        date_format = "%Y-%m-%d-%a",
+        time_format = "%H:%M",
+      },
+
+      -- Optional, customize the backlinks interface.
+      backlinks = {
+        -- The default height of the backlinks pane.
+        height = 10,
+        -- Whether or not to wrap lines.
+        wrap = true,
+      },
     },
   },
 }
