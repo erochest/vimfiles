@@ -23,7 +23,7 @@ local vault_locations = {
 }
 
 local function find_vault()
-  for vault in vault_locations do
+  for _, vault in pairs(vault_locations) do
     local vault = vim.fn.expand(vault)
     if vim.fn.isdirectory(vault) then
       return vault
@@ -55,9 +55,9 @@ return {
         new_notes_location = "currentdir",
       },
 
-      mappings = {
-        ["gf"] = require("obsidian.mappings").gf_passthrough(),
-      },
+      -- mappings = {
+      --   ["gf"] = require("obsidian.mapping").gf_passthrough(),
+      -- },
 
       templates = {
         subdir = "templates",
