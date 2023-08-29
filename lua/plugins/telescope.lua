@@ -10,6 +10,7 @@ return {
         cmd = { "Telescope", },
         keys = {
             { '<C-p>', '<cmd>Telescope find_files<cr>', desc = 'Find files', mode = "n", },
+            { '<leader>fc', '<cmd>Telescope commands<cr>', desc = 'commands', mode = { 'n', 'v' }, },
             { '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'grep', mode = "n", },
             { ';', '<cmd>Telescope buffers<cr>', desc = 'Find buffer', mode = "n", },
             { '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Help pages', mode = "n", },
