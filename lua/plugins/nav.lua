@@ -96,7 +96,7 @@ return {
     "ggandor/leap-ast.nvim",
     dependencies = { "ggandor/leap.nvim", },
     keys = {
-      { "n", function() require("leap-ast").leap() end, mode = { "n", "x", "o" }, desc = "Leap AST" },
+      { "<leader>g", function() require("leap-ast").leap() end, mode = { "n", "x", "o" }, desc = "Leap AST" },
     },
   },
 }
