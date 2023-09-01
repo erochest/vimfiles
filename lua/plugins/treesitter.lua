@@ -19,6 +19,7 @@ return {
                     "lua",
                     "make",
                     "markdown_inline",
+                    "nu",
                     "python",
                     "query",
                     "rust",

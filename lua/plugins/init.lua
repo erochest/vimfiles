@@ -54,4 +54,7 @@ return {
   },
 
   { "tpope/vim-repeat", },
+
+  { "LhKipp/nvim-nu" },
+  -- Need to also install the nu treesitter.
 }
