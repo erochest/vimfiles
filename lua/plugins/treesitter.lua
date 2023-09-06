@@ -19,7 +19,7 @@ return {
                     "lua",
                     "make",
                     "markdown_inline",
-                    "nu",
+                    -- "nu",
                     "python",
                     "query",
                     "rust",
@@ -36,4 +36,12 @@ return {
             })
         end,
     },
+
+  { 
+    "IndianBoy42/tree-sitter-just",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = true,
+  },
 }

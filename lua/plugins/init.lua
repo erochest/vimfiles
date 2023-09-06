@@ -57,4 +57,6 @@ return {
 
   { "LhKipp/nvim-nu" },
   -- Need to also install the nu treesitter.
+
+  { "NoahTheDuke/vim-just", },
 }
