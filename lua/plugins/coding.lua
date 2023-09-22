@@ -49,4 +49,6 @@ return {
     },
     opts = {},
   },
+
+  { "yorinasub17/vim-terragrunt", },
 }

@@ -232,4 +232,5 @@ vim.o.background = "light"
 -- vim.g.material_style = "palenight"
 --
 -- vim.cmd("colorscheme solarized")
-vim.cmd("colorscheme slate")
+vim.cmd("colorscheme solarized-high")
+-- vim.cmd("colorscheme slate")
