@@ -220,8 +220,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
-vim.o.background = "light"
--- vim.o.background = "dark"
+-- vim.o.background = "light"
+vim.o.background = "dark"
 --
 -- vim.cmd("colorscheme nord")
 -- vim.g.material_style = "darker"
