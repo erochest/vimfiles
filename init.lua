@@ -21,6 +21,7 @@ vim.keymap.set("v", "Q", "gq",   { desc = "Reformat the selection." })
 vim.keymap.set("n", "Q", "gqap", { desc = "Reformat the current paragraph." })
 vim.keymap.set("n", "gn", ":tabn<cr>", { desc = "Go to the next tab." })
 vim.keymap.set("n", "gN", ":tabN<cr>", { desc = "Go to the previous tab." })
+vim.keymap.set("n", "<C-n>", ":cnext<cr>zv", { desc = "Go to next clist item." })
 vim.keymap.set("n", "<leader>/", function()
 	vim.opt.hlsearch = false
 end, {
