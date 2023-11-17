@@ -35,7 +35,7 @@ end, {
 	silent = true
 })
 
-vim.keymap.set("n", "<C-n>", ":next<CR>", { desc = "Move to the next file in args." })
+-- vim.keymap.set("n", "<C-n>", ":next<CR>", { desc = "Move to the next file in args." })
 
 -- vim.api.nvim_create_user_command('Test', 'echo "It works!"', {})
 
